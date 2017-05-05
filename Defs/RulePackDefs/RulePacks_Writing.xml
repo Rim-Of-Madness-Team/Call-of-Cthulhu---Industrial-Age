@@ -1,0 +1,57 @@
+<Defs>
+
+  <!-- Different physical description roots for different kinds of artworks. 
+      Added to artworks with tales and taleless art.-->
+  
+
+  <RulePackDef>
+    <defName>ArtName_Typed</defName>
+    <include>
+      <li>ArtNameUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>art_name->Journal</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  
+  
+  <RulePackDef>
+    <defName>ArtDescription_Typed</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>physical_description_root->This [journal] [tells] [image]. [desc_sentence_group]</li>
+        <li>physical_description_root->This [journal] [holds] a [text] of [image]. [desc_sentence_group]</li>
+        <li>physical_description_root->In this [journal] is a [text] of [image]. [desc_sentence_group]</li>
+        <li>journal->journal</li>
+        <li>journal->diary</li>
+        <li>journal->writing</li>
+        <li>journal->text</li>
+        <li>holds->holds</li>
+		<li>holds->contains</li>
+		<li>holds->involves</li>
+		<li>holds->consists of</li>
+		<li>tells->tells</li>
+        <li>tells->retells</li>
+        <li>tells->discloses</li>
+        <li>tells->explains</li>		
+        <li>tells->mentions</li>
+        <li>tells->reveals</li>
+        <li>tells->divulges</li>
+        <li>tells->makes known</li>		
+        <li>text->depiction</li>
+        <li>text->text</li>
+        <li>text->tale</li>
+        <li>text->story</li>
+        <li>text->note</li>
+        <li>text->short story</li>
+        <li>text->lengthy description</li>
+		<li>text->poem</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  
+</Defs>

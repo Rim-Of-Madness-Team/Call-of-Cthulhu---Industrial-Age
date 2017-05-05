@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<JobDefs>
+  
+  <JobDef>
+    <defName>Estate_FreeWrite</defName>
+    <driverClass>ArkhamEstate.JobDriver_FreeWrite</driverClass>
+    <reportString>practice writing.</reportString>
+    <joyDuration>4000</joyDuration>
+    <joyMaxParticipants>1</joyMaxParticipants>
+    <joyGainRate>1</joyGainRate>
+    <joySkill>Research</joySkill>
+    <joyXpPerTick>0.002</joyXpPerTick>
+    <joyKind>Meditative</joyKind>
+  </JobDef>
+
+  
+  <JobDef>
+    <defName>Estate_AutoWrite</defName>
+    <driverClass>JobDriver_SitFacingBuilding</driverClass>
+    <reportString>writing automatically.</reportString>
+    <joyDuration>4000</joyDuration>
+    <joyMaxParticipants>1</joyMaxParticipants>
+    <joyGainRate>1</joyGainRate>
+    <joySkill>Research</joySkill>
+    <joyXpPerTick>0.002</joyXpPerTick>
+    <joyKind>Meditative</joyKind>
+  </JobDef>
+	  
+	<JobDef>
+	<defName>PlayGramophone</defName>
+	<driverClass>ArkhamEstate.JobDriver_PlayGramophone</driverClass>
+	<reportString>Winding up gramophone.</reportString>
+	</JobDef>
+	
+	
+  <JobDef>
+    <defName>ListenToGramophone</defName>
+    <driverClass>ArkhamEstate.JobDriver_ListenToGramophone</driverClass>
+    <reportString>listening to gramophone.</reportString>
+    <joyDuration>8000</joyDuration>
+    <joyMaxParticipants>8</joyMaxParticipants>
+    <joyGainRate>1.2</joyGainRate>
+    <joyKind>Passive</joyKind>
+  </JobDef>
+
+   <JobDef>
+	<defName>PlayAndListenToGramophone</defName>
+    <driverClass>ArkhamEstate.JobDriver_AutoPlayListenGramophone</driverClass>
+    <reportString>listening to gramophone.</reportString>
+    <joyDuration>8000</joyDuration>
+    <joyMaxParticipants>8</joyMaxParticipants>
+    <joyGainRate>1.2</joyGainRate>
+    <joyKind>Passive</joyKind>
+  </JobDef> 
+	
+  <JobDef>
+    <defName>TurnOffGramophone</defName>
+    <driverClass>ArkhamEstate.JobDriver_TurnOffGramophone</driverClass>
+    <reportString>turning off gramophone.</reportString>
+  </JobDef>
+
+  
+</JobDefs>

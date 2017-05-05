@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ConceptDef>
+    <defName>Jecrell_Wax</defName>
+    <label>Using Wax</label>
+    <priority>50</priority>
+    <helpText>To make wax, select a cooking station or stove. Click the bills tab and select Make Wax. Meat from animals will be made into tallow wax. This wax can fuel non-electric candelabras or chandeliers.</helpText>
+  </ConceptDef>
+  
+  <ConceptDef>
+    <defName>Jecrell_TypewriterTable</defName>
+    <label>Writing</label>
+    <priority>50</priority>
+    <helpText>Pawns can use the typewriting table to give themselves joy and reduce stress. If Call of Cthulhu is enabled, this station will also reduce the severity of insanity at a faster rate. Pawns can also create journal items. Currently, these are rudimentary, and can be destroyed. They will be expanded upon later.</helpText>
+  </ConceptDef>
+  
+  <ConceptDef>
+    <defName>Jecrell_Gramophone</defName>
+    <label>Gramophone</label>
+    <priority>50</priority>
+    <helpText>With a pawn selected, right click the gramophone to play a recorded song. When a song is playing, pawns may voluntarily listen to the music, or players can force them to listen by selecting listen to gramophone.</helpText>
+  </ConceptDef>  
+  
+  <ConceptDef>
+    <defName>Jecrell_Refrigerator</defName>
+    <label>Refrigerator</label>
+    <priority>50</priority>
+    <helpText>Refrigerators will hold a single stack of meals frozen. The meals will not display frozen in the game. Do not worry, for as long as they are inside a powered fridge, they will not spoil.</helpText>
+  </ConceptDef>  
+
+</Defs>

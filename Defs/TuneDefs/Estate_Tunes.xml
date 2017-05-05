@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DefPackage-SoundDef>
+  <SoundDef Class="ArkhamEstate.TuneDef">
+    <defName>Estate_GS_Charleston</defName>
+	<label>Charleston</label>
+	<artist>Green Hill Instrumental</artist>
+	<durationTime>151</durationTime>
+    <sustain>True</sustain>
+	<context>MapOnly</context>
+	<eventNames />
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+	    <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Gramophone/Charleston</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>
+          <min>20</min>        
+          <max>20</max>
+        </volumeRange>      
+        <pitchRange>
+          <min>0.9311765</min>        
+          <max>1.045882</max>
+        </pitchRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+    
+  <SoundDef Class="ArkhamEstate.TuneDef">
+    <defName>Estate_GS_InTheMood</defName>  
+	<label>In The Mood</label>
+	<artist>Glenn Miller</artist>
+	<durationTime>215</durationTime>
+    <sustain>True</sustain>
+    <priorityMode>PrioritizeNearest</priorityMode> 
+	<context>MapOnly</context>
+	<eventNames />
+    <subSounds>
+      <li>
+	    <muteWhenPaused>True</muteWhenPaused>	  
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Gramophone/InTheMood</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>
+          <min>20</min>        
+          <max>20</max>
+        </volumeRange>      
+        <pitchRange>
+          <min>0.9311765</min>        
+          <max>1.045882</max>
+        </pitchRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef Class="ArkhamEstate.TuneDef">
+    <defName>Estate_GS_KingPorterStomp</defName>  
+    <label>King Porter Stomp</label>
+	<artist>Benny Goodman</artist>
+	<durationTime>187</durationTime>
+	<sustain>True</sustain>
+    <priorityMode>PrioritizeNearest</priorityMode> 
+	<context>MapOnly</context>
+    <eventNames />
+    <subSounds>
+      <li>
+	    <muteWhenPaused>True</muteWhenPaused>	  
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Gramophone/KingPorterStomp</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>
+          <min>20</min>        
+          <max>20</max>
+        </volumeRange>      
+        <pitchRange>
+          <min>0.9311765</min>        
+          <max>1.045882</max>
+        </pitchRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  
+  <SoundDef Class="ArkhamEstate.TuneDef">
+    <defName>Estate_GS_AintMisbehavin</defName>  
+    <label>Ain't Misbehavin'</label>
+	<artist>Fats Waller</artist>
+	<durationTime>145</durationTime>
+	<sustain>True</sustain>
+    <priorityMode>PrioritizeNearest</priorityMode> 
+	<context>MapOnly</context>
+    <eventNames />
+    <subSounds>
+      <li>
+	    <muteWhenPaused>True</muteWhenPaused>	  
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Gramophone/AintMisbehavin</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>
+          <min>20</min>        
+          <max>20</max>
+        </volumeRange>      
+        <pitchRange>
+          <min>0.9311765</min>        
+          <max>1.045882</max>
+        </pitchRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+    <SoundDef Class="ArkhamEstate.TuneDef">
+    <defName>Estate_GS_ItDontMeanAThing</defName>  
+    <label>It Don't Mean A Thing</label>
+	<artist>Duke Ellington</artist>
+	<durationTime>191</durationTime>
+	<sustain>True</sustain>
+    <priorityMode>PrioritizeNearest</priorityMode> 
+	<context>MapOnly</context>
+    <eventNames />
+    <subSounds>
+      <li>
+	    <muteWhenPaused>True</muteWhenPaused>	  
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Gramophone/ItDontMeanAThing</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>
+          <min>20</min>        
+          <max>20</max>
+        </volumeRange>      
+        <pitchRange>
+          <min>0.9311765</min>        
+          <max>1.045882</max>
+        </pitchRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+ </DefPackage-SoundDef> 

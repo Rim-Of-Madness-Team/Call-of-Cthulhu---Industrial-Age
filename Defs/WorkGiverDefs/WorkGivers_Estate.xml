@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<WorkGivers>
+
+
+  <WorkGiverDef>
+    <defName>DoBillsWrite</defName>
+    <label>write</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Art</workType>
+    <priorityInType>100</priorityInType>
+    <fixedBillGiverDefs>
+      <li>Estate_TableTypewriter</li>
+    </fixedBillGiverDefs>
+    <verb>write</verb>
+    <gerund>writing at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+  
+
+  <WorkGiverDef>
+    <defName>DoBillsCookWoodStoveFurnace</defName>
+    <label>cook meals at wood stove furnace</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Cooking</workType>
+    <priorityInType>97</priorityInType>
+    <fixedBillGiverDefs>
+      <li>WoodStoveFurnace</li>
+    </fixedBillGiverDefs>
+    <verb>cook</verb>
+    <gerund>cooking</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+    
+  
+</WorkGivers>

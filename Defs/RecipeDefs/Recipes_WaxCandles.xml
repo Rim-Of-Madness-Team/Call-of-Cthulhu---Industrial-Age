@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RecipeDefs>
+
+  <RecipeDef Name="Jecrell_MakeWax">
+    <defName>Jecrell_MakeWax</defName>
+    <label>make wax</label>
+    <description>renders tallow wax from animal fat</description>
+    <jobString>making wax</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+          </categories>
+        </filter>
+        <count>1.0</count>
+      </li>
+    </ingredients>
+    <products>
+      <Jecrell_Wax>20</Jecrell_Wax>
+    </products>
+    <fixedIngredientFilter>
+      <categories>
+        <li>MeatRaw</li>
+      </categories>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>MeatRaw</li>
+      </categories>
+	  <exceptedThingDefs>
+		<li>Human_Meat</li>
+	  </exceptedThingDefs>		  
+    </defaultIngredientFilter>
+    <workSkill>Cooking</workSkill>
+	<recipeUsers>
+	  <li>ElectricStove</li>
+	  <li>FueledStove</li>
+	  <li>WoodStoveFurnace</li>
+	</recipeUsers>	
+  </RecipeDef>
+  
+</RecipeDefs>

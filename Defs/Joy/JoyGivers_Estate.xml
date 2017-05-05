@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<JoyGiverDefs>
+
+  <JoyGiverDef>
+    <defName>Estate_FreeWriteJG</defName>
+    <giverClass>JoyGiver_InteractBuildingSitAdjacent</giverClass>
+    <baseChance>1.5</baseChance>
+    <thingDefs>
+      <li>Estate_TableTypewriter</li>
+    </thingDefs>
+    <jobDef>Estate_FreeWrite</jobDef>
+    <joyKind>Meditative</joyKind>
+    <requiredCapacities>
+      <li>Sight</li>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </JoyGiverDef>
+
+  <JoyGiverDef>
+    <defName>Estate_AutoWriteJG</defName>
+    <giverClass>JoyGiver_InteractBuildingSitAdjacent</giverClass>
+    <baseChance>1.5</baseChance>
+    <thingDefs>
+      <li>Estate_TableTypewriter</li>
+    </thingDefs>
+    <jobDef>Estate_AutoWrite</jobDef>
+    <joyKind>Meditative</joyKind>
+    <requiredCapacities>
+      <li>Sight</li>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </JoyGiverDef>
+  
+  <JoyGiverDef>
+    <defName>Estate_ListenToGramophoneJG</defName>
+    <giverClass>ArkhamEstate.JoyGiver_ListenToBuilding</giverClass>
+    <baseChance>2</baseChance>
+    <canDoWhileInBed>true</canDoWhileInBed>
+    <thingDefs>
+      <li>Estate_Gramophone</li>
+	  <li>Estate_Radio</li>
+    </thingDefs>
+    <jobDef>ListenToGramophone</jobDef>
+    <joyKind>Passive</joyKind>
+    <requiredCapacities>
+      <li>Hearing</li>
+    </requiredCapacities>
+  </JoyGiverDef>
+
+  <JoyGiverDef>
+    <defName>Estate_PlayAndListenToGramophoneJG</defName>
+    <giverClass>ArkhamEstate.JoyGiver_ListenToBuilding</giverClass>
+    <baseChance>2</baseChance>
+    <canDoWhileInBed>true</canDoWhileInBed>
+    <thingDefs>
+      <li>Estate_Gramophone</li>
+	  <li>Estate_Radio</li>
+    </thingDefs>
+    <jobDef>PlayAndListenToGramophone</jobDef>
+    <joyKind>Passive</joyKind>
+    <requiredCapacities>
+      <li>Hearing</li>
+    </requiredCapacities>
+  </JoyGiverDef>  
+  
+</JoyGiverDefs>
