@@ -43,10 +43,10 @@ namespace ArkhamEstate
         /// <summary>
         /// Do something after the object is spawned
         /// </summary>
-        public override void SpawnSetup(Map map)
+        public override void SpawnSetup(Map map, bool bla)
         {
             // Do the work of the base class (Building)
-            base.SpawnSetup(map);
+            base.SpawnSetup(map, bla);
         }
 
         /// <summary>

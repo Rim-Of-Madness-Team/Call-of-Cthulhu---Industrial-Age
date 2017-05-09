@@ -8,7 +8,7 @@
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>
     <joyGainRate>1</joyGainRate>
-    <joySkill>Research</joySkill>
+    <joySkill>Intellectual</joySkill>
     <joyXpPerTick>0.002</joyXpPerTick>
     <joyKind>Meditative</joyKind>
   </JobDef>
@@ -21,7 +21,7 @@
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>
     <joyGainRate>1</joyGainRate>
-    <joySkill>Research</joySkill>
+    <joySkill>Intellectual</joySkill>
     <joyXpPerTick>0.002</joyXpPerTick>
     <joyKind>Meditative</joyKind>
   </JobDef>

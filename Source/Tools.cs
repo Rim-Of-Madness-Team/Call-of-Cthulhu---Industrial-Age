@@ -63,7 +63,7 @@ namespace RimWorld
 
         public override void PostExposeData()
         {
-            Scribe_Values.LookValue<bool>(ref this.fireOnInt, "fireOn", false, false);
+            Scribe_Values.Look<bool>(ref this.fireOnInt, "fireOn", false, false);
         }
 
     }
@@ -100,7 +100,7 @@ namespace RimWorld
             }
         }
 
-        public override void PostSpawnSetup()
+        public override void PostSpawnSetup(bool bla)
         {
 
             this.fireOverlay = ThingCompUtility.TryGetComp<Comp2FireOverlay>(this.parent);
@@ -156,7 +156,7 @@ namespace RimWorld
         }
 
 
-        public override void PostSpawnSetup()
+        public override void PostSpawnSetup(bool bla)
         {
 
             this.fireOverlay = ThingCompUtility.TryGetComp<Comp3FireOverlay>(this.parent);
@@ -213,7 +213,7 @@ namespace RimWorld
         }
 
 
-        public override void PostSpawnSetup()
+        public override void PostSpawnSetup(bool bla)
         {
 
             this.fireOverlay = ThingCompUtility.TryGetComp<Comp4FireOverlay>(this.parent);

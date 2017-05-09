@@ -109,15 +109,15 @@ namespace ArkhamEstate
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Deep.LookDeep<BillStack>(ref this.billStack, "billStack", new object[]
+            Scribe_Deep.Look<BillStack>(ref this.billStack, "billStack", new object[]
             {
                 this
             });
         }
 
-        public override void SpawnSetup(Map map)
+        public override void SpawnSetup(Map map, bool bla)
         {
-            base.SpawnSetup(map);
+            base.SpawnSetup(map, bla);
             this.heatPusherComp = base.GetComp<CompHeatPusher>();
             this.flickableComp = base.GetComp<CompFlickable>();
             this.glowerComp = base.GetComp<CompGlower>();

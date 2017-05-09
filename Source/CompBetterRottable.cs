@@ -122,12 +122,15 @@ namespace ArkhamEstate
 
         private bool ShouldTakeDessicateDamage()
         {
-            if (this.parent.holdingContainer != null)
+            if (this.parent.holdingOwner != null)
             {
-                Thing thing = this.parent.holdingContainer.owner as Thing;
-                if (thing != null && thing.def.category == ThingCategory.Building && thing.def.building.preventDeterioration)
+                if (this.parent.holdingOwner.Owner != null)
                 {
-                    return false;
+                    Thing thing = this.parent.holdingOwner.Owner as Thing;
+                    if (thing != null && thing.def.category == ThingCategory.Building && thing.def.building.preventDeterioration)
+                    {
+                        return false;
+                    }
                 }
             }
             return true;

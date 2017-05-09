@@ -47,9 +47,9 @@ namespace ArkhamEstate
             }
         }
 
-        public override void SpawnSetup(Map map)
+        public override void SpawnSetup(Map map, bool bla)
         {
-            base.SpawnSetup(map);
+            base.SpawnSetup(map, bla);
             compBreakdownable = this.TryGetComp<CompBreakdownable>();
         }
 
@@ -70,7 +70,7 @@ namespace ArkhamEstate
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_References.LookReference<ThingWithComps_Glower>(ref this.glower, "glower", false);
+            Scribe_References.Look<ThingWithComps_Glower>(ref this.glower, "glower", false);
         }
     }
 }

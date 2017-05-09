@@ -4,13 +4,18 @@ using System.Linq;
 using System.Text;
 using RimWorld;
 using Verse;
+using RimWorld.Planet;
 
 namespace ArkhamEstate
 {
-    class UtilityWorldObject_Tunes : Cthulhu.UtilityWorldObject
+    class WorldComponent_Tunes : WorldComponent
     {
         private bool AreTunesReady = false;
         public List<TuneDef> TuneDefCache = new List<TuneDef>();
+
+        public WorldComponent_Tunes(World world) : base(world)
+        {
+        }
 
         public TuneDef GetCache(TuneDef tune)
         {
@@ -35,6 +40,7 @@ namespace ArkhamEstate
             result = tune;
             return result;
         }
+        
 
 
         public void GenerateTunesList()
@@ -49,18 +55,16 @@ namespace ArkhamEstate
             }
             return;
         }
-        
-        public override void Tick()
+
+        public override void WorldComponentTick()
         {
-            base.Tick();
+            base.WorldComponentTick();
             GenerateTunesList();
-            //Log.Message("UtilityWorldObject Tunes Started");
-            
         }
 
         public override void ExposeData()
         {
-            Scribe_Collections.LookList<TuneDef>(ref this.TuneDefCache, "TuneDefCache", LookMode.Def, new object[0]);
+            Scribe_Collections.Look<TuneDef>(ref this.TuneDefCache, "TuneDefCache", LookMode.Def, new object[0]);
             base.ExposeData();
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {

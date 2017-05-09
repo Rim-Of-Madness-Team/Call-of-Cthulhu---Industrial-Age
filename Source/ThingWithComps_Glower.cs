@@ -50,7 +50,7 @@ namespace ArkhamEstate
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_References.LookReference<Building_StreetLamp>(ref this.master, "master", false);
+            Scribe_References.Look<Building_StreetLamp>(ref this.master, "master", false);
         }
     }
 }

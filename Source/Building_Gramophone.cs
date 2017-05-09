@@ -46,7 +46,7 @@ namespace ArkhamEstate
         private TuneDef nextTuneDef;
         private CompPowerTrader powerTrader;
         private List<TuneDef> playlist = new List<TuneDef>();
-        private UtilityWorldObject_Tunes tuneScape = Cthulhu.UtilityWorldObjectManager.GetUtilityWorldObject<UtilityWorldObject_Tunes>();
+        private WorldComponent_Tunes tuneScape = Find.World.GetComponent<WorldComponent_Tunes>();
         public bool isRadio = false;
         private bool autoPlay = false;
         private int rareTickWorker = 250;
@@ -116,10 +116,10 @@ namespace ArkhamEstate
         /// <summary>
         /// Do something after the object is spawned
         /// </summary>
-        public override void SpawnSetup(Map map)
+        public override void SpawnSetup(Map map, bool flip)
         {
             // Do the work of the base class (Building)
-            base.SpawnSetup(map);
+            base.SpawnSetup(map, flip);
 
             // Get refferences to the components CompPowerTrader and CompGlower
             //SetMusicPlayer();
@@ -133,14 +133,14 @@ namespace ArkhamEstate
         {
             base.ExposeData();
             // Save and load the work variables, so they don't default after loading
-            Scribe_Values.LookValue<bool>(ref isRadio, "isRadio", false);
-            Scribe_Values.LookValue<bool>(ref autoPlay, "autoPlay", false);
-            Scribe_Values.LookValue<State>(ref state, "state", State.off);
-            Scribe_Values.LookValue<int>(ref counter, "counter", 0);
-            Scribe_Defs.LookDef<TuneDef>(ref prevTuneDef, "prevTuneDef");
-            Scribe_Defs.LookDef<TuneDef>(ref currentTuneDef, "currentTuneDef");
-            Scribe_Defs.LookDef<TuneDef>(ref nextTuneDef, "nextTuneDef");
-            Scribe_Collections.LookList<TuneDef>(ref playlist, "playlist", LookMode.Def, new object[0]);
+            Scribe_Values.Look<bool>(ref isRadio, "isRadio", false);
+            Scribe_Values.Look<bool>(ref autoPlay, "autoPlay", false);
+            Scribe_Values.Look<State>(ref state, "state", State.off);
+            Scribe_Values.Look<int>(ref counter, "counter", 0);
+            Scribe_Defs.Look<TuneDef>(ref prevTuneDef, "prevTuneDef");
+            Scribe_Defs.Look<TuneDef>(ref currentTuneDef, "currentTuneDef");
+            Scribe_Defs.Look<TuneDef>(ref nextTuneDef, "nextTuneDef");
+            Scribe_Collections.Look<TuneDef>(ref playlist, "playlist", LookMode.Def, new object[0]);
             
             // Set the old value to the phase value
             stateOld = state;

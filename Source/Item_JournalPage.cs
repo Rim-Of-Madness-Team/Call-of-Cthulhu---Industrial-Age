@@ -16,9 +16,9 @@ namespace ArkhamEstate
         private Pawn owner = null;
         private CompArt artComp;
 
-        public override void SpawnSetup(Map map)
+        public override void SpawnSetup(Map map, bool bla)
         {
-            base.SpawnSetup(map);
+            base.SpawnSetup(map, bla);
             this.artComp = base.GetComp<CompArt>();
             ResolveOwner();
         }
@@ -51,11 +51,11 @@ namespace ArkhamEstate
         {
             base.ExposeData();
             // Save and load the work variables, so they don't default after loading
-            Scribe_Values.LookValue<bool>(ref this.IsBook, "IsBook", false);
-            Scribe_Values.LookValue<bool>(ref this.saveOwner, "saveOwner", false, false);
+            Scribe_Values.Look<bool>(ref this.IsBook, "IsBook", false);
+            Scribe_Values.Look<bool>(ref this.saveOwner, "saveOwner", false, false);
             if (this.saveOwner)
             {
-                Scribe_References.LookReference<Pawn>(ref this.owner, "owner", false);
+                Scribe_References.Look<Pawn>(ref this.owner, "owner", false);
             }
         }
 

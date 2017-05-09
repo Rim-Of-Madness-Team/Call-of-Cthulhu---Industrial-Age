@@ -13,9 +13,9 @@ namespace ArkhamEstate
 
         public float Temp = 0f;
 
-        public override void SpawnSetup(Map map)
+        public override void SpawnSetup(Map map, bool bla)
         {
-            base.SpawnSetup(map);
+            base.SpawnSetup(map, bla);
             this.powerComp = base.GetComp<CompPowerTrader>();
         }
 

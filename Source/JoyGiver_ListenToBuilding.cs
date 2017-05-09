@@ -18,7 +18,7 @@ namespace ArkhamEstate
             }
             if (inBed)
             {
-                Building_Bed layingDownBed = pawn.jobs.curDriver.layingDownBed;
+                Building_Bed layingDownBed = pawn.CurrentBed();
 
                 return ListenBuildingUtility.CanListenFromBed(pawn, layingDownBed, t);
             }
