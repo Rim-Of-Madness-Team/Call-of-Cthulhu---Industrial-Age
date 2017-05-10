@@ -71,7 +71,7 @@ namespace ArkhamEstate
                 }
             }
             string result = stringBuilder.ToString();
-            result.TrimEndNewlines();
+            result = result.TrimEndNewlines();
             return result;
         }
 

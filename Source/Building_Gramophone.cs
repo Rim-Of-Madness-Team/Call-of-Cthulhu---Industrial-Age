@@ -315,7 +315,8 @@ namespace ArkhamEstate
             }
 
             // return the complete string
-            return stringBuilder.ToString();
+            var result = stringBuilder.ToString().TrimEndNewlines();
+            return result;
         }
 
 
