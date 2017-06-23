@@ -5,9 +5,9 @@
 	<author>Jecrell</author>
 	<targetVersion>0.17.0</targetVersion>
 	<description>
-	V1.17.0
+	V1.17.0.1
 	Adds new furniture and appliances to your game from the time period of the late 1800's and early 1900s themed after the industrial era of H.P. Lovecraft's writings.
-	
+
 	Adds the following objects:
 		*Refrigerator
 		*Typewriter
@@ -17,10 +17,10 @@
 		*Street Gas Lamp
 		*Interior Gas Lamp
 		*Wood Stove Furnace
-		
-	Special thanks to Vendan for a refrigeration subclass.	
+
+	Special thanks to Vendan for a refrigeration subclass.
 	Check out his mod, RimFridge!
-		
+
 	Adds the following resources:
 		*Wax (Obtained from meat at cooking tables)</description>
 </ModMetaData>

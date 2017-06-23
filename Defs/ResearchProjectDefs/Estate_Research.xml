@@ -9,6 +9,9 @@
     <tags>
       <li>ClassicStart</li>
     </tags>
+	<researchViewX>0</researchViewX>
+	<researchViewY>0</researchViewY>
+	<tab>Estate_ResearchTab</tab>
   </ResearchProjectDef>
   
   <ResearchProjectDef>
@@ -20,6 +23,9 @@
     <tags>
       <li>ClassicStart</li>
     </tags>
+	<researchViewX>0</researchViewX>
+	<researchViewY>0.5</researchViewY>	
+	<tab>Estate_ResearchTab</tab>
   </ResearchProjectDef>    
   
   <ResearchProjectDef>
@@ -34,6 +40,9 @@
     <tags>
       <li>ClassicStart</li>
     </tags>
+	<researchViewX>0</researchViewX>
+	<researchViewY>1</researchViewY>	
+	<tab>Estate_ResearchTab</tab>	
   </ResearchProjectDef>  
 
 <!--
@@ -57,6 +66,9 @@
     <tags>
       <li>ClassicStart</li>
     </tags>
+	<researchViewX>0</researchViewX>
+	<researchViewY>1.5</researchViewY>
+	<tab>Estate_ResearchTab</tab>	
   </ResearchProjectDef>  
   
   <ResearchProjectDef>
@@ -68,6 +80,9 @@
     <tags>
       <li>ClassicStart</li>
     </tags>
+	<researchViewX>0</researchViewX>
+	<researchViewY>2</researchViewY>
+	<tab>Estate_ResearchTab</tab>	
   </ResearchProjectDef>
   
   <ResearchProjectDef>
@@ -79,9 +94,11 @@
     <tags>
       <li>ClassicStart</li>
     </tags>
+	<researchViewX>0</researchViewX>
+	<researchViewY>2.5</researchViewY>
+	<tab>Estate_ResearchTab</tab>	
   </ResearchProjectDef>
 
-<!--    
   <ResearchProjectDef>
     <defName>Estate_TechMusicMed</defName>
     <label>basic radio</label>
@@ -94,7 +111,10 @@
 	    <prerequisites>
       <li>Estate_TechMusicLow</li>
     </prerequisites>  
+	<researchViewX>1</researchViewX>
+	<researchViewY>2.5</researchViewY>
+	<tab>Estate_ResearchTab</tab>	
   </ResearchProjectDef>
--->
+
 
 </Defs>

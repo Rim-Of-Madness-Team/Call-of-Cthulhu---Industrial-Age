@@ -57,14 +57,12 @@ namespace Cthulhu
         public static bool loadedFactions = false;
 
 
-        public static bool IsMorning(Map map) { return GenLocalDate.HourInteger(map) > 6 && GenLocalDate.HourInteger(map) < 10; }
-        public static bool IsEvening(Map map) { return GenLocalDate.HourInteger(map) > 18 && GenLocalDate.HourInteger(map) < 22; }
-        public static bool IsNight(Map map) { return GenLocalDate.HourInteger(map) > 22; }
-
+        public static bool IsMorning(Map map) =>
+            GenLocalDate.HourInteger(map) > 6 && GenLocalDate.HourInteger(map) < 10; public static bool IsEvening(Map map) => GenLocalDate.HourInteger(map) > 18 && GenLocalDate.HourInteger(map) < 22; public static bool IsNight(Map map) => GenLocalDate.HourInteger(map) > 22;
         public static T GetMod<T>(string s) where T : Mod
         {
             //Call of Cthulhu - Cosmic Horrors
-            var result = default(T);
+            T result = default(T);
             foreach (Mod ResolvedMod in LoadedModManager.ModHandles)
             {
                 if (ResolvedMod.Content.Name == s) result = ResolvedMod as T;
@@ -72,11 +70,11 @@ namespace Cthulhu
             return result;
         }
 
-        public static bool isCosmicHorror(Pawn thing)
+        public static bool IsCosmicHorror(Pawn thing)
         {
             if (!IsCosmicHorrorsLoaded()) return false;
 
-            var type = Type.GetType("CosmicHorror.CosmicHorrorPawn");
+            Type type = Type.GetType("CosmicHorror.CosmicHorrorPawn");
             if (type != null)
             {
                 if (thing.GetType() == type)
@@ -112,18 +110,7 @@ namespace Cthulhu
             if (pawn == null) return false;
             if (pawn.Dead) return false;
             if (pawn.Downed && !allowDowned) return false;
-            List<WorkTags> list = pawn.story.DisabledWorkTags.ToList<WorkTags>();
-            if (list.Count == 0)
-            {
-                return true;
-            }
-            else
-            {
-                foreach (WorkTags current in list)
-                {
-                    if (current == WorkTags.Violent) return false;
-                }
-            }
+            if (pawn.story.WorkTagIsDisabled(WorkTags.Violent)) return false;
             return true;
         }
 
@@ -286,7 +273,7 @@ namespace Cthulhu
             IL_95:
             Log.Error("Tried 100 times to generate age for " + pawn);
             IL_A5:
-            pawn.ageTracker.AgeBiologicalTicks = ((long)((float)num2 * 3600000f) + (long)Rand.Range(0, 3600000));
+            pawn.ageTracker.AgeBiologicalTicks = ((long)(num2 * 3600000f) + Rand.Range(0, 3600000));
             int num3;
             if (Rand.Value < pawn.kindDef.backstoryCryptosleepCommonality)
             {
@@ -309,8 +296,8 @@ namespace Cthulhu
             {
                 num3 = 0;
             }
-            long num5 = (long)GenTicks.TicksAbs - pawn.ageTracker.AgeBiologicalTicks;
-            num5 -= (long)num3 * 3600000L;
+            long num5 = GenTicks.TicksAbs - pawn.ageTracker.AgeBiologicalTicks;
+            num5 -= num3 * 3600000L;
             pawn.ageTracker.BirthAbsTicks = num5;
             if (pawn.ageTracker.AgeBiologicalTicks > pawn.ageTracker.AgeChronologicalTicks)
             {
@@ -328,10 +315,8 @@ namespace Cthulhu
         /// <param name="maxDist"></param>
         /// <param name="pos"></param>
         /// <returns></returns>
-        public static bool TryFindSpawnCell(ThingDef def, IntVec3 nearLoc, Map map, int maxDist, out IntVec3 pos)
-        {
-            ///Find a random cell.
-            return CellFinder.TryFindRandomCellNear(nearLoc, map, maxDist, delegate (IntVec3 x)
+        public static bool TryFindSpawnCell(ThingDef def, IntVec3 nearLoc, Map map, int maxDist, out IntVec3 pos) =>
+            CellFinder.TryFindRandomCellNear(nearLoc, map, maxDist, delegate (IntVec3 x)
             {
                 ///Check if the entire area is safe based on the size of the object definition.
                 foreach (IntVec3 current in GenAdj.OccupiedRect(x, Rot4.North, new IntVec2(def.size.x + 2, def.size.z + 2)))
@@ -353,10 +338,12 @@ namespace Cthulhu
                     {
                         foreach (Pawn colonist in map.mapPawns.FreeColonistsSpawned)
                         {
-                            if (!colonist.CanReach(current + def.interactionCellOffset, PathEndMode.ClosestTouch, Danger.Deadly)) intCanBeReached = false;
+                            if (!colonist.CanReach(current + def.interactionCellOffset, PathEndMode.ClosestTouch, Danger.Deadly))
+                                intCanBeReached = false;
                         }
                     }
-                    if (!intCanBeReached) return false;
+                    if (!intCanBeReached)
+                        return false;
                     //
 
                     //Don't wipe existing objets...
@@ -372,7 +359,6 @@ namespace Cthulhu
                 }
                 return true;
             }, out pos);
-        }
 
         public static BodyPartRecord GetHeart(HediffSet set)
         {
@@ -483,7 +469,7 @@ namespace Cthulhu
         public static void ChangeResearchProgress(ResearchProjectDef projectDef, float progressValue, bool deselectCurrentResearch = false)
         {
             FieldInfo researchProgressInfo = typeof(ResearchManager).GetField("progress", BindingFlags.Instance | BindingFlags.NonPublic);
-            var researchProgress = researchProgressInfo.GetValue(Find.ResearchManager);
+            object researchProgress = researchProgressInfo.GetValue(Find.ResearchManager);
             PropertyInfo itemPropertyInfo = researchProgress.GetType().GetProperty("Item");
             itemPropertyInfo.SetValue(researchProgress, progressValue, new[] { projectDef });
             if (deselectCurrentResearch) Find.ResearchManager.currentProj = null;
@@ -526,23 +512,31 @@ namespace Cthulhu
                 });
             }
         }
+
+
+        public static bool HasSanityLoss(Pawn pawn)
+        {
+            string sanityLossDef = (!IsCosmicHorrorsLoaded()) ? AltSanityLossDef : SanityLossDef;
+            var pawnSanityHediff = pawn.health.hediffSet.GetFirstHediffOfDef(DefDatabase<HediffDef>.GetNamed(sanityLossDef));
+
+            return pawnSanityHediff != null;
+        }
+
         public static void ApplySanityLoss(Pawn pawn, float sanityLoss = 0.3f, float sanityLossMax = 1.0f)
         {
             if (pawn == null) return;
-            string sanityLossDef;
-            sanityLossDef = SanityLossDef;
-            if (!IsCosmicHorrorsLoaded()) sanityLossDef = AltSanityLossDef;
-            Hediff pawnSanityHediff = pawn.health.hediffSet.GetFirstHediffOfDef(DefDatabase<HediffDef>.GetNamed(sanityLossDef));
-            float trueMax = sanityLossMax;
+            string sanityLossDef = (!IsCosmicHorrorsLoaded()) ? AltSanityLossDef : SanityLossDef;
+
+            var pawnSanityHediff = pawn.health.hediffSet.GetFirstHediffOfDef(DefDatabase<HediffDef>.GetNamed(sanityLossDef));
             if (pawnSanityHediff != null)
             {
-                if (pawnSanityHediff.Severity > trueMax) trueMax = pawnSanityHediff.Severity;
+                if (pawnSanityHediff.Severity > sanityLossMax) sanityLossMax = pawnSanityHediff.Severity;
                 float result = pawnSanityHediff.Severity;
                 result += sanityLoss;
-                result = Mathf.Clamp(result, 0.0f, trueMax);
+                result = Mathf.Clamp(result, 0.0f, sanityLossMax);
                 pawnSanityHediff.Severity = result;
             }
-            else
+            else if (sanityLoss > 0)
             {
                 Hediff sanityLossHediff = HediffMaker.MakeHediff(DefDatabase<HediffDef>.GetNamed(sanityLossDef), pawn, null);
 
@@ -552,15 +546,10 @@ namespace Cthulhu
             }
         }
 
-        public static int GetSocialSkill(Pawn p)
-        {
-            return p.skills.GetSkill(SkillDefOf.Social).Level;
-        }
 
-        public static int GetResearchSkill(Pawn p)
-        {
-            return p.skills.GetSkill(SkillDefOf.Intellectual).Level;
-        }
+        public static int GetSocialSkill(Pawn p) => p.skills.GetSkill(SkillDefOf.Social).Level;
+
+        public static int GetResearchSkill(Pawn p) => p.skills.GetSkill(SkillDefOf.Intellectual).Level;
 
         public static bool IsCosmicHorrorsLoaded()
         {
@@ -659,13 +648,7 @@ namespace Cthulhu
             return;
         }
 
-        public static string Prefix
-        {
-            get
-            {
-                return ModProps.main + " :: " + ModProps.mod + " " + ModProps.version + " :: ";
-            }
-        }
+        public static string Prefix => ModProps.main + " :: " + ModProps.mod + " " + ModProps.version + " :: ";
 
         public static void DebugReport(string x)
         {
@@ -675,10 +658,7 @@ namespace Cthulhu
             }
         }
 
-        public static void ErrorReport(string x)
-        {
-            Log.Error(Prefix + x);
-        }
+        public static void ErrorReport(string x) => Log.Error(Prefix + x);
 
 
     }

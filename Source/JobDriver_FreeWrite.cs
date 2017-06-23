@@ -16,7 +16,6 @@ namespace ArkhamEstate
     public class JobDriver_FreeWrite : JobDriver
     {
         private HediffDef sanityLossHediff;
-        private string sanityLossString = "CosmicHorror_SanityLoss";
         private float sanityRestoreRate = 0.1f; 
 
         [DebuggerHidden]
@@ -45,11 +44,10 @@ namespace ArkhamEstate
                 {
                     try
                     {
-                        sanityLossHediff = HediffDef.Named(sanityLossString);
-                        if (pawn.health.hediffSet.HasHediff(sanityLossHediff))
+                        if (Cthulhu.Utility.HasSanityLoss(this.pawn))
                         {
-                            HealthUtility.AdjustSeverity(this.pawn, sanityLossHediff, -sanityRestoreRate);
-                            Messages.Message(this.pawn.ToString() + " has restored some sanity using the " + this.TargetA.Thing.def.label + ".", new TargetInfo(this.pawn.Position,this.pawn.Map), MessageSound.Standard);
+                            Cthulhu.Utility.ApplySanityLoss(this.pawn, -sanityRestoreRate, 1);
+                            Messages.Message(this.pawn.ToString() + " has restored some sanity using the " + this.TargetA.Thing.def.label + ".", new TargetInfo(this.pawn.Position, this.pawn.Map), MessageSound.Standard);
                         }
                     }
                     catch

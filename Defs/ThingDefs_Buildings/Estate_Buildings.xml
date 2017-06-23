@@ -369,7 +369,7 @@
       <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>	  
     </statBases>
     <researchPrerequisites>
-      <li>Estate_TechMusicLow</li>
+      <li>Estate_TechMusicMed</li>
     </researchPrerequisites>
 	<comps>
       <li Class="CompProperties_Forbiddable" />	  	
