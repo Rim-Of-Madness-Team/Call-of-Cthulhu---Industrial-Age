@@ -19,6 +19,11 @@ namespace ArkhamEstate
     public class JobDriver_AutoPlayListenGramophone : JobDriver
     {
 
+        public override bool TryMakePreToilReservations()
+        {
+            return true;
+        }
+
         public Building_Gramophone Gramophone
         {
             get
@@ -66,7 +71,7 @@ namespace ArkhamEstate
             //Wait a minute, is this thing already playing?
             if (!Gramophone.IsOn())
             {
-                if (this.CurJob.targetA.Thing is Building_Radio) report = "playing the radio.";
+                if (this.job.targetA.Thing is Building_Radio) report = "playing the radio.";
 
                 // Toil 1:
                 // Reserve Target (TargetPack A is selected (It has the info where the target cell is))
@@ -82,7 +87,7 @@ namespace ArkhamEstate
                 wind.defaultCompleteMode = ToilCompleteMode.Delay;
                 wind.defaultDuration = this.Duration;
                 wind.WithProgressBarToilDelay(TargetIndex.A, false, -0.5f);
-                if (this.CurJob.targetA.Thing is Building_Radio)
+                if (this.job.targetA.Thing is Building_Radio)
                 {
                     wind.PlaySustainerOrSound(DefDatabase<SoundDef>.GetNamed("Estate_RadioSeeking"));
                 }
@@ -133,14 +138,14 @@ namespace ArkhamEstate
             toil.AddPreTickAction(delegate
             {
                 this.ListenTickAction();
-                if (this.CurJob.targetA.Thing is Building_Radio) report = "Listening to the radio.";
+                if (this.job.targetA.Thing is Building_Radio) report = "Listening to the radio.";
             });
             toil.AddFinishAction(delegate
             {
                 JoyUtility.TryGainRecRoomThought(this.pawn);
             });
             toil.defaultCompleteMode = ToilCompleteMode.Delay;
-            toil.defaultDuration = base.CurJob.def.joyDuration;
+            toil.defaultDuration = base.job.def.joyDuration;
             yield return toil;
             yield break;
         }
@@ -152,12 +157,13 @@ namespace ArkhamEstate
                 base.EndJobWith(JobCondition.Incompletable);
                 return;
             }
-            this.pawn.Drawer.rotator.FaceCell(base.TargetA.Cell);
+            this.pawn.rotationTracker.FaceCell(base.TargetA.Cell);
             this.pawn.GainComfortFromCellIfPossible();
             float statValue = base.TargetThingA.GetStatValue(StatDefOf.EntertainmentStrengthFactor, true);
             float extraJoyGainFactor = statValue;
             JoyUtility.JoyTickCheckEnd(this.pawn, JoyTickFullJoyAction.EndJob, extraJoyGainFactor);
         }
+
     }
 }
 

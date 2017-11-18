@@ -15,7 +15,10 @@ namespace ArkhamEstate
 {
     public class JobDriver_ListenToGramophone : JobDriver
     {
-
+        public override bool TryMakePreToilReservations()
+        {
+            return true;
+        }
         private string report = "";
         public override string GetReport()
         {
@@ -33,7 +36,7 @@ namespace ArkhamEstate
             
             this.EndOnDespawnedOrNull(TargetIndex.A, JobCondition.Incompletable);   //If we don't exist, exit.
 
-            if (this.CurJob.targetA.Thing is Building_Radio) report = "Listening to the radio.";
+            if (this.job.targetA.Thing is Building_Radio) report = "Listening to the radio.";
 
 
             //yield return Toils_Reserve.Reserve(TargetIndex.A, base.CurJob.def.joyMaxParticipants); //Can we reserve?
@@ -64,7 +67,7 @@ namespace ArkhamEstate
             }
             toil.AddPreTickAction(delegate
             {
-                if (this.CurJob.targetA.Thing is Building_Radio) report = "Listening to the radio.";
+                if (this.job.targetA.Thing is Building_Radio) report = "Listening to the radio.";
                 this.ListenTickAction();
             });
             toil.AddFinishAction(delegate
@@ -72,7 +75,7 @@ namespace ArkhamEstate
                 JoyUtility.TryGainRecRoomThought(this.pawn);
             });
             toil.defaultCompleteMode = ToilCompleteMode.Delay;
-            toil.defaultDuration = base.CurJob.def.joyDuration * 2;
+            toil.defaultDuration = base.job.def.joyDuration * 2;
             yield return toil;
             yield break;
         }
@@ -85,11 +88,12 @@ namespace ArkhamEstate
                 base.EndJobWith(JobCondition.Incompletable);
                 return;
             }
-            this.pawn.Drawer.rotator.FaceCell(base.TargetA.Cell);
+            this.pawn.rotationTracker.FaceCell(base.TargetA.Cell);
             this.pawn.GainComfortFromCellIfPossible();
             float statValue = base.TargetThingA.GetStatValue(StatDefOf.EntertainmentStrengthFactor, true);
             float extraJoyGainFactor = statValue;
             JoyUtility.JoyTickCheckEnd(this.pawn, JoyTickFullJoyAction.EndJob, extraJoyGainFactor);
         }
+
     }
 }

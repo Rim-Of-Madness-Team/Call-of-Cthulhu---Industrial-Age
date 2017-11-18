@@ -291,7 +291,8 @@ namespace ArkhamEstate
             StringBuilder stringBuilder = new StringBuilder();
 
             // Add the inspections string from the base
-            stringBuilder.Append(base.GetInspectString());
+            if (base.GetInspectString() != "")
+                stringBuilder.Append(base.GetInspectString());
 
             // Add your own strings (caution: string shouldn't be more than 5 lines (including base)!)
             //stringBuilder.Append("Power output: " + powerComp.powerOutput + " W");

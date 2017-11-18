@@ -100,7 +100,7 @@ namespace ArkhamEstate
                     Messages.Message("MessageRottedAwayInStorage".Translate(new object[]
                     {
                 this.parent.Label
-                    }).CapitalizeFirst(), MessageSound.Silent);
+                    }).CapitalizeFirst(), MessageTypeDefOf.SilentInput); // MessageSound.Silent);
                     LessonAutoActivator.TeachOpportunity(ConceptDefOf.SpoilageAndFreezers, OpportunityType.GoodToKnow);
                 }
                 this.parent.Destroy(DestroyMode.Vanish);
@@ -127,7 +127,7 @@ namespace ArkhamEstate
                 if (this.parent.holdingOwner.Owner != null)
                 {
                     Thing thing = this.parent.holdingOwner.Owner as Thing;
-                    if (thing != null && thing.def.category == ThingCategory.Building && thing.def.building.preventDeterioration)
+                    if (thing != null && thing.def.category == ThingCategory.Building)
                     {
                         return false;
                     }

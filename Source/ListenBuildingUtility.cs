@@ -31,7 +31,7 @@ namespace ArkhamEstate
                         flag = true;
                     }
                 }
-                else if (!current.IsForbidden(pawn) && pawn.CanReserve(current, 1) && !pawn.Map.pawnDestinationManager.DestinationIsReserved(current, pawn))
+                else if (!current.IsForbidden(pawn) && pawn.CanReserve(current, 1))
                 {
                     flag = true;
                 }

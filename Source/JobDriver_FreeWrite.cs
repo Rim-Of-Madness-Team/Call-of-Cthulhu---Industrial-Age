@@ -16,13 +16,18 @@ namespace ArkhamEstate
     public class JobDriver_FreeWrite : JobDriver
     {
         private HediffDef sanityLossHediff;
-        private float sanityRestoreRate = 0.1f; 
+        private float sanityRestoreRate = 0.1f;
+
+        public override bool TryMakePreToilReservations()
+        {
+            return true;
+        }
 
         [DebuggerHidden]
         protected override IEnumerable<Toil> MakeNewToils()
         {
             this.EndOnDespawnedOrNull(TargetIndex.A, JobCondition.Incompletable);
-            yield return Toils_Reserve.Reserve(TargetIndex.A, base.CurJob.def.joyMaxParticipants);
+            yield return Toils_Reserve.Reserve(TargetIndex.A, base.job.def.joyMaxParticipants);
             if (this.TargetB != null)
                 yield return Toils_Reserve.Reserve(TargetIndex.B, 1);
             yield return Toils_Goto.GotoThing(TargetIndex.B, PathEndMode.OnCell);
@@ -30,14 +35,14 @@ namespace ArkhamEstate
             toil.PlaySustainerOrSound(DefDatabase<SoundDef>.GetNamed("Estate_SoundManualTypewriter"));
             toil.tickAction = delegate
             {
-                this.pawn.Drawer.rotator.FaceCell(this.TargetA.Cell);
+                this.pawn.rotationTracker.FaceCell(this.TargetA.Cell);
                 this.pawn.GainComfortFromCellIfPossible();
                 float statValue = this.TargetThingA.GetStatValue(StatDefOf.EntertainmentStrengthFactor, true);
                 float extraJoyGainFactor = statValue;
                 JoyUtility.JoyTickCheckEnd(this.pawn, JoyTickFullJoyAction.EndJob, extraJoyGainFactor);
             };
             toil.defaultCompleteMode = ToilCompleteMode.Delay;
-            toil.defaultDuration = base.CurJob.def.joyDuration;
+            toil.defaultDuration = base.job.def.joyDuration;
             toil.AddFinishAction(delegate
             {
                 if (Cthulhu.Utility.IsCosmicHorrorsLoaded())
@@ -47,7 +52,7 @@ namespace ArkhamEstate
                         if (Cthulhu.Utility.HasSanityLoss(this.pawn))
                         {
                             Cthulhu.Utility.ApplySanityLoss(this.pawn, -sanityRestoreRate, 1);
-                            Messages.Message(this.pawn.ToString() + " has restored some sanity using the " + this.TargetA.Thing.def.label + ".", new TargetInfo(this.pawn.Position, this.pawn.Map), MessageSound.Standard);
+                            Messages.Message(this.pawn.ToString() + " has restored some sanity using the " + this.TargetA.Thing.def.label + ".", new TargetInfo(this.pawn.Position, this.pawn.Map), MessageTypeDefOf.NeutralEvent);// .Standard);
                         }
                     }
                     catch

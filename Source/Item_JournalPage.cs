@@ -51,6 +51,7 @@ namespace ArkhamEstate
         {
             base.ExposeData();
             // Save and load the work variables, so they don't default after loading
+
             Scribe_Values.Look<bool>(ref this.IsBook, "IsBook", false);
             Scribe_Values.Look<bool>(ref this.saveOwner, "saveOwner", false, false);
             if (this.saveOwner)

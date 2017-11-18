@@ -19,6 +19,11 @@ namespace ArkhamEstate
     public class JobDriver_TurnOffGramophone : JobDriver
     {
 
+        public override bool TryMakePreToilReservations()
+        {
+            return true;
+        }
+
         private string report = "";
         public override string GetReport()
         {
@@ -35,7 +40,7 @@ namespace ArkhamEstate
             //Check it out. Can we go there?
             this.FailOnDespawnedNullOrForbidden(TargetIndex.A);
 
-            if (this.CurJob.targetA.Thing is Building_Radio) report = "Turning off radio."; 
+            if (this.job.targetA.Thing is Building_Radio) report = "Turning off radio."; 
 
             // Toil 1:
             // Reserve Target (TargetPack A is selected (It has the info where the target cell is))
@@ -52,7 +57,7 @@ namespace ArkhamEstate
             toilStopMusic.defaultCompleteMode = ToilCompleteMode.Instant;
             toilStopMusic.initAction = delegate
             {
-                Building_Gramophone gramophone = this.CurJob.targetA.Thing as Building_Gramophone;
+                Building_Gramophone gramophone = this.job.targetA.Thing as Building_Gramophone;
                 gramophone.StopMusic();
             };
             yield return toilStopMusic;

@@ -8,7 +8,8 @@ namespace ArkhamEstate
     {
         public override void DrawGhost(ThingDef def, IntVec3 center, Rot4 rot)
         {
-            GenDraw.DrawFieldEdges(Building_Gramophone.ListenableCellsAround(center, Map));
+            Map visibleMap = Find.VisibleMap;
+            GenDraw.DrawFieldEdges(Building_Gramophone.ListenableCellsAround(center, visibleMap));
         }
     }
 }

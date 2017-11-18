@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\Call-of-Cthulhu---Cults\Assemblies\0Harmony.dll</HintPath>
+    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\RimWorldWin_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
@@ -49,16 +52,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Building_Bookcase.cs" />
     <Compile Include="Building_Radio.cs" />
+    <Compile Include="Building_InternalStorage.cs" />
     <Compile Include="Building_StreetLamp.cs" />
     <Compile Include="Building_Woodstove.cs" />
     <Compile Include="CompBetterRottable.cs" />
     <Compile Include="Building_Gramophone.cs" />
     <Compile Include="Building_Refrigerator.cs" />
     <Compile Include="Building_Typewriter.cs" />
+    <Compile Include="CompStorageGraphic.cs" />
     <Compile Include="CompHeatPusherRefuelable.cs" />
+    <Compile Include="CompProperties_StorageGraphic.cs" />
     <Compile Include="CthulhuUtility.cs" />
+    <Compile Include="Graphic_CustomFlicker.cs" />
+    <Compile Include="HarmonyPatches.cs" />
+    <Compile Include="ITab_Inventory.cs" />
     <Compile Include="JobDriver_AutoPlayListenGramophone.cs" />
+    <Compile Include="JobDriver_ReadABook.cs" />
+    <Compile Include="JobDriver_ReturnBook.cs" />
+    <Compile Include="JoyGiver_ReadABook.cs" />
+    <Compile Include="RoomRoleWorker_Library.cs" />
+    <Compile Include="TexButton.cs" />
+    <Compile Include="ThingBook.cs" />
     <Compile Include="ThingWithComps_Glower.cs" />
     <Compile Include="Tools.cs" />
     <Compile Include="Item_JournalPage.cs" />
@@ -72,6 +88,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TunesDef.cs" />
     <Compile Include="UtilityWorldObject.cs" />
+    <Compile Include="WorkGiver_ReturnBooks.cs" />
     <Compile Include="WorldComponent_ArkhamEstate.cs" />
     <Compile Include="WorldComponent_Tunes.cs" />
   </ItemGroup>

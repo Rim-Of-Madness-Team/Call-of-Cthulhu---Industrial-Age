@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<WorkGivers>
+<Defs>
+
+
+<WorkGiverDef>
+	<defName>Estate_ReturnBooks</defName>
+	<label>return books</label>
+	<giverClass>ArkhamEstate.WorkGiver_ReturnBooks</giverClass>
+	<workType>Hauling</workType>
+	<verb>return</verb>
+	<gerund>returning</gerund>
+	<priorityInType>70</priorityInType>
+	<requiredCapacities>
+		<li>Manipulation</li>
+	</requiredCapacities>
+</WorkGiverDef>
+
 
 
   <WorkGiverDef>
@@ -38,4 +53,4 @@
   </WorkGiverDef>
     
   
-</WorkGivers>
+</Defs>

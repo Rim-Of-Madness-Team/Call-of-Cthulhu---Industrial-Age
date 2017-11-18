@@ -7,7 +7,7 @@ using RimWorld;
 
 namespace ArkhamEstate
 {
-    public class Building_Refrigerator : Building_Storage
+    public class Building_Refrigerator : RimWorld.Building_Storage
     {
         public CompPowerTrader powerComp;
 

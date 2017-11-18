@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <Estate_Inventory>Inventory</Estate_Inventory>
+  <Estate_XSlotsForBooks>Can hold a total of {0} books</Estate_XSlotsForBooks>
+  <Estate_BookTitle>{0} by {1}</Estate_BookTitle>
+  <Estate_RetrieveBook>Retrieve Book</Estate_RetrieveBook>
+  <Estate_RetrieveBookDesc>Find and remove a particular book from the bookcase.</Estate_RetrieveBookDesc>
+  <Estate_ContainsXBooks>Contains {0} books</Estate_ContainsXBooks>
+</LanguageData>

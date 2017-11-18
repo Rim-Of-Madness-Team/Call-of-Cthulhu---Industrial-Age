@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ThingDefs>
+<Defs>
 
 
   <ThingDef Name="EstateBuildingBase" Abstract="True">
@@ -52,7 +52,7 @@
       <MaxHitPoints>110</MaxHitPoints>
       <WorkToBuild>2500</WorkToBuild>
       <Flammability>0</Flammability>
-	  <Beauty>15</Beauty>
+	  <Beauty>10</Beauty>
       <Mass>4.0</Mass>	  
     </statBases>
     <selectable>true</selectable>
@@ -104,6 +104,124 @@
     <storedConceptLearnOpportunity>Jecrell_Wax</storedConceptLearnOpportunity>	
   </ThingDef>
 
+    <ThingDef ParentName="EstateBuildingBase">
+    <defName>Jecrell_ChandelierRoyal</defName>
+    <label>royal chandelier</label>
+    <description>A lavish metal or stone ceiling mount for wax candles to light an area. Can be automatically refueled with wax made from animal fats at a cooking station. Produces a very small amount of heat.</description>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Building/Misc/Chandelier/Jecrell_RoyalChandelier</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <shaderType>CutoutComplex</shaderType>	  
+      <damageData>
+        <rect>(0.35,0.35,0.3,0.3)</rect>
+      </damageData>
+	  <drawSize>2.0</drawSize>
+    </graphicData>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <researchPrerequisites>
+      <li>Estate_TechCandleLights</li>
+    </researchPrerequisites>		
+    <costStuffCount>200</costStuffCount>	
+    <rotatable>false</rotatable>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <passability>Standable</passability>
+	<pathCost>8</pathCost>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <fillPercent>0.15</fillPercent>
+	<size>(2,2)</size>
+	<building>
+	  <isEdifice>false</isEdifice>
+	</building>
+    <statBases>
+      <MaxHitPoints>110</MaxHitPoints>
+      <WorkToBuild>3500</WorkToBuild>
+      <Flammability>0</Flammability>
+	  <Beauty>16</Beauty>
+      <Mass>4.0</Mass>	  
+    </statBases>
+    <selectable>true</selectable>
+    <costList>
+      <Jecrell_Wax>20</Jecrell_Wax>
+    </costList>
+    <soundImpactDefault>BulletImpactGround</soundImpactDefault>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <comps>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>0.5</fuelConsumptionRate>
+        <fuelCapacity>20.0</fuelCapacity>
+        <fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>
+        <fuelFilter>
+          <thingDefs>
+            <li>Jecrell_Wax</li>
+          </thingDefs>
+        </fuelFilter>
+        <destroyOnNoFuel>false</destroyOnNoFuel>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>10</glowRadius>
+        <glowColor>(252,187,113,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <heatPerSecond>0.5</heatPerSecond>
+        <heatPushMaxTemperature>23</heatPushMaxTemperature>
+      </li>
+      <li Class="CompOverlays.CompProperties_Overlays">
+        <overlays>
+		  <li>
+			<graphicData>
+			  <texPath>Things/Special/Fire</texPath>
+			  <graphicClass>ArkhamEstate.Graphic_CustomFlicker</graphicClass>
+			  <shaderType>TransparentPostLight</shaderType>
+			  <drawSize>0.27</drawSize>
+			</graphicData>
+			<offset>(-0.51,0.1,-0.1)</offset>
+		  </li>
+		  <li>
+			<graphicData>
+			  <texPath>Things/Special/Fire</texPath>
+			  <graphicClass>ArkhamEstate.Graphic_CustomFlicker</graphicClass>
+			  <shaderType>TransparentPostLight</shaderType>
+			  <drawSize>0.27</drawSize>
+			</graphicData>
+			<offset>(-0.31,0.1,-0.05)</offset>
+		  </li>
+		  <li>
+			<graphicData>
+			  <texPath>Things/Special/Fire</texPath>
+			  <graphicClass>ArkhamEstate.Graphic_CustomFlicker</graphicClass>
+			  <shaderType>TransparentPostLight</shaderType>
+			  <drawSize>0.27</drawSize>
+			</graphicData>
+			<offset>(0.31,0.1,-0.05)</offset>
+		  </li>
+		  <li>
+			<graphicData>
+			  <texPath>Things/Special/Fire</texPath>
+			  <graphicClass>ArkhamEstate.Graphic_CustomFlicker</graphicClass>
+			  <shaderType>TransparentPostLight</shaderType>
+			  <drawSize>0.27</drawSize>
+			</graphicData>
+			<offset>(0.5,0.1,-0.1)</offset>
+		  </li>
+		</overlays>
+      </li>
+    </comps>
+	<placeWorkers>
+      <li>PlaceWorker_IsUnderRoof</li>
+      <li>PlaceWorker_Heater</li>
+    </placeWorkers>
+    <designationCategory>Furniture</designationCategory>
+    <storedConceptLearnOpportunity>Jecrell_Wax</storedConceptLearnOpportunity>	
+  </ThingDef>
+  
 
   <ThingDef ParentName="EstateBuildingBase">
     <defName>Jecrell_Candelabra</defName>
@@ -189,12 +307,97 @@
   </ThingDef>
   
 
+  <ThingDef ParentName="EstateBuildingBase">
+    <defName>Jecrell_Bookcase</defName>
+    <label>bookcase</label>
+	<thingClass>ArkhamEstate.Building_Bookcase</thingClass>
+    <description>Used to hold and catalog books.</description>
+	<iconDrawScale>2</iconDrawScale>
+    <graphicData>
+      <texPath>Building/Production/LibraryBookcase/Jecrell_Bookcase</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+	  <drawSize>3</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <rotatable>true</rotatable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>10000</WorkToBuild>
+      <Mass>20</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>5</Beauty>
+      <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
+    </statBases>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>90</costStuffCount>
+    <pathCost>70</pathCost>
+    <passability>PassThroughOnly</passability>
+    <designationCategory>Joy</designationCategory>
+    <designationHotKey>Misc2</designationHotKey>
+	<comps>
+	  <li Class="CompProperties_RoomIdentifier">
+		<roomStat>Impressiveness</roomStat>
+	  </li>
+	  <li Class="ArkhamEstate.CompProperties_StorageGraphic">
+	    <graphicEmpty>
+		  <texPath>Building/Production/LibraryBookcase/Jecrell_BookcaseEmpty</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		  <drawSize>3</drawSize>
+	    </graphicEmpty>
+	    <graphicSparse>
+		  <texPath>Building/Production/LibraryBookcase/Jecrell_BookcaseSparse</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		  <drawSize>3</drawSize>
+	    </graphicSparse>
+	    <graphicFull>
+		  <texPath>Building/Production/LibraryBookcase/Jecrell_Bookcase  </texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		  <drawSize>3</drawSize>
+	    </graphicFull>
+	    <countSparseThreshhold>1</countSparseThreshhold>
+	    <countFullCapacity>30</countFullCapacity>
+	  </li>
+	</comps>
+	<building>
+      <isJoySource>true</isJoySource>
+	  <ai_chillDestination>false</ai_chillDestination>
+      <isInert>true</isInert>
+      <preventDeteriorationInside>true</preventDeteriorationInside>
+      <fixedStorageSettings>
+        <filter>
+          <categories>
+            <li>Estate_Books</li>
+          </categories>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <filter>
+          <categories>
+            <li>Estate_Books</li>
+          </categories>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+	  <li>ArkhamEstate.ITab_Inventory</li>
+    </inspectorTabs>
+  </ThingDef>
 
   <ThingDef ParentName="EstateBenchBase">
-    <DefName>Estate_TableTypewriter</DefName>
+    <defName>Estate_TableTypewriter</defName>
     <label>typewriting table</label>
 	<thingClass>ArkhamEstate.Building_Typewriter</thingClass>	
-    <Description>A writer's bench equipped with a typewriter.</Description> 
+    <description>A writer's bench equipped with a typewriter.</description> 
 	<graphicData>
       <texPath>Building/Production/TypewriterTable/Jecrell_TypewriterTable</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -208,9 +411,9 @@
       </damageData>
     </graphicData>
     <defaultPlacingRot>South</defaultPlacingRot>	
-    <CostList>
+    <costList>
       <Steel>50</Steel>
-    </CostList>
+    </costList>
     <stuffCategories>
       <li>Metallic</li>
       <li>Woody</li>
@@ -218,7 +421,7 @@
     </stuffCategories>
     <costStuffCount>75</costStuffCount>
 	<minifiedDef>MinifiedFurniture</minifiedDef>
-    <AltitudeLayer>Building</AltitudeLayer>
+    <altitudeLayer>Building</altitudeLayer>
     <socialPropernessMatters>true</socialPropernessMatters>	
     <fillPercent>0.5</fillPercent>
     <useHitPoints>True</useHitPoints>
@@ -233,9 +436,9 @@
     <researchPrerequisites>
       <li>Estate_TechTypewriting</li>
     </researchPrerequisites>	
-    <Size>(3,1)</Size>
-    <DesignationCategory>Joy</DesignationCategory>
-    <Passability>PassThroughOnly</Passability>
+    <size>(3,1)</size>
+    <designationCategory>Joy</designationCategory>
+    <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
     <hasInteractionCell>True</hasInteractionCell>
     <interactionCellOffset>(0,0,1)</interactionCellOffset>
@@ -635,11 +838,11 @@
       <li>Estate_TechWoodStoveFurnace</li>
     </researchPrerequisites>	 	
     <selectable>true</selectable>
-	<Size>(1,1)</Size>
-    <CostList>
+	<size>(1,1)</size>
+    <costList>
       <Steel>70</Steel>
       <Component>1</Component>
-    </CostList>
+    </costList>
 	<minifiedDef>MinifiedFurniture</minifiedDef>	
     <hasInteractionCell>True</hasInteractionCell>
     <interactionCellOffset>(0,0,1)</interactionCellOffset>	
@@ -716,7 +919,6 @@
     <fillPercent>0.5</fillPercent>
     <pathCost>70</pathCost>
     <building>	
-	  <preventDeterioration>true</preventDeterioration>
       <fixedStorageSettings>
         <priority>Important</priority>
         <filter>
@@ -756,6 +958,7 @@
     </comps>	
     <inspectorTabs>
       <li>ITab_Storage</li>
+	  <li>ArkhamEstate.ITab_Inventory</li>
     </inspectorTabs>
     <statBases>
       <Mass>80</Mass>		
@@ -777,4 +980,4 @@
   </ThingDef>
 
   
-</ThingDefs>
+</Defs>

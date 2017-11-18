@@ -18,7 +18,12 @@ namespace ArkhamEstate
 
     public class JobDriver_PlayGramophone : JobDriver
     {
-        
+
+        public override bool TryMakePreToilReservations()
+        {
+            return true;
+        }
+
         //How long will it take to wind up the gramophone?
         private int duration = 400;
         protected int Duration
@@ -46,7 +51,7 @@ namespace ArkhamEstate
             //Check it out. Can we go there?
             this.FailOnDespawnedNullOrForbidden(TargetIndex.A);
 
-            if (this.CurJob.targetA.Thing is Building_Radio) report = "Playing the radio.";
+            if (this.job.targetA.Thing is Building_Radio) report = "Playing the radio.";
 
             // Toil 1:
             // Reserve Target (TargetPack A is selected (It has the info where the target cell is))
@@ -62,11 +67,11 @@ namespace ArkhamEstate
             toil.defaultCompleteMode = ToilCompleteMode.Delay;
             toil.defaultDuration = this.Duration;
             toil.WithProgressBarToilDelay(TargetIndex.A, false, -0.5f);
-            if (this.CurJob.targetA.Thing is Building_Radio) toil.PlaySustainerOrSound(DefDatabase<SoundDef>.GetNamed("Estate_RadioSeeking"));
+            if (this.job.targetA.Thing is Building_Radio) toil.PlaySustainerOrSound(DefDatabase<SoundDef>.GetNamed("Estate_RadioSeeking"));
             else toil.PlaySustainerOrSound(DefDatabase<SoundDef>.GetNamed("Estate_GramophoneWindup"));
             toil.initAction = delegate
             {
-                Building_Gramophone gramophone = this.CurJob.targetA.Thing as Building_Gramophone;
+                Building_Gramophone gramophone = this.job.targetA.Thing as Building_Gramophone;
                 gramophone.StopMusic();
             };
             yield return toil;
@@ -78,13 +83,14 @@ namespace ArkhamEstate
             toilPlayMusic.defaultCompleteMode = ToilCompleteMode.Instant;
             toilPlayMusic.initAction = delegate
             {
-                Building_Gramophone gramophone = this.CurJob.targetA.Thing as Building_Gramophone;
+                Building_Gramophone gramophone = this.job.targetA.Thing as Building_Gramophone;
                 gramophone.PlayMusic(this.pawn);
             };
             yield return toilPlayMusic;
 
             yield break;
         }
+
     }
 }
 

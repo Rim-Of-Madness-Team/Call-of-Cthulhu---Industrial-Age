@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<DefPackage-SoundDef>
+<Defs>
   <SoundDef Class="ArkhamEstate.TuneDef">
     <defName>Estate_GS_Charleston</defName>
 	<label>Charleston</label>
@@ -151,4 +151,4 @@
     </subSounds>
   </SoundDef>
   
- </DefPackage-SoundDef> 
+ </Defs> 
