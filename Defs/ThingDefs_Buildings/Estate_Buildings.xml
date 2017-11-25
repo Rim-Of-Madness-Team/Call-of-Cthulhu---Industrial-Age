@@ -958,7 +958,6 @@
     </comps>	
     <inspectorTabs>
       <li>ITab_Storage</li>
-	  <li>ArkhamEstate.ITab_Inventory</li>
     </inspectorTabs>
     <statBases>
       <Mass>80</Mass>		
