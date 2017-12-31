@@ -900,7 +900,7 @@
     <thingClass>ArkhamEstate.Building_Refrigerator</thingClass>
     <graphicData>
       <texPath>Building/Temperature/RefrigeratorBasic/Jecrell_Refrigerator</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <graphicClass>Graphic_Multi</graphicClass>
       <damageData>
         <rect>(0.05,0.1,0.9,0.9)</rect>
         <cornerTL>Damage/Corner</cornerTL>
@@ -912,7 +912,7 @@
         <offset>(0,0,-0.1)</offset>
       </shadowData>		
     </graphicData>
-    <rotatable>false</rotatable>	
+    <rotatable>true</rotatable>	
 	<uiIconPath>UI/Icons/Refrigerator/Refrigerator_ico</uiIconPath>
     <altitudeLayer>MoteOverhead</altitudeLayer>
     <passability>PassThroughOnly</passability>
@@ -952,6 +952,10 @@
         <compClass>CompPowerTrader</compClass>
 		<soundAmbientPowered>Refrigerator_Ambience</soundAmbientPowered>
         <basePowerConsumption>50</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(255,214,170,0)</glowColor>
       </li>
       <li Class="CompProperties_Flickable"/>
       <li Class="CompProperties_Breakdownable"/>
