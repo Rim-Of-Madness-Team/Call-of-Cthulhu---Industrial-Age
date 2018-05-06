@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_ArcTower</defName>
+    <label>tesla coil</label>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/HeavySMG</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>	
+    <description>tesla coil</description>
+    <menuHidden>true</menuHidden>
+    <soundInteract>InteractRifle</soundInteract>
+    <canBeSpawningInventory>false</canBeSpawningInventory>
+    <tradeability>Never</tradeability>
+    <destroyOnDrop>true</destroyOnDrop>
+    <statBases>
+      <AccuracyTouch>1.00</AccuracyTouch>
+      <AccuracyShort>1.00</AccuracyShort>
+      <AccuracyMedium>1.00</AccuracyMedium>
+      <AccuracyLong>0.95</AccuracyLong>
+      <RangedWeapon_Cooldown>1.00</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <weaponTags>
+      <li>TurretGun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_Tesla</defaultProjectile>
+        <warmupTime>10</warmupTime>
+        <range>18</range>
+        <soundCast>ShotTesla</soundCast>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
+ 
+ </ThingDef>	
+    <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Tesla</defName>
+    <label>electric arc</label>
+    <thingClass>GaussWeapons.Projectile_Gauss</thingClass>		
+    <graphicData>
+      <texPath>Things/Projectile/ElectricityArc</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Arc</damageDef>
+      <damageAmountBase>25</damageAmountBase>
+      <speed>190</speed>
+	  <explosionRadius>1.5</explosionRadius>
+	  <explosionDelay>1</explosionDelay>	  
+   </projectile>
+     <comps>
+      <li Class="GaussWeapons.CompProperties_ExtraDamage">
+        <compClass>GaussWeapons.CompExtraDamage</compClass>
+        <damageDef>Stun</damageDef>
+        <damageAmount>2</damageAmount>
+        <chanceToProc>0.8</chanceToProc>
+      </li>
+      <li Class="GaussWeapons.CompProperties_ExtraDamage">
+        <compClass>GaussWeapons.CompExtraDamage</compClass>
+        <damageDef>EMP</damageDef>
+        <damageAmount>2</damageAmount>
+        <chanceToProc>1</chanceToProc>
+      </li>	  
+    </comps>  
+  </ThingDef>
+
+
+</Defs>

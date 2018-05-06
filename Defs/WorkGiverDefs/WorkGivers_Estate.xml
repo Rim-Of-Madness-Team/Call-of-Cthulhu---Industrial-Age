@@ -16,6 +16,26 @@
 </WorkGiverDef>
 
 
+  <WorkGiverDef>
+    <defName>DoBillsDrill</defName>
+    <label>drill</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Hauling</workType>
+    <priorityInType>100</priorityInType>
+    <fixedBillGiverDefs>
+      <li>Estate_DrillCoal</li>
+      <li>Estate_DrillCopper</li>
+      <li>Estate_DrillCoalAdvanced</li>
+      <li>Estate_DrillCopperAdvanced</li>
+    </fixedBillGiverDefs>
+    <verb>drill</verb>
+    <gerund>drilling at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+  
 
   <WorkGiverDef>
     <defName>DoBillsWrite</defName>

@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ========================= Work tables ==========================-->
+  
+  <ThingDef ParentName="EstateBenchBase" Name="Estate_DrillBase" Abstract="True">
+    <thingClass>ArkhamEstate.Building_Drill</thingClass>
+    <tickerType>Normal</tickerType>
+    <staticSunShadowHeight>0.0</staticSunShadowHeight>
+	<castEdgeShadows>false</castEdgeShadows>
+	<rotatable>false</rotatable>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>75</costStuffCount>
+    <fillPercent>0.2</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>4000</WorkToBuild>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Flammability>0.0</Flammability>
+      <Cleanliness>-20</Cleanliness>
+    </statBases>
+    <size>(2,2)</size>
+    <designationCategory>Production</designationCategory>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(1,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+	  <workSpeedPenaltyOutdoors>false</workSpeedPenaltyOutdoors>
+	  <workSpeedPenaltyTemperature>true</workSpeedPenaltyTemperature>
+	  <expandHomeArea>false</expandHomeArea>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="Estate_DrillBase">
+  <defName>Estate_DrillCoal</defName>
+    <label>coal drill</label>
+    <description>Using a combination of drilling for depth and flooding for surfacing, this contraption provides a constant source of coal in non-extreme environments. Requires manual operation.</description>
+    <graphicData>
+      <texPath>Things/Building/Production/mrXuiryusDrillCoal</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+      <drawSize>(4.5,4.5)</drawSize>
+	  <shadowData>
+          <volume>(0.15, 1.0, 0.15)</volume>
+      </shadowData>
+    </graphicData>
+	<costList>
+      <Steel>50</Steel>
+    </costList>
+    <placeWorkers>
+	  <li>PlaceWorker_NotUnderRoof</li>
+	  <li>ArkhamEstate.PlaceWorker_OnCoalVein</li>
+	</placeWorkers>
+	<comps>
+	  <li Class="CompOverlays.CompProperties_Overlays">
+        <overlays>
+		  <li>
+			<graphicData>
+			  <texPath>Things/Building/Production/jecPowerSwitchSmall</texPath>
+			  <graphicClass>Graphic_Single</graphicClass>
+			  <shaderType>CutoutComplex</shaderType>
+			  <drawSize>(4.5,4.5)</drawSize>
+			  <shadowData>
+				  <volume>(0.15, 1.0, 0.15)</volume>
+			  </shadowData>
+			</graphicData>
+			<offset>(0.0,-4.6,0.0)</offset>
+		  </li>
+		</overlays>
+      </li>
+	</comps>
+	<uiIconPath>Things/Building/Production/mrXuiryusDrillCoal_MenuIcon</uiIconPath>
+    <researchPrerequisites><li>Estate_TechDrill</li></researchPrerequisites>
+  </ThingDef>
+
+
+  
+    <ThingDef ParentName="Estate_DrillBase">
+      <defName>Estate_DrillCopper</defName>
+      <label>copper drill</label>
+    <description>Using a combination of drilling for depth and flooding for surfacing, this contraption provides a constant source of copper in non-extreme environments. Requires manual operation.</description>
+		<graphicData>
+		  <texPath>Things/Building/Production/mrXuiryusDrillBrass</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <drawSize>(4.5,4.5)</drawSize>
+		  <shaderType>CutoutComplex</shaderType>
+		  <shadowData>
+			  <volume>(0.15, 1.0, 0.15)</volume>
+		  </shadowData>
+		</graphicData>
+	<placeWorkers>
+	  <li>PlaceWorker_NotUnderRoof</li>
+	  <li>ArkhamEstate.PlaceWorker_OnCopperVein</li>
+	</placeWorkers>
+	<comps>
+	  <li Class="CompOverlays.CompProperties_Overlays">
+        <overlays>
+		  <li>
+			<graphicData>
+			  <texPath>Things/Building/Production/jecPowerSwitchSmall</texPath>
+			  <graphicClass>Graphic_Single</graphicClass>
+			  <shaderType>CutoutComplex</shaderType>
+			  <drawSize>(4.5,4.5)</drawSize>
+			  <shadowData>
+				  <volume>(0.15, 1.0, 0.15)</volume>
+			  </shadowData>
+			</graphicData>
+			<offset>(0.0,-4.6,0.0)</offset>
+		  </li>
+		</overlays>
+      </li>
+	</comps>
+    <uiIconPath>Things/Building/Production/mrXuiryusDrillBrass_MenuIcon</uiIconPath>
+    <researchPrerequisites><li>Estate_TechDrill</li></researchPrerequisites>
+	</ThingDef>
+ 
+    <ThingDef ParentName="Estate_DrillBase" Name="Estate_DrillBaseAdvanced" Abstract="True">
+      <staticSunShadowHeight>0.0</staticSunShadowHeight>
+	  <costList>
+        <Steel>150</Steel>
+      </costList>
+      <fillPercent>0.4</fillPercent>
+      <useHitPoints>True</useHitPoints>
+      <statBases>
+        <WorkToBuild>11000</WorkToBuild>
+        <MaxHitPoints>250</MaxHitPoints>
+        <Flammability>0.0</Flammability>
+        <Cleanliness>-30</Cleanliness>
+      </statBases>
+      <size>(2,2)</size>
+      <pathCost>120</pathCost>
+	</ThingDef> 
+	
+	
+ <ThingDef ParentName="Estate_DrillBaseAdvanced">
+ <defName>Estate_DrillCopperAdvanced</defName>
+      <label>advanced copper drill</label>
+      <description>Mines three times more copper than a simple drill before depletion. Requires manual operation.</description>
+	  <graphicData>
+		<texPath>Things/Building/Production/mrXuiryusDrillBrassAdvanced</texPath>
+		<graphicClass>Graphic_Multi</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		<drawSize>(9,9)</drawSize>	
+		  <shadowData>
+			  <volume>(0.5, 3.5, 0.5)</volume>
+		  </shadowData>
+	  </graphicData>
+      <researchPrerequisites><li>Estate_TechDrillAdvanced</li></researchPrerequisites>
+	  <comps>
+	    <li Class="CompOverlays.CompProperties_Overlays">
+          <overlays>
+		    <li>
+			  <graphicData>
+			    <texPath>Things/Building/Production/jecPowerSwitchBig</texPath>
+			    <graphicClass>Graphic_Single</graphicClass>
+			    <shaderType>CutoutComplex</shaderType>
+			    <drawSize>(9,9)</drawSize>
+			    <shadowData>
+				  <volume>(0.15, 1.0, 0.15)</volume>
+			    </shadowData>
+			  </graphicData>
+			  <offset>(0.0,-4.6,0.0)</offset>
+		    </li>
+		  </overlays>
+        </li>
+	  </comps>
+    <uiIconPath>Things/Building/Production/mrXuiryusDrillBrassAdvanced_MenuIcon</uiIconPath>
+	<placeWorkers>
+	  <li>PlaceWorker_NotUnderRoof</li>
+	  <li>ArkhamEstate.PlaceWorker_OnCopperVein</li>
+	</placeWorkers>
+	</ThingDef>
+ 
+	
+    <ThingDef ParentName="Estate_DrillBaseAdvanced">
+      <defName>Estate_DrillCoalAdvanced</defName>
+      <label>advanced coal drill</label>
+      <description>Mines three times more coal than a simple drill before depletion. Requires manual operation.</description>
+	  <graphicData>
+		<texPath>Things/Building/Production/mrXuiryusDrillCoalAdvanced</texPath>
+		<graphicClass>Graphic_Multi</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		<drawSize>(9,9)</drawSize>	 
+		  <shadowData>
+			  <volume>(0.5, 3.5, 0.5)</volume>
+		  </shadowData>
+	  </graphicData>
+      <researchPrerequisites><li>Estate_TechDrillAdvanced</li></researchPrerequisites>
+    <uiIconPath>Things/Building/Production/mrXuiryusDrillCoalAdvanced_MenuIcon</uiIconPath>
+	  <comps>
+	    <li Class="CompOverlays.CompProperties_Overlays">
+          <overlays>
+		    <li>
+			  <graphicData>
+			    <texPath>Things/Building/Production/jecPowerSwitchBig</texPath>
+			    <graphicClass>Graphic_Single</graphicClass>
+			    <shaderType>CutoutComplex</shaderType>
+			    <drawSize>(9,9)</drawSize>
+			    <shadowData>
+				  <volume>(0.15, 1.0, 0.15)</volume>
+			    </shadowData>
+			  </graphicData>
+			  <offset>(0.0,-4.6,0.0)</offset>
+		    </li>
+		  </overlays>
+        </li>
+	  </comps>
+	<placeWorkers>
+	  <li>PlaceWorker_NotUnderRoof</li>
+	  <li>ArkhamEstate.PlaceWorker_OnCoalVein</li>
+	</placeWorkers>
+	</ThingDef>
+
+</Defs>

@@ -20,20 +20,15 @@ namespace ArkhamEstate
         public TuneDef GetCache(TuneDef tune)
         {
             TuneDef result;
-            bool flag1 = TuneDefCache == null;
-            if (flag1)
-            {
+            if (TuneDefCache == null)
                 TuneDefCache = new List<TuneDef>();
-            }
 
             foreach (TuneDef current in TuneDefCache)
-            {
                 if (current == tune)
                 {
                     result = current;
                     return result;
                 }
-            }
 
             TuneDef tuneDef = tune;
             TuneDefCache.Add(tune);

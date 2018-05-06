@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="IndAccessoryMakeableBase" ParentName="ApparelBase" Abstract="True">
+    <recipeMaker>
+      <workSpeedStat>TailoringSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Tailor</effectWorking>
+      <soundWorking>Recipe_Tailor</soundWorking>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+    </recipeMaker>
+  </ThingDef>
+  
+  
+  <!-- ====================================== Clothing =========================================== -->
+  
+
+  <!-- Pocket Watch -->  
+  <ThingDef ParentName="IndAccessoryMakeableBase">
+    <defName>Apparel_IndPocketwatch</defName>
+    <description>A charming little watch, keeping time is helpful on the rim. Watches are difficult to make and hard to come by, so they sell for a good price.</description>
+    <label>Pocketwatch</label>
+    <recipeMaker>
+      <researchPrerequisite>ComplexClothing</researchPrerequisite>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Apparel/Accessories/Pocketwatch/Pocketwatch</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+		<generateCommonality>0.01</generateCommonality> 
+    <costList>
+      <Steel>15</Steel>
+      <Gold>15</Gold>
+      <Component>1</Component>	  
+    </costList>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <statBases>	
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>25000</WorkToMake>
+     <Beauty>5</Beauty>	  
+    </statBases>
+    <equippedStatOffsets>
+      <MentalBreakThreshold>-0.2</MentalBreakThreshold>	  
+      <WorkSpeedGlobal>-0.1</WorkSpeedGlobal>
+      <SocialImpact>0.25</SocialImpact>	  
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Waist</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Accessories/Pocketwatch/Pocketwatch</wornGraphicPath>
+      <layers>
+        <li>Belt</li>
+      </layers>
+      <tags>
+        <li>Outlander</li>	
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
+  </ThingDef> 
+
+
+
+</Defs>

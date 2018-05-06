@@ -13,6 +13,8 @@ namespace ArkhamEstate
         private string version = "0";
         public string artist;
         public float durationTime;
+        public bool instrumentOnly;
+        public List<ThingDef> instrumentDefs = new List<ThingDef>();
 
         public override string ToString()
         {

@@ -335,7 +335,7 @@ namespace ArkhamEstate
             //If there is no tuneDef set to play, then let's randomly select one from the library.
             if (currentTuneDef == null)
             {
-                currentTuneDef = tuneScape.TuneDefCache.RandomElement<TuneDef>();
+                currentTuneDef = tuneScape.TuneDefCache.Where(x => !x.instrumentOnly).RandomElement<TuneDef>();
             }
 
             //We're off? Let's change that.
@@ -404,7 +404,7 @@ namespace ArkhamEstate
         private bool TryCreatePlaylist()
         {
             if (tuneScape.TuneDefCache == null) return false;
-            if (tuneScape.TuneDefCache.Count == 0) return false;
+            if (!tuneScape.TuneDefCache.Any(x => !x.instrumentOnly)) return false;
             List<TuneDef> tempList = tuneScape.TuneDefCache.ToList<TuneDef>();
             playlist = new List<TuneDef>(tempList.InRandomOrder<TuneDef>());
             return true;
@@ -620,9 +620,10 @@ namespace ArkhamEstate
 
             if (tuneScape != null)
             {
-                if (tuneScape.TuneDefCache.Count > 0)
+                var tuneDefs = tuneScape.TuneDefCache.Where(x => !x.instrumentOnly);
+                if (tuneDefs.Any())
                 {
-                    foreach (TuneDef def in tuneScape.TuneDefCache)
+                    foreach (TuneDef def in tuneDefs)
                     {
                         Action actionDef = delegate
                         {
@@ -637,7 +638,6 @@ namespace ArkhamEstate
                         list.Add(new FloatMenuOption("Play " + def.LabelCap, actionDef, MenuOptionPriority.Default, null, null, 0f, null));
                     }
                 }
-
             }
             return list;
         }

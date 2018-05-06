@@ -35,3 +35,9 @@ C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Call of Cthulhu - In
 D:\SteamLibrary\steamapps\common\RimWorld\Mods\Call-of-Cthulhu---Industrial-Age\Assemblies\ArkhamEstate.dll
 D:\SteamLibrary\steamapps\common\RimWorld\Mods\Call-of-Cthulhu---Industrial-Age\Source\obj\Debug\ArkhamEstate.csprojResolveAssemblyReference.cache
 D:\SteamLibrary\steamapps\common\RimWorld\Mods\Call-of-Cthulhu---Industrial-Age\Source\obj\Debug\ArkhamEstate.dll
+D:\SteamLibrary\steamapps\common\RimWorld\ModsWorkspace\Call-of-Cthulhu---Industrial-Age\Assemblies\ArkhamEstate.dll
+D:\SteamLibrary\steamapps\common\RimWorld\ModsWorkspace\Call-of-Cthulhu---Industrial-Age\Source\obj\Debug\ArkhamEstate.csprojResolveAssemblyReference.cache
+D:\SteamLibrary\steamapps\common\RimWorld\ModsWorkspace\Call-of-Cthulhu---Industrial-Age\Source\obj\Debug\ArkhamEstate.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\ModsWorkspace\Call-of-Cthulhu---Industrial-Age\Assemblies\ArkhamEstate.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\ModsWorkspace\Call-of-Cthulhu---Industrial-Age\Source\obj\Debug\ArkhamEstate.csprojResolveAssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\ModsWorkspace\Call-of-Cthulhu---Industrial-Age\Source\obj\Debug\ArkhamEstate.dll

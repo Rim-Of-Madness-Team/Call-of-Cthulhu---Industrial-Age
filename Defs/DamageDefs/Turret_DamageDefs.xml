@@ -1,0 +1,25 @@
+  <Defs>
+  
+  <DamageDef Name="LocalInjuryBase" Abstract="True">
+    <workerClass>DamageWorker_AddInjury</workerClass>
+  </DamageDef>
+  <DamageDef ParentName="StunBase">
+    <defName>EletricalBurn</defName>
+    <workerClass>DamageWorker_Flame</workerClass>
+    <label>eletrical burn</label>
+    <hasForcefulImpact>false</hasForcefulImpact>
+    <makesBlood>false</makesBlood>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been electrocuted to death.</deathMessage>
+    <hediff>Burn</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <armorCategory>Electric</armorCategory>	
+		<harmsHealth>true</harmsHealth>
+		<explosionDamage>60</explosionDamage>
+		<explosionSnowMeltAmount>0</explosionSnowMeltAmount>
+		<explosionCellMote>Mote_BlastEMP</explosionCellMote>
+		<explosionColorEdge>(0.8, 0.8, 0.8, 0.8)</explosionColorEdge>
+		<explosionInteriorMote>Mote_ElectricalSpark</explosionInteriorMote>	
+  </DamageDef>
+  
+  </Defs>

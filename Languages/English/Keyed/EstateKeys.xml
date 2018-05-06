@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
+ <!-- 5-7-18 -->
+  <Estate_MustPlaceOnCoalVein>Must be placed on a coal vein.</Estate_MustPlaceOnCoalVein>
+  <Estate_MustPlaceOnCopperVein>Must be placed on a copper vein.</Estate_MustPlaceOnCopperVein>
+
   <Estate_Inventory>Inventory</Estate_Inventory>
   <Estate_XSlotsForBooks>Can hold a total of {0} books</Estate_XSlotsForBooks>
   <Estate_BookTitle>{0} by {1}</Estate_BookTitle>

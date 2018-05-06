@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <ThingDef Name="EstateBuildingNaturalBase" Abstract="True">
+    <category>Building</category>
+    <selectable>true</selectable>
+    <drawerType>MapMeshOnly</drawerType>
+    <filthLeaving>RockRubble</filthLeaving>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+	</ThingDef>
+
+
+  <ThingDef ParentName="EstateBuildingNaturalBase">
+    <defName>Estate_VeinCoal</defName>
+    <thingClass>Building</thingClass>
+    <label>coal vein</label>
+    <graphicData>
+      <texPath>Things/Building/Natural/jecVeinCoal</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+    </statBases>
+    <altitudeLayer>Floor</altitudeLayer>
+		<rotatable>false</rotatable>
+    <destroyable>true</destroyable>
+    <useHitPoints>true</useHitPoints>
+    <tickerType>Normal</tickerType>
+    <selectable>true</selectable>
+    <description>Natural coal source.</description>
+    <size>(2,2)</size>
+    <neverOverlapFloors>true</neverOverlapFloors>
+    <blockPlants>true</blockPlants>
+    <building>
+      <isEdifice>false</isEdifice>
+      <claimable>false</claimable>
+      <deconstructible>false</deconstructible>
+    </building>
+  </ThingDef>
+  
+  <ThingDef ParentName="EstateBuildingNaturalBase">
+    <defName>Estate_VeinCopper</defName>
+    <thingClass>Building</thingClass>
+    <label>copper vein</label>
+    <graphicData>
+      <texPath>Things/Building/Natural/jecVeinCopper</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>800</MaxHitPoints>
+    </statBases>
+    <altitudeLayer>Floor</altitudeLayer>
+	<rotatable>false</rotatable>
+    <destroyable>true</destroyable>
+    <useHitPoints>true</useHitPoints>
+    <tickerType>Normal</tickerType>
+    <selectable>true</selectable>
+    <description>Natural copper source.</description>
+    <size>(2,2)</size>
+    <neverOverlapFloors>true</neverOverlapFloors>
+    <blockPlants>true</blockPlants>
+    <building>
+      <isEdifice>false</isEdifice>
+      <claimable>false</claimable>
+      <deconstructible>false</deconstructible>
+    </building>
+  </ThingDef>
+
+  <!-- GenStep for Veins -->
+  <GenStepDef>
+    <defName>Estate_VeinCoal</defName>
+    <linkWithMapGenerator>BasicMap</linkWithMapGenerator>
+    <order>498</order>
+    <genStep Class="GenStep_ScatterThings">
+      <thingDef>Estate_VeinCoal</thingDef>
+			<allowOnWater>false</allowOnWater>
+			<minSpacing>25</minSpacing>
+      <extraNoBuildEdgeDist>4</extraNoBuildEdgeDist>
+      <countPer10kCellsRange>
+        <min>0.7</min>
+        <max>1</max>
+      </countPer10kCellsRange>
+      <clearSpaceSize>30</clearSpaceSize>
+      <terrainValidationRadius>4</terrainValidationRadius>
+      <terrainValidationDisallowed>
+        <li>Road</li>
+      </terrainValidationDisallowed>
+      <validators>
+        <li Class="ScattererValidator_Buildable">
+          <radius>4</radius>
+          <affordance>Heavy</affordance>
+        </li>
+        <li Class="ScattererValidator_NoNonNaturalEdifices">
+          <radius>4</radius>
+        </li>
+      </validators>
+    </genStep>
+  </GenStepDef>
+
+  <GenStepDef>
+    <defName>Estate_VeinCopper</defName>
+    <linkWithMapGenerator>BasicMap</linkWithMapGenerator>
+    <order>499</order>
+    <genStep Class="GenStep_ScatterThings">
+      <thingDef>Estate_VeinCopper</thingDef>
+			<allowOnWater>false</allowOnWater>
+			<minSpacing>25</minSpacing>
+      <extraNoBuildEdgeDist>4</extraNoBuildEdgeDist>
+      <countPer10kCellsRange>
+        <min>0.7</min>
+        <max>1</max>
+      </countPer10kCellsRange>
+      <clearSpaceSize>30</clearSpaceSize>
+      <terrainValidationRadius>4</terrainValidationRadius>
+      <terrainValidationDisallowed>
+        <li>Road</li>
+      </terrainValidationDisallowed>
+      <validators>
+        <li Class="ScattererValidator_Buildable">
+          <radius>4</radius>
+          <affordance>Heavy</affordance>
+        </li>
+        <li Class="ScattererValidator_NoNonNaturalEdifices">
+          <radius>4</radius>
+        </li>
+      </validators>
+    </genStep>
+  </GenStepDef>
+
+</Defs>

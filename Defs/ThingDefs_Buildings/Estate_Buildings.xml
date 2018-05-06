@@ -14,6 +14,8 @@
     <filthLeaving>BuildingRubble</filthLeaving>
   </ThingDef>
   
+  
+  
   <ThingDef Name="EstateBenchBase" ParentName="EstateBuildingBase" Abstract="True">
     <castEdgeShadows>true</castEdgeShadows>
     <staticSunShadowHeight>0.20</staticSunShadowHeight>
@@ -459,6 +461,75 @@
     <designationHotKey>Misc11</designationHotKey>
 	    <storedConceptLearnOpportunity>Jecrell_TypewriterTable</storedConceptLearnOpportunity>	
   </ThingDef>
+  
+
+  <ThingDef ParentName="EstateBuildingBase">
+    <defName>Estate_Piano</defName>
+	<thingClass>ArkhamEstate.Building_Gramophone</thingClass>
+    <label>piano</label>
+    <description>An acoustic, stringed musical instrument played using a keyboard. Can improve artistic skill and joy.</description>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Building/Misc/Gramophone/Jecrell_Gramophone</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+	  <shaderType>CutoutComplex</shaderType>
+      <damageData>
+        <rect>(0.35,0.35,0.3,0.3)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+      </shadowData>	  	  	  
+    </graphicData>
+    <rotatable>false</rotatable>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <socialPropernessMatters>true</socialPropernessMatters>	
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <building>
+      <isJoySource>true</isJoySource>
+    </building>
+    <placeWorkers>
+      <li>ArkhamEstate.PlaceWorker_ListenArea</li>
+    </placeWorkers>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+    </comps>	
+	<pathCost>8</pathCost>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <fillPercent>0.15</fillPercent>
+    <statBases>
+      <Mass>30</Mass>	
+      <MaxHitPoints>110</MaxHitPoints>
+      <WorkToBuild>1500</WorkToBuild>
+      <Flammability>1.0</Flammability>
+	  <Beauty>10</Beauty>
+      <MarketValue>500</MarketValue>
+      <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>	  
+    </statBases>
+    <researchPrerequisites>
+      <li>Estate_TechMusicLow</li>
+    </researchPrerequisites>		
+    <selectable>true</selectable>
+    <costList>
+      <Steel>50</Steel>
+      <Component>2</Component>	
+    </costList>
+    <stuffCategories>
+      <li>Metallic</li>
+	  <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>60</costStuffCount>	
+    <soundImpactDefault>BulletImpactGround</soundImpactDefault>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+	    <storedConceptLearnOpportunity>Jecrell_Gramophone</storedConceptLearnOpportunity>		
+    <designationCategory>Joy</designationCategory>
+  </ThingDef>
+    
   
   <ThingDef ParentName="EstateBuildingBase">
     <defName>Estate_Gramophone</defName>

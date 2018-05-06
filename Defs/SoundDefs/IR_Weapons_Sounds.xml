@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+
+<SoundDef>
+<defName>ShotTesla</defName>
+<context>MapOnly</context>
+<eventNames/>
+<maxSimultaneous>1</maxSimultaneous>
+<subSounds>
+<li>
+<grains>
+<li Class="AudioGrain_Clip">
+<clipPath>Things/Tesla</clipPath>
+</li>
+</grains>
+<pitchRange>
+<min>0.9152174</min>
+<max>1.042391</max>
+</pitchRange>
+</li>
+</subSounds>
+</SoundDef>
+
+<SoundDef>
+<defName>TeslaAmbient</defName>
+<context>MapOnly</context>
+<eventNames/>
+    <sustain>True</sustain>
+    <priorityMode>PrioritizeNearest</priorityMode> 	
+<subSounds>
+<li>
+        <muteWhenPaused>True</muteWhenPaused> 
+<grains>
+<li Class="AudioGrain_Clip">
+<clipPath>Things/TeslaAmbient</clipPath>
+</li>
+        </grains>      
+        <volumeRange>
+          <min>50</min>        
+          <max>50</max>
+        </volumeRange>      
+        <pitchRange>
+          <min>1</min>        
+          <max>1.015</max>
+        </pitchRange>      
+        <distRange>
+          <min>0</min>        
+          <max>25</max>
+        </distRange>
+</li>
+</subSounds>
+</SoundDef>
+
+<SoundDef>
+<defName>TeslaImpact</defName>
+<context>MapOnly</context>
+<eventNames/>
+    <sustain>True</sustain>
+    <priorityMode>PrioritizeNearest</priorityMode> 	
+<subSounds>
+<li>
+        <muteWhenPaused>True</muteWhenPaused> 
+<grains>
+<li Class="AudioGrain_Clip">
+<clipPath>Things/TeslaImpact</clipPath>
+</li>
+        </grains>      
+        <volumeRange>
+          <min>50</min>        
+          <max>50</max>
+        </volumeRange>      
+        <pitchRange>
+          <min>1</min>        
+          <max>1.015</max>
+        </pitchRange>      
+        <distRange>
+          <min>0</min>        
+          <max>25</max>
+        </distRange>
+</li>
+</subSounds>
+</SoundDef>
+		
+</Defs>

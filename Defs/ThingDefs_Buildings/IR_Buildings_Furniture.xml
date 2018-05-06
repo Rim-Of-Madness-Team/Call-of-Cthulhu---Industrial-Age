@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <ThingDef Name="EstateFurnitureBase" ParentName="EstateBuildingBase" Abstract="True">
+    <designationCategory>Furniture</designationCategory>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <tradeTags>
+      <li>Furniture</li>
+    </tradeTags>
+  </ThingDef>
+  
+  <ThingDef Name="EstateFurnitureWithQualityBase" ParentName="EstateFurnitureBase" Abstract="True">
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef Name="EstateArtableFurnitureBase" ParentName="EstateFurnitureWithQualityBase" Abstract="True">
+    <comps>
+      <li Class="CompProperties_Art">
+        <nameMaker>ArtName_Furniture</nameMaker>
+        <descriptionMaker>ArtDescription_Furniture</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+	  </li>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+  </ThingDef>
+
+
+
+  <ThingDef Abstract="True" Name="Estate_LampBase" ParentName="EstateBuildingBase">
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <selectable>true</selectable>
+    <fillPercent>0.20</fillPercent>
+    <pathCost>8</pathCost>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <designationCategory>Furniture</designationCategory>
+    <rotatable>false</rotatable>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Flickable"/>
+    </comps>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToBuild>170</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <researchPrerequisites>
+      <li>Electricity</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+  <ThingDef Abstract="True" Name="Estate_StandingLampBase" ParentName="Estate_LampBase">
+    <graphicData>
+      <texPath>Things/Building/Furniture/LampStanding</texPath>
+    </graphicData>
+    <costList>
+      <Steel>15</Steel>
+    </costList>
+    <statBases>
+      <Mass>4</Mass>
+    </statBases>
+  </ThingDef>
+  
+  <ThingDef Abstract="True" Name="Estate_ArcLampBase" ParentName="Estate_LampBase">
+    <costStuffCount>15</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <passability>Standable</passability>
+    <fillPercent>0.15</fillPercent>
+    <statBases>
+      <Mass>1.5</Mass>
+    </statBases>
+	<building>
+	  <isEdifice>false</isEdifice>
+	</building>
+  </ThingDef>
+  
+  <ThingDef ParentName="Estate_ArcLampBase" >
+    <defName>Estate_ArcLamp</defName>
+    <label>Arc lamp</label>
+    <description>The earliest form of electric lighting, a lamp that produces light through an arc between carbon rods.</description>
+    <designationHotKey>Misc11</designationHotKey>
+    <costStuffCount>25</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <graphicData>
+	  <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>Things/Building/Furniture/ArcLamp</texPath>
+	  <shaderType>CutoutComplex</shaderType>
+	  <drawSize>4</drawSize>
+	</graphicData>
+    <comps>	
+      <li Class="CompProperties_Glower">
+        <glowRadius>8</glowRadius>
+        <glowColor>(218,211,255,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>40</basePowerConsumption>
+        <shortCircuitInRain>false</shortCircuitInRain>
+      </li>
+    </comps>
+    <researchPrerequisites><li>Estate_TechArcLamps</li></researchPrerequisites>		
+  </ThingDef>  
+  
+  <ThingDef ParentName="Estate_ArcLampBase" >
+    <defName>Estate_EdisonLamp</defName>
+    <label>Edison lamp</label>
+    <description>Tungsten-filament lamp that lights a small area. While not as bright as an arc lamp, it provides a warm glow.</description>
+    <designationHotKey>Misc11</designationHotKey>
+    <costStuffCount>10</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <graphicData>
+	  <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>Things/Building/Furniture/EdisonLamp</texPath> 
+	  <shaderType>CutoutComplex</shaderType>
+	  <drawSize>4</drawSize>
+	</graphicData>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>6</glowRadius>
+        <glowColor>(224,203,164,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>25</basePowerConsumption>
+        <shortCircuitInRain>false</shortCircuitInRain>
+      </li>
+    </comps>
+    <statBases>
+      <Beauty>2</Beauty>
+    </statBases>
+    <researchPrerequisites>
+	  <li>Estate_TechEdisonLights</li>
+	</researchPrerequisites>		
+  </ThingDef>
+  
+  <ThingDef ParentName="EstateArtableFurnitureBase">
+    <defName>Estate_Telescope</defName>
+    <label>fancy telescope</label>
+    <description>A fancy telescope for doing amateur astronomy. It's a relaxing and fun hobby for a certain kind of person.</description>
+    <graphicData>
+      <texPath>Things/Building/Joy/invernusTelescope</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+      </shadowData>
+    </graphicData>
+    <fillPercent>0.15</fillPercent>
+    <altitudeLayer>Building</altitudeLayer>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,1)</interactionCellOffset>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <building>
+      <isJoySource>true</isJoySource>
+    </building>
+    <costList>
+      <Steel>50</Steel>
+      <Component>1</Component>
+	  <Gold>1</Gold>
+    </costList>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <MarketValue>400</MarketValue>
+      <Mass>8.0</Mass>
+      <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
+    </statBases>
+	<comps>
+		<li Class="CompProperties_RoomIdentifier">
+			<roomStat>Impressiveness</roomStat>
+		</li>
+	</comps>
+  </ThingDef>
+
+
+  <!-- Table base -->
+  <ThingDef Abstract="True" ParentName="EstateFurnitureWithQualityBase" Name="EstateTableBase">
+    <thingClass>Building</thingClass>
+    <altitudeLayer>Building</altitudeLayer>
+    <description>People eat off tables when chairs are placed facing them.</description>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <pathCost>60</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <canOverlapZones>false</canOverlapZones>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <surfaceType>Eat</surfaceType>
+    <comps>
+			<li Class="CompProperties_RoomIdentifier">
+				<roomStat>Impressiveness</roomStat>
+			</li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef Abstract="True" ParentName="EstateTableBase" Name="EstateTableGatherSpotBase">
+    <comps>
+      <li>
+        <compClass>CompGatherSpot</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="EstateTableGatherSpotBase">
+    <defName>Estate_RoundTable</defName>
+    <label>round table (1x1)</label>
+    <graphicData>
+      <texPath>Things/Building/Furniture/mrXuiryusRoundTable</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+      <shadowData>
+        <volume>(0.3, 0.3, 0.3)</volume>
+      </shadowData>
+    </graphicData>
+      <castEdgeShadows>false</castEdgeShadows>
+      <staticSunShadowHeight>0.0</staticSunShadowHeight>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToBuild>550</WorkToBuild>
+      <Mass>3</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>0.7</Beauty>
+    </statBases>
+    <size>(1,1)</size>
+    <costStuffCount>22</costStuffCount>
+  </ThingDef>
+  
+  
+</Defs>

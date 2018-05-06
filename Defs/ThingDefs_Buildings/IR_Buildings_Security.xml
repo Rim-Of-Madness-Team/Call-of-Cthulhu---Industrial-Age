@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <ThingDef ParentName="EstateBuildingBase">
+    <defName>Estate_TrapVent</defName>
+    <label>steam vent trap</label>
+    <thingClass>Building_TrapExplosive</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Security/mrXuiryusSteamVent</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <damageData>
+        <rect>(0,0,1,0.15)</rect>
+      </damageData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>RealtimeOnly</drawerType>
+    <rotatable>false</rotatable>
+    <tickerType>Normal</tickerType>
+    <stealable>false</stealable>
+    <statBases>
+      <MaxHitPoints>40</MaxHitPoints>
+      <WorkToBuild>2000</WorkToBuild>
+      <TrapMeleeDamage>60</TrapMeleeDamage>
+      <TrapSpringChance>0.8</TrapSpringChance>
+    </statBases>
+    <description>Condensed steam held back by a delicate trigger. When the victim disturbs the trigger, the steam is released and burns the legs of the target.</description>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>70</costStuffCount>
+    <designationCategory>Security</designationCategory>
+    <designationHotKey>Misc6</designationHotKey>
+    <building>
+      <isTrap>true</isTrap>
+      <trapDamageCategory>Heat</trapDamageCategory>
+      <trapUnarmedGraphicData>
+        <texPath>Things/Building/Security/DeadfallUnarmed</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+        <shaderType>Cutout</shaderType>
+      </trapUnarmedGraphicData>
+    </building>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>2.9</explosiveRadius>
+        <explosiveDamageType>Burn</explosiveDamageType>
+		<destroyThingOnExplosionSize>10</destroyThingOnExplosionSize>
+        <startWickHitPointsPercent>0.2</startWickHitPointsPercent>
+        <wickTicks>
+          <min>15</min>
+          <max>70</max>
+        </wickTicks>
+      </li>
+    </comps>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+  </ThingDef>
+
+  <ThingDef ParentName="EstateBuildingBase">
+    <defName>Estate_BarbedWireFence</defName>
+    <label>barbed wire fence</label>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Things/Building/Security/invernusBarbedWire_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Sandbags</li>
+      </linkFlags>
+    </graphicData>
+    <blueprintGraphicData>
+      <texPath>Things/Building/Security/invernusBarbedWire_Blueprint_Atlas</texPath>
+    </blueprintGraphicData>
+    <uiIconPath>Things/Building/Security/invernusBarbedWire_Icon</uiIconPath>
+    <altitudeLayer>Building</altitudeLayer>
+    <pathCost>40</pathCost>
+    <pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>false</castEdgeShadows>
+    <fillPercent>0.65</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <statBases>
+      <MaxHitPoints>450</MaxHitPoints>
+      <Beauty>-15</Beauty>
+      <WorkToBuild>180</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    <building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<isInert>true</isInert>
+    </building>
+    <description>Slows down and has a chance to damage incoming enemies.</description>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <costList>
+      <Steel>6</Steel>
+    </costList>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Security</designationCategory>
+    <staticSunShadowHeight>0.0</staticSunShadowHeight>
+    <constructEffect>ConstructMetal</constructEffect>
+    <repairEffect>ConstructMetal</repairEffect>
+    <designationHotKey>Misc1</designationHotKey>
+  </ThingDef>
+
+  <ThingDef ParentName="EstateBuildingBase" Name="Industrial_TurretBase" Abstract="True">
+		<techLevel>Industrial</techLevel>	
+  <thingClass>ThingWithComps</thingClass>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <castEdgeShadows>true</castEdgeShadows>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <Flammability>1.0</Flammability>
+			<SellPriceFactor>1.10</SellPriceFactor>
+    </statBases>
+  </ThingDef>
+  
+ <ThingDef Name="Industrial_TurretMakeableBase" ParentName="Industrial_TurretBase" Abstract="True">	
+
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+    </recipeMaker>
+  </ThingDef>
+
+	
+
+	
+    <!--=============== Arc tower ===============-->
+
+  <ThingDef ParentName="Industrial_TurretMakeableBase">
+    <defName>Estate_ArcTower</defName>
+    <label>arc tower</label>
+    <description>The tesla turret uses a combination of electricity generation and atmosphere ionization to hurl electromagnetic arcs of electricity at hostile attackers. Disables people and mechanoids.</description>
+        <thingClass>Building_TurretGun</thingClass>	
+	<graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Building/Tesla_Base</texPath>	  
+      <drawSize>(3,3)</drawSize>
+      <damageData>
+        <rect>(0.38,0.2,0.56375,0.8)</rect>
+        <cornerTL>Damage/Corner</cornerTL>
+      </damageData>
+    </graphicData>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <stealable>false</stealable>
+    <rotatable>true</rotatable>
+    <size>(3,3)</size>
+    <statBases>
+      <MarketValue>2000</MarketValue>	
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+      <WorkToMake>65000</WorkToMake>
+      <Mass>80</Mass>
+      <Beauty>-30</Beauty>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>4.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <chanceNeverExplodeFromDamage>0.6</chanceNeverExplodeFromDamage>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>4500</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <tradeTags>
+      <li>Turret</li>
+    </tradeTags>	
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <castEdgeShadows>true</castEdgeShadows>
+    <hasTooltip>true</hasTooltip>
+    <costList>
+      <Steel>350</Steel>
+      <Uranium>20</Uranium>
+      <Component>25</Component>
+    </costList>
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+			<researchPrerequisite>Industrial_ArcTower</researchPrerequisite>		  
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+    <skillRequirements>
+        <Crafting>12</Crafting>
+    </skillRequirements>
+	  </recipeMaker>	
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <building>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretGunDef>Gun_ArcTower</turretGunDef>
+      <turretBurstWarmupTime>0.5</turretBurstWarmupTime>
+      <turretBurstCooldownTime>5</turretBurstCooldownTime>
+      <turretTopGraphicPath>Things/Building/Tesla_Top</turretTopGraphicPath>	  
+	  <soundAmbient>TeslaAmbient</soundAmbient>	  
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>Industrial_ArcTower</li>
+    </researchPrerequisites>
+  </ThingDef>  	
+
+
+</Defs>
