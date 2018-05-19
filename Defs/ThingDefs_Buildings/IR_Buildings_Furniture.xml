@@ -106,11 +106,12 @@
     <stuffCategories>
       <li>Metallic</li>
     </stuffCategories>
+    <rotatable>true</rotatable>
     <graphicData>
 	  <graphicClass>Graphic_Multi</graphicClass>
-      <texPath>Things/Building/Furniture/ArcLamp</texPath>
+      <texPath>Things/Building/Furniture/jecArcLamp</texPath>
 	  <shaderType>CutoutComplex</shaderType>
-	  <drawSize>4</drawSize>
+	  <drawSize>3</drawSize>
 	</graphicData>
     <comps>	
       <li Class="CompProperties_Glower">
@@ -135,9 +136,45 @@
     <stuffCategories>
       <li>Metallic</li>
     </stuffCategories>
+    <rotatable>true</rotatable>
     <graphicData>
 	  <graphicClass>Graphic_Multi</graphicClass>
-      <texPath>Things/Building/Furniture/EdisonLamp</texPath> 
+      <texPath>Things/Building/Furniture/jecEdisonLamp</texPath> 
+	  <shaderType>CutoutComplex</shaderType>
+	  <drawSize>4</drawSize>
+	</graphicData>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>6</glowRadius>
+        <glowColor>(224,203,164,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>25</basePowerConsumption>
+        <shortCircuitInRain>false</shortCircuitInRain>
+      </li>
+    </comps>
+    <statBases>
+      <Beauty>2</Beauty>
+    </statBases>
+    <researchPrerequisites>
+	  <li>Estate_TechEdisonLights</li>
+	</researchPrerequisites>		
+  </ThingDef>
+  
+  <ThingDef ParentName="Estate_ArcLampBase" >
+    <defName>Estate_EdisonTube</defName>
+    <label>Edison tube</label>
+    <description>Tungsten-filament tube that lights a small area encased with a small metal cage. While not as bright as an arc lamp, it provides a warm glow.</description>
+    <designationHotKey>Misc11</designationHotKey>
+    <costStuffCount>10</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <rotatable>true</rotatable>
+    <graphicData>
+	  <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>Things/Building/Furniture/jecEdisonTube</texPath> 
 	  <shaderType>CutoutComplex</shaderType>
 	  <drawSize>4</drawSize>
 	</graphicData>

@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+<WorkGiverDef>
+	<defName>Estate_Vent</defName>
+	<label>vent buildup</label>
+	<giverClass>ArkhamEstate.WorkGiver_Vent</giverClass>
+	<workType>Construction</workType>
+	<priorityInType>80</priorityInType>
+	<verb>vent</verb>
+	<gerund>venting</gerund>
+	<requiredCapacities>
+	  <li>Manipulation</li>
+	</requiredCapacities>
+	<canBeDoneByNonColonists>true</canBeDoneByNonColonists>
+</WorkGiverDef>
+	
+<WorkGiverDef>
+	<defName>Estate_PatchLeaks</defName>
+	<label>patch leaks</label>
+	<giverClass>ArkhamEstate.WorkGiver_PatchLeaks</giverClass>
+	<workType>Construction</workType>
+	<priorityInType>80</priorityInType>
+	<verb>patch</verb>
+	<gerund>patching</gerund>
+	<requiredCapacities>
+		<li>Manipulation</li>
+	</requiredCapacities>
+	<canBeDoneByNonColonists>true</canBeDoneByNonColonists>
+</WorkGiverDef>
+	
 
 <WorkGiverDef>
 	<defName>Estate_ReturnBooks</defName>

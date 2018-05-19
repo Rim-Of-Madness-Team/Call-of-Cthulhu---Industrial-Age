@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <!--========================= Doors =============================-->
+
+  <ThingDef ParentName="EstateBuildingBase" Name="EstateDoorBase" Abstract="True">
+    <thingClass>Building_Door</thingClass>
+    <blueprintClass>Blueprint_Door</blueprintClass>
+    <category>Building</category>
+    <blueprintGraphicData>
+      <texPath>Things/Building/Door/Door_Blueprint</texPath>
+    </blueprintGraphicData>
+    <altitudeLayer>DoorMoveable</altitudeLayer>
+    <fillPercent>1</fillPercent>
+    <useHitPoints>true</useHitPoints>
+
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Structure</designationCategory>
+    <holdsRoof>true</holdsRoof>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <blockLight>true</blockLight>
+    <drawerType>RealtimeOnly</drawerType>
+    <building>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>DoorOpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>DoorClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>DoorOpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>DoorCloseManual</soundDoorCloseManual>
+    </building>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+		<placeWorkers>
+			<li>PlaceWorker_DoorLearnOpeningSpeed</li>
+		</placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="EstateDoorBase">
+    <defName>Estate_DoorIndustrial</defName>
+    <label>industrial door</label>
+    <description>Fashioned out of riveted metals. Divides rooms. Must be manually opened and closed, which slows people down.</description>
+    <statBases>
+      <WorkToBuild>1020</WorkToBuild>
+    </statBases>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <graphicData>
+      <texPath>Things/Building/Door/jecDoorIndustrialSimple_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <damageData>
+        <!--  no damage marks because they don't move with the door
+        <rect>(0,0.12,1,0.76)</rect>-->
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/Door/jecDoorIndustrialSimple_MenuIcon</uiIconPath>
+    <costStuffCount>25</costStuffCount>
+    <designationHotKey>Misc1</designationHotKey>
+  </ThingDef>
+
+  <ThingDef ParentName="DoorBase">
+    <defName>Estate_DoorIndustrialAuto</defName>
+    <label>industrial autodoor</label>
+    <description>Divides rooms. Steam powered operation allows people to move through the door without slowing down.</description>
+    <statBases>
+      <WorkToBuild>1300</WorkToBuild>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Building/Door/jecDoorIndustrialFancy_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <damageData>
+      <!--  no damage marks because they don't move with the door
+        <rect>(0,0.12,1,0.76)</rect>-->
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/Door/jecDoorIndustrialFancy_MenuIcon</uiIconPath>
+    <costList>
+      <Steel>30</Steel>
+    </costList>
+    <costStuffCount>20</costStuffCount>
+    <comps>
+      <li Class="ArkhamEstate.CompProperties_Steam">
+        <compClass>ArkhamEstate.CompSteamTrader</compClass>
+        <baseSteamConsumption>50</baseSteamConsumption>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <designationHotKey>Misc2</designationHotKey>
+    <researchPrerequisites>
+      <li>Autodoors</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+  </ThingDef>
+
+  
+</Defs>

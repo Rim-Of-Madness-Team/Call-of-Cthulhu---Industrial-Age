@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
- <!-- 5-7-18 -->
+ <!-- 5-11-18 -->
+  <Estate_WaterPlaceWorker_NeedSource>Must place next to a water source.</Estate_WaterPlaceWorker_NeedSource>
+  <Estate_WaterPlaceWorker_TwoPumps>Must not be in range of other pumps.</Estate_WaterPlaceWorker_TwoPumps>
+ 
+  <Estate_VentWater>Vent water</Estate_VentWater>
+  <Estate_VentWaterDesc>Vents {0} of water.</Estate_VentWaterDesc>
+
+  <Estate_VentSteam>Vent steam</Estate_VentSteam>
+  <Estate_VentSteamDesc>Vents {0} of steam.</Estate_VentSteamDesc>
+  <Estate_VentToxicGasWarnDesc>WARNING: Also vents {0} of toxic gas.</Estate_VentToxicGasWarnDesc> 
+  <Estate_ToxicGasPercentStored>Toxic gas percent/stored: {0} Psi / {1} Psi</Estate_ToxicGasPercentStored>
+  <Estate_ToxicGasConnectedRateStored>Toxic gas rate/stored: {0} Psi per day / {1} Psi</Estate_ToxicGasConnectedRateStored>
+ 
+  <Estate_SteamOutput>Steam output</Estate_SteamOutput>
+  <Estate_SteamNeeded>Steam needed</Estate_SteamNeeded>
+  <Estate_SteamNotConnected>Not connected</Estate_SteamNotConnected>
+  <Estate_SteamLeakRate>Leakage Rate</Estate_SteamLeakRate>
+  <Estate_SteamConnectedRateStored>Steam rate/stored: {0} Psi per day / {1} Psi</Estate_SteamConnectedRateStored>
+ 
+  <Estate_PumpOutput>Pump output</Estate_PumpOutput>
+  <Estate_WaterNeeded>Water needed</Estate_WaterNeeded>
+  <Estate_WaterNotConnected>Not connected</Estate_WaterNotConnected>
+  <Estate_WaterLeakRate>Leakage Rate</Estate_WaterLeakRate>
+  <Estate_WaterConnectedRateStored>Water rate/stored: {0} Liters per day / {1} Liters</Estate_WaterConnectedRateStored>
   <Estate_MustPlaceOnCoalVein>Must be placed on a coal vein.</Estate_MustPlaceOnCoalVein>
   <Estate_MustPlaceOnCopperVein>Must be placed on a copper vein.</Estate_MustPlaceOnCopperVein>
 

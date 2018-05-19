@@ -43,6 +43,55 @@
         <e p="AssemblyInfo.cs" t="Include" />
       </e>
       <e p="RoomRoleWorker_Library.cs" t="Include" />
+      <e p="SteamPowerSystems" t="Include">
+        <e p="iLeakable.cs" t="Include" />
+        <e p="IVentable.cs" t="Include" />
+        <e p="JobDriver_PatchLeaks.cs" t="Include" />
+        <e p="JobDriver_Vent.cs" t="Include" />
+        <e p="Steam" t="Include">
+          <e p="Building_Boiler.cs" t="Include" />
+          <e p="Building_SteamTank.cs" t="Include" />
+          <e p="CompProperties_Steam.cs" t="Include" />
+          <e p="CompProperties_SteamTank.cs" t="Include" />
+          <e p="CompSteam.cs" t="Include" />
+          <e p="CompSteamElectricPlant.cs" t="Include" />
+          <e p="CompSteamGenerator.cs" t="Include" />
+          <e p="CompSteamPlant.cs" t="Include" />
+          <e p="CompSteamTank.cs" t="Include" />
+          <e p="CompSteamTrader.cs" t="Include" />
+          <e p="CompSteamTransmitter.cs" t="Include" />
+          <e p="PlaceWorker_SteamPipe.cs" t="Include" />
+          <e p="PlaceWorker_SteamPump.cs" t="Include" />
+          <e p="SteamConnectionMaker.cs" t="Include" />
+          <e p="SteamNet.cs" t="Include" />
+          <e p="SteamNetGrid.cs" t="Include" />
+          <e p="SteamNetMaker.cs" t="Include" />
+          <e p="SteamNetManager.cs" t="Include" />
+          <e p="SteamUtility.cs" t="Include" />
+          <e p="WaterOverlayMats.cs" t="Include" />
+        </e>
+        <e p="Water" t="Include">
+          <e p="Building_WaterTank.cs" t="Include" />
+          <e p="CompProperties_Water.cs" t="Include" />
+          <e p="CompProperties_WaterTank.cs" t="Include" />
+          <e p="CompWater.cs" t="Include" />
+          <e p="CompWaterPump.cs" t="Include" />
+          <e p="CompWaterTank.cs" t="Include" />
+          <e p="CompWaterTrader.cs" t="Include" />
+          <e p="CompWaterTransmitter.cs" t="Include" />
+          <e p="PlaceWorker_WaterPipe.cs" t="Include" />
+          <e p="PlaceWorker_WaterPump.cs" t="Include" />
+          <e p="WaterConnectionMaker.cs" t="Include" />
+          <e p="WaterNet.cs" t="Include" />
+          <e p="WaterNetGrid.cs" t="Include" />
+          <e p="WaterNetMaker.cs" t="Include" />
+          <e p="WaterNetManager.cs" t="Include" />
+          <e p="WaterOverlayMats.cs" t="Include" />
+          <e p="WaterUtility.cs" t="Include" />
+        </e>
+        <e p="WorkGiver_PatchLeaks.cs" t="Include" />
+        <e p="WorkGiver_Vent.cs" t="Include" />
+      </e>
       <e p="TexButton.cs" t="Include" />
       <e p="ThingBook.cs" t="Include" />
       <e p="ThingWithComps_Glower.cs" t="Include" />

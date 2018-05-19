@@ -2,6 +2,19 @@
 <Defs>
   
   <JobDef>
+    <defName>Estate_Vent</defName>
+    <driverClass>ArkhamEstate.JobDriver_Vent</driverClass>
+    <reportString>venting TargetA.</reportString>
+  </JobDef>
+  
+  <JobDef>
+    <defName>Estate_PatchLeaks</defName>
+    <driverClass>ArkhamEstate.JobDriver_PatchLeaks</driverClass>
+    <reportString>patching TargetA.</reportString>
+  </JobDef>
+  
+  
+  <JobDef>
     <defName>Estate_ReadABook</defName>
     <driverClass>ArkhamEstate.JobDriver_ReadABook</driverClass>
     <reportString>reading.</reportString>

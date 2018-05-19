@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Verse;
+using CompRefuelable = ArkhamEstate.SteamPowerSystems.Steam.CompRefuelable;
 
 namespace ArkhamEstate
 {

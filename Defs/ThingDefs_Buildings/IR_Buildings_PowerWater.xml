@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="EstateBuildingBase">
+    <defName>Estate_WaterConduit</defName>
+    <label>raw water pipes</label>
+    <description>Transfers unexamined, potentially non-potable water. This water can be used to create steam when the pipe connects a water source to a steam boiler. Raw water pipes can also connect to steam powered buildings to transfer return water and prevent spillages.</description>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Things/Building/Linked/mrXuiryusWaterpipe_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>Transmitter</linkType>
+      <linkFlags>
+        <li>Custom1</li>
+      </linkFlags>
+      <damageData>
+        <rect>(0,0.35,1,0.3)</rect>
+      </damageData>
+    </graphicData>
+    <blueprintGraphicData>
+      <texPath>Things/Building/Linked/PowerConduit_Blueprint_Atlas</texPath>
+    </blueprintGraphicData>
+    <uiIconPath>Things/Building/Linked/mrXuiryusWaterpipe_MenuIcon</uiIconPath>
+    <building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<isInert>true</isInert>
+      <isEdifice>false</isEdifice>
+    </building>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <passability>Standable</passability>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToBuild>35</WorkToBuild>
+      <Flammability>0.0</Flammability>
+      <Beauty>-1</Beauty>
+    </statBases>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <costList>
+      <Steel>1</Steel>
+    </costList>
+    <comps>
+      <li Class="ArkhamEstate.CompProperties_Water">
+        <compClass>ArkhamEstate.CompWaterTransmitter</compClass>
+        <transmitsWater>true</transmitsWater>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>ArkhamEstate.PlaceWorker_WaterPipe</li>
+    </placeWorkers>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Power</designationCategory>
+    <constructEffect>ConstructMetal</constructEffect>
+    <clearBuildingArea>false</clearBuildingArea>
+    <researchPrerequisites>
+      <li>Industrial_SteamPower</li>
+    </researchPrerequisites>
+  </ThingDef>
+  
+  <ThingDef ParentName="EstateBuildingBase">
+    <defName>Estate_WaterPump</defName>
+    <label>raw water pump</label>
+    <description>Produces raw unfiltered water by pulling it up from a nearby water source.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Power/jecWaterPump</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+      <linkFlags>
+        <li>Custom1</li>
+      </linkFlags>
+      <shadowData>
+        <volume>(0.8, 0.5, 0.8)</volume>
+      </shadowData>
+    </graphicData>
+    <uiIconPath>Things/Building/Power/jecWaterPump_MenuIcon</uiIconPath>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>150</pathCost>
+    <blockWind>true</blockWind>
+    <fillPercent>0.8</fillPercent>
+    <castEdgeShadows>false</castEdgeShadows>
+    <rotatable>true</rotatable>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <WorkToBuild>2500</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <canOverlapZones>false</canOverlapZones>
+    <size>(2,2)</size>
+    <costList>
+      <Steel>100</Steel>
+      <Component>2</Component>
+    </costList>
+	<building>
+	  <soundAmbient>Estate_WaterPumpAmbience</soundAmbient>	  
+	</building>
+    <comps>
+      <li Class="ArkhamEstate.CompProperties_Water">
+        <compClass>ArkhamEstate.CompWaterPlant</compClass>
+        <baseWaterConsumption>-7600</baseWaterConsumption>
+        <transmitsWater>true</transmitsWater>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Power</designationCategory>
+    <constructEffect>ConstructMetal</constructEffect>
+    <placeWorkers>
+	  <li>ArkhamEstate.PlaceWorker_WaterPump</li>
+	</placeWorkers>
+	<researchPrerequisites>
+      <li>Industrial_SteamPower</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+  </ThingDef>
+
+  <ThingDef ParentName="EstateBuildingBase">
+    <defName>Estate_WaterTank</defName>
+    <label>raw water tank</label>
+    <thingClass>ArkhamEstate.Building_WaterTank</thingClass>
+    <description>Stores raw (unfiltered) water when there is excess and yields it when there is not.</description>
+    <graphicData>
+      <texPath>Things/Building/Power/jecWaterTower</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+      <linkFlags>
+        <li>Custom1</li>
+      </linkFlags>
+      <shadowData>
+        <volume>(0.8, 1.2, 0.8)</volume>
+		<offset>(0,0,-0.39)</offset>
+      </shadowData>
+    </graphicData>
+    <uiIconPath>Things/Building/Power/jecWaterTower_MenuIcon</uiIconPath>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <blockWind>true</blockWind>
+	<building>
+	  <soundAmbient>Estate_WaterPumpAmbience</soundAmbient>	  
+	</building>
+    <castEdgeShadows>false</castEdgeShadows>
+    <fillPercent>0.80</fillPercent>
+    <tickerType>Normal</tickerType>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>800</WorkToBuild>
+      <Mass>20</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>-18</Beauty>
+    </statBases>
+    <size>(2,2)</size>
+    <costList>
+      <Steel>50</Steel>
+      <Component>2</Component>
+    </costList>
+    <comps>
+      <li Class="ArkhamEstate.CompProperties_WaterTank">
+        <storedWaterMax>23000</storedWaterMax>
+        <efficiency>0.5</efficiency>
+        <transmitsWater>true</transmitsWater>
+		<indicatorOffset>(0.55,0,-0.05)</indicatorOffset>
+		<indicatorDrawSize>(0.5,0.22)</indicatorDrawSize>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Power</designationCategory>
+    <constructEffect>ConstructMetal</constructEffect>
+    <canOverlapZones>false</canOverlapZones>
+    <researchPrerequisites>
+      <li>Industrial_SteamPower</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+
+</Defs>
