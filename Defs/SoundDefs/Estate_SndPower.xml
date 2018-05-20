@@ -53,6 +53,59 @@
     </subSounds>
   </SoundDef>
   
+  
+  <SoundDef>
+    <defName>Estate_SteamElectricPlantLoop</defName>  
+    <sustain>True</sustain>  
+	<context>MapOnly</context>
+    <eventNames />  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+	    <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Power/SteamElectricPlantLoop</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>
+          <min>9</min>        
+          <max>11</max>
+        </volumeRange>      
+        <distRange>
+          <min>0</min>        
+          <max>25</max>
+        </distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>Estate_SteamDriverPlantLoop</defName>  
+    <sustain>True</sustain>  
+	<context>MapOnly</context>
+    <eventNames />  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+	    <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Power/SteamDriverPlantLoop</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>
+          <min>9</min>        
+          <max>11</max>
+        </volumeRange>      
+        <distRange>
+          <min>0</min>        
+          <max>25</max>
+        </distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
   <SoundDef>
     <defName>Estate_SteamHissLoop</defName>  
     <sustain>True</sustain>  

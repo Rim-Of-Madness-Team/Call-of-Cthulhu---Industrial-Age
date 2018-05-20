@@ -151,7 +151,7 @@ namespace ArkhamEstate
 					"Estate_WaterLeakRate".Translate(),
 					": ",
 					LeakRate.ToString("F0"),
-					" L"
+					"%"
 				});
 			}
 			return text + "\n" + base.CompInspectStringExtra();

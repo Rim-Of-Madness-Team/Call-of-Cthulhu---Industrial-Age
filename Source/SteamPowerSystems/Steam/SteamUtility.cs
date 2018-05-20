@@ -61,6 +61,29 @@ namespace ArkhamEstate
             }
             return (showPrefix) ? prefix + " : " + result : result;
         }
+        public static string GetDescription(this PressureLevel level, bool showPrefix = true)
+        {
+            string prefix = "Estate_Pressure".Translate();
+            string result = "Estate_PressureOff".Translate();
+            switch (level)
+            {
+                case PressureLevel.Off:
+                    break;
+                case PressureLevel.Nominal:
+                    result = "Estate_PressureNominalDesc".Translate();
+                    break;
+                case PressureLevel.Caution:
+                    result = "Estate_PressureCautionDesc".Translate();
+                    break;
+                case PressureLevel.Danger:
+                    result = "Estate_PressureDangerDesc".Translate();
+                    break;
+                case PressureLevel.Maximum:
+                    result = "Estate_PressureMaximumDesc".Translate();
+                    break;
+            }
+            return (showPrefix) ? prefix + " : " + result : result;
+        }
         
         public static Building GetSteamTransmitter(this IntVec3 c, Map map)
         {

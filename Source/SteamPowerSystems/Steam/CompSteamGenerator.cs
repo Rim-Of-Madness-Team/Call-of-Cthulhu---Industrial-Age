@@ -74,14 +74,19 @@ namespace ArkhamEstate
                 if (waterTank.LeakRate < 5f)
                     damageRate = 9999999;
                 else if (waterTank.LeakRate < 10f)
-                    damageRate = 500;
+                    damageRate = 2500;
                 else if (waterTank.LeakRate < 20f)
-                    damageRate = 200;
+                    damageRate = 1000;
+                else if (waterTank.LeakRate < 99f)
+                    damageRate = 750;
                 else
-                    damageRate = 100;
+                {
+                    this.parent.TryGetComp<CompExplosive>()?.StartWick();
+                }
                 if (Find.TickManager.TicksGame % damageRate == 0)
                 {
-                    this.parent?.TakeDamage(new DamageInfo(DamageDefOf.Crush, Rand.Range(5, 10)));
+                    waterTank.AdjustLeakRate(1);
+                    this.parent?.TakeDamage(new DamageInfo(DamageDefOf.Crush, Rand.Range(1, 3)));
                     MoteMaker.ThrowExplosionCell(this.parent.OccupiedRect().RandomCell, this.parent.MapHeld, ThingDefOf.Mote_Smoke, Color.white);
                 }                
             }
@@ -96,6 +101,12 @@ namespace ArkhamEstate
         public override IEnumerable<FloatMenuOption> CompFloatMenuOptions(Pawn selPawn)
         {
             return base.CompFloatMenuOptions(selPawn);
+        }
+
+        public override void PostExposeData()
+        {
+            base.PostExposeData();
+            Scribe_Values.Look(ref curBoilerSetting, "curBoilerSetting", BoilerSetting.Safe);
         }
 
         public void UpdateDesiredSteamOutput()

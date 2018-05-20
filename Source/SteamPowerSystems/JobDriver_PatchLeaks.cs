@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -22,7 +23,7 @@ namespace ArkhamEstate
             Toil repair = new Toil();
             repair.initAction = delegate
             {
-                 ticksToNextRepair = 250f;
+                 ticksToNextRepair = 100f;
             };
             repair.tickAction = delegate
             {
@@ -32,7 +33,7 @@ namespace ArkhamEstate
                  ticksToNextRepair -= statValue;
                 if ( ticksToNextRepair <= 0f)
                 {
-                     ticksToNextRepair += 250f;
+                     ticksToNextRepair += 100f;
                     
                     var leakable = (ILeakable)((ThingWithComps) TargetThingA).AllComps.FirstOrDefault(x => x is ILeakable y);
                     if (leakable != null)

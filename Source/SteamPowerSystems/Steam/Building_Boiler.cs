@@ -86,8 +86,9 @@ namespace ArkhamEstate
                 yield return new Command_Action
                 {
                     defaultLabel = curPressureLevel.GetString(),
+                    defaultDesc = curPressureLevel.GetDescription(),
                     icon = GetCurPressureIcon(),
-                    action = null
+                    action = () => {}
                 };
             }
         }

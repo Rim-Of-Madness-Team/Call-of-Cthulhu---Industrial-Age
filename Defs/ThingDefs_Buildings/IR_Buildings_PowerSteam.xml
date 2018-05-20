@@ -146,9 +146,6 @@
     <fillPercent>0.40</fillPercent>
     <tickerType>Normal</tickerType>
     <minifiedDef>MinifiedFurniture</minifiedDef>
-	<building>
-	  <soundAmbient>Estate_SteamHissLoop</soundAmbient>	  
-	</building>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <WorkToBuild>800</WorkToBuild>
@@ -174,6 +171,7 @@
 		</ticksOnTime>
 		<ticksOffTime>2100</ticksOffTime>
         <transmitsSteam>true</transmitsSteam>
+		<soundAmbientSteamed>Estate_SteamHissLoop</soundAmbientSteamed>
       </li>
       <li Class="CompProperties_Breakdownable"/>
     </comps>
@@ -209,9 +207,6 @@
     <blockWind>true</blockWind>
     <fillPercent>1.0</fillPercent>
     <castEdgeShadows>false</castEdgeShadows>
-	<building>
-	  <soundAmbient>Estate_SteamBoilerAmbience</soundAmbient>	  
-	</building>
     <rotatable>false</rotatable>
     <statBases>
       <Mass>100</Mass>
@@ -246,6 +241,7 @@
         <transmitsWater>true</transmitsWater>
 		<indicatorOffset>(0.55,0,-0.05)</indicatorOffset>
 		<indicatorDrawSize>(0.22,0.22)</indicatorDrawSize>
+		<soundAmbientWatered>Estate_SteamBoilerAmbience</soundAmbientWatered>
       </li>
       <li Class="CompProperties_Flickable" />
       <li Class="CompProperties_Refuelable">
@@ -307,9 +303,6 @@
     <blockWind>true</blockWind>
     <fillPercent>1.0</fillPercent>
     <castEdgeShadows>false</castEdgeShadows>
-	<building>
-	  <soundAmbient>GeothermalPlant_Ambience</soundAmbient>	  
-	</building>
     <rotatable>false</rotatable>
     <statBases>
       <Mass>100</Mass>
@@ -335,6 +328,7 @@
 		<ticksOffTime>10</ticksOffTime>
 		<toxicGasVentRate>5</toxicGasVentRate>
 		<steamOffset>(0,0,1.5)</steamOffset>
+		<soundAmbientSteamed>GeothermalPlant_Ambience</soundAmbientSteamed>
       </li>
       <li Class="CompProperties_Flickable" />
       <li Class="CompProperties_HeatPusher">
@@ -402,6 +396,7 @@
 		</ticksOnTime>
 		<ticksOffTime>999</ticksOffTime>
 		<steamOffset>(0,0,1.7)</steamOffset>
+		<soundAmbientSteamed>Estate_SteamElectricPlantLoop</soundAmbientSteamed>
       </li>
       <li Class="CompProperties_Power">
         <compClass>ArkhamEstate.CompSteamElectricPlant</compClass>
@@ -475,6 +470,7 @@
 		<ticksOffTime>1000</ticksOffTime>
 		<baseSteamConsumption>50</baseSteamConsumption>
 		<steamOffset>(0,0,0.5)</steamOffset>
+		<soundAmbientSteamed>Estate_SteamDriverPlantLoop</soundAmbientSteamed>
       </li>
     </comps>
 		<placeWorkers>

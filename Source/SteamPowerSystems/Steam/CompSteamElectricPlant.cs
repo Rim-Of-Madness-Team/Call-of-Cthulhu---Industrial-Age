@@ -1,10 +1,14 @@
-﻿using RimWorld;
+﻿using System.Collections.Generic;
+using System.Linq;
+using RimWorld;
 
 namespace ArkhamEstate
 {
     public class CompSteamElectricPlant : CompPowerTrader
     {
         public CompProperties_SteamTank SteamProps => this.parent?.GetComp<CompSteamTank>()?.Props;
+
+        public CompSteamTank SteamTankComp => steamTankComp;
 
         protected virtual float DesiredPowerOutput
         {
@@ -13,8 +17,23 @@ namespace ArkhamEstate
                 //if (SteamProps.baseSteamConsumption < 0f)
                 //{
                 //    return -SteamProps.baseSteamConsumption;
-                //}
-                return -Props.basePowerConsumption;
+                //})
+                var result = -Props.basePowerConsumption;
+                var modifier = 1f;
+                if (steamTankComp != null && steamTankComp?.SteamNet?.GetSteamBoilers != null)
+                {
+                    HashSet<Building_Boiler> boilers =
+                        new HashSet<Building_Boiler>(steamTankComp?.SteamNet?.GetSteamBoilers);
+                    if (boilers.Any())
+                    {
+                        foreach (var boiler in boilers)
+                        {
+                            var boilerPressure = ((int)boiler.CurPressureLevel) * 0.5f;
+                            modifier += boilerPressure;
+                        }
+                    }
+                }
+                return result * modifier;
             }
         }
 
@@ -40,7 +59,7 @@ namespace ArkhamEstate
 
         public void UpdateDesiredSteamOutput()
         {
-            if ((steamTankComp != null && !steamTankComp.CanDrawSteam(SteamProps.baseSteamConsumption)) ||
+            if ((steamTankComp != null && !steamTankComp.CanDrawSteam(SteamProps.baseSteamConsumption * LitersPerTick)) ||
                 (breakdownableComp != null && breakdownableComp.BrokenDown) ||
                 (refuelableComp != null && !refuelableComp.HasFuel) ||
                 (flickableComp != null && !flickableComp.SwitchIsOn) ||
@@ -61,6 +80,6 @@ namespace ArkhamEstate
 
         private CompBreakdownable breakdownableComp;
 
-        private static readonly float LitersPerTick = 0.01f;
+        private static readonly float LitersPerTick = 0.0001f;
     }
 }

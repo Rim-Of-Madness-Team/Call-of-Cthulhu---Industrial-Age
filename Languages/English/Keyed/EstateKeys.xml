@@ -31,13 +31,13 @@
   <Estate_SteamOutput>Steam output</Estate_SteamOutput>
   <Estate_SteamNeeded>Steam needed</Estate_SteamNeeded>
   <Estate_SteamNotConnected>Not connected</Estate_SteamNotConnected>
-  <Estate_SteamLeakRate>Leakage Rate</Estate_SteamLeakRate>
+  <Estate_SteamLeakRate>Explosive pressure buildup</Estate_SteamLeakRate>
   <Estate_SteamConnectedRateStored>Steam rate/stored: {0} Psi per day / {1} Psi</Estate_SteamConnectedRateStored>
  
   <Estate_PumpOutput>Pump output</Estate_PumpOutput>
   <Estate_WaterNeeded>Water needed</Estate_WaterNeeded>
   <Estate_WaterNotConnected>Not connected</Estate_WaterNotConnected>
-  <Estate_WaterLeakRate>Leakage Rate</Estate_WaterLeakRate>
+  <Estate_WaterLeakRate>Explosive pressure buildup</Estate_WaterLeakRate>
   <Estate_WaterConnectedRateStored>Water rate/stored: {0} Liters per day / {1} Liters</Estate_WaterConnectedRateStored>
   <Estate_MustPlaceOnCoalVein>Must be placed on a coal vein.</Estate_MustPlaceOnCoalVein>
   <Estate_MustPlaceOnCopperVein>Must be placed on a copper vein.</Estate_MustPlaceOnCopperVein>

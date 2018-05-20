@@ -50,6 +50,7 @@ namespace ArkhamEstate
 		{
 			base.CompTick();
 			DrawSteam(Mathf.Min(LeakRate * PsiPerTick, storedSteam));
+			
 			if (LastRepairTick + GenDate.TicksPerDay < Find.TickManager.TicksGame)
 			{
 				LastRepairTick = Find.TickManager.TicksGame;
@@ -155,7 +156,7 @@ namespace ArkhamEstate
 					"Estate_SteamLeakRate".Translate(),
 					": ",
 					LeakRate.ToString("F0"),
-					" L"
+					"%"
 				});
 			}
 			return text + "\n" + base.CompInspectStringExtra();

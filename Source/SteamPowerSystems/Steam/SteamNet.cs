@@ -62,6 +62,21 @@ namespace ArkhamEstate
 			}
 		}
 
+		public IEnumerable<Building_Boiler> GetSteamBoilers
+		{
+			get
+			{
+				for (int i = 0; i < this.transmitters.Count; i++)
+				{
+					if (this.transmitters[i]?.parent is Building_Boiler b)
+					{
+						yield return b;
+					}
+				}
+				yield break;
+			}			
+		}
+
 		private bool IsSteamSource(CompSteam cp)
 		{
 			return cp is CompSteamTank || (cp is CompSteamTrader && (cp.Props.baseSteamConsumption < 0f || cp.Props.baseWaterConsumption < 0f));
