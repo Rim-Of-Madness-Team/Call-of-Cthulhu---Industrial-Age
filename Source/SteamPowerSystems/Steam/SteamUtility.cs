@@ -3,8 +3,65 @@ using Verse;
 
 namespace ArkhamEstate
 {
+    
+        
+    public enum PressureLevel : int
+    {
+        Off = 0,
+        Nominal = 1,
+        Caution = 2,
+        Danger = 3,
+        Maximum = 4
+    }
+    
     public static class SteamUtility
     {
+        
+        
+        public const float fuelLevelNominal = 0.26f;
+        public const float fuelLevelCaution = 0.51f;
+        public const float fuelLevelDanger = 0.76f;
+                    
+        
+        public static PressureLevel GetCurPressureLevel(CompSteam compSteam, float curFuelLevel)
+        {
+            var curPressureLevel = curFuelLevel * ((compSteam.TransmitsSteamNow) ? 1f : 0f);
+            if (curPressureLevel <= 0.01f)
+                return PressureLevel.Off;
+            else if (curPressureLevel <= fuelLevelNominal)
+                return PressureLevel.Nominal;
+            else if (curPressureLevel <= fuelLevelCaution)
+                return PressureLevel.Caution;
+            else if (curPressureLevel <= fuelLevelDanger)
+                return PressureLevel.Danger;
+            else
+                return PressureLevel.Maximum;
+        }
+        
+        public static string GetString(this PressureLevel level, bool showPrefix = true)
+        {
+            string prefix = "Estate_Pressure".Translate();
+            string result = "Estate_PressureOff".Translate();
+            switch (level)
+            {
+                case PressureLevel.Off:
+                    break;
+                case PressureLevel.Nominal:
+                    result = "Estate_PressureNominal".Translate();
+                    break;
+                case PressureLevel.Caution:
+                    result = "Estate_PressureCaution".Translate();
+                    break;
+                case PressureLevel.Danger:
+                    result = "Estate_PressureDanger".Translate();
+                    break;
+                case PressureLevel.Maximum:
+                    result = "Estate_PressureMaximum".Translate();
+                    break;
+            }
+            return (showPrefix) ? prefix + " : " + result : result;
+        }
+        
         public static Building GetSteamTransmitter(this IntVec3 c, Map map)
         {
             List<Thing> list = map.thingGrid.ThingsListAt(c);
@@ -17,6 +74,7 @@ namespace ArkhamEstate
             }
             return null;
         }
+        
         
         public static bool EverTransmitsSteam(this ThingDef def)
         {
@@ -69,5 +127,6 @@ namespace ArkhamEstate
                 Log.Message(output);
             }
         }
+
     }
 }

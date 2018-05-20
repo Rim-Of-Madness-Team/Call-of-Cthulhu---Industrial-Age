@@ -193,7 +193,7 @@
   <ThingDef ParentName="EstateBuildingBase">
     <defName>Estate_SteamGenerator</defName>
     <label>steam boiler</label>
-    <thingClass>Building</thingClass>
+    <thingClass>ArkhamEstate.Building_Boiler</thingClass>
     <graphicData>
       <texPath>Things/Building/Power/mrXuiryusSteamGenerator</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -231,7 +231,7 @@
       <li Class="ArkhamEstate.CompProperties_Steam">
         <compClass>ArkhamEstate.CompSteamGenerator</compClass>
 		<baseSteamConsumption>-200</baseSteamConsumption>
-        <baseWaterConsumption>4500</baseWaterConsumption>
+        <baseWaterConsumption>200</baseWaterConsumption>
 		<ticksOnTime>
 		  <min>100</min>
 		  <max>160</max>
@@ -244,6 +244,8 @@
         <storedWaterMax>2300</storedWaterMax>
         <efficiency>0.5</efficiency>
         <transmitsWater>true</transmitsWater>
+		<indicatorOffset>(0.55,0,-0.05)</indicatorOffset>
+		<indicatorDrawSize>(0.22,0.22)</indicatorDrawSize>
       </li>
       <li Class="CompProperties_Flickable" />
       <li Class="CompProperties_Refuelable">

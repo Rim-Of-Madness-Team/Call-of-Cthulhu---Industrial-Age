@@ -83,6 +83,7 @@
     <Compile Include="SteamPowerSystems\JobDriver_Vent.cs" />
     <Compile Include="SteamPowerSystems\Steam\Building_Boiler.cs" />
     <Compile Include="SteamPowerSystems\Steam\Building_SteamTank.cs" />
+    <Compile Include="SteamPowerSystems\Steam\Command_SetTargetFuelLevel.cs" />
     <Compile Include="SteamPowerSystems\Steam\CompProperties_Steam.cs" />
     <Compile Include="SteamPowerSystems\Steam\CompProperties_SteamTank.cs" />
     <Compile Include="SteamPowerSystems\Steam\CompSteam.cs" />

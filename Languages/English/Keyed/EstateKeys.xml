@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
- <!-- 5-11-18 -->
+ <!-- 5-20-18 -->
+  <Estate_EmptyFuelContentsNoFuel>There is no fuel to discharge.</Estate_EmptyFuelContentsNoFuel>
+  <Estate_EmptyFuelContents>Discharge fuelbox contents</Estate_EmptyFuelContents>
+  <Estate_EmptyFuelContentsDesc>Discharges a variable percentage of fuel items (as coal). This will often stop boiler overload.\n\nWARNING: Fuel items will still be on fire if the boiler is active.</Estate_EmptyFuelContentsDesc>
+  <Estate_BlowSteamWhistle>Blow steam whistle</Estate_BlowSteamWhistle>
+  <Estate_BlowSteamWhistleDesc>This whistle will sound automatically if pressure reaches overload. Manually blowing the steam whistle will create a shrill sound, but not much else.</Estate_BlowSteamWhistleDesc>
+  <Estate_NoSteamAvailable>No steam available</Estate_NoSteamAvailable>
+  <Estate_SetTargetFuelLevel>Set target fuel level to {0}\nPressure level will be {1}</Estate_SetTargetFuelLevel>
+  <Estate_Pressure>Pressure</Estate_Pressure>
+  <Estate_PressureOff>Off</Estate_PressureOff>
+  <Estate_PressureNominal>Nominal</Estate_PressureNominal>
+  <Estate_PressureCaution>Caution</Estate_PressureCaution>
+  <Estate_PressureDanger>Danger</Estate_PressureDanger>
+  <Estate_PressureMaximum>Overload</Estate_PressureMaximum>
+  
   <Estate_WaterPlaceWorker_NeedSource>Must place next to a water source.</Estate_WaterPlaceWorker_NeedSource>
   <Estate_WaterPlaceWorker_TwoPumps>Must not be in range of other pumps.</Estate_WaterPlaceWorker_TwoPumps>
  

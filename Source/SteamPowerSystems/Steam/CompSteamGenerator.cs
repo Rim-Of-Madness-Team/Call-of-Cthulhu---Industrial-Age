@@ -9,17 +9,44 @@ namespace ArkhamEstate
     public enum BoilerSetting : int
     {
         Safe = 0,
-        Caution = 1,
-        Dangerous = 2,
-        SetToBlow = 3
+        Acceptable = 1,
+        Caution = 2,
+        Dangerous = 3,
+        SetToBlow = 4
     }
     
     public class CompSteamGenerator : CompSteamTrader
     {
-        protected virtual float DesiredSteamOutput => -Props.baseSteamConsumption * (1 + (int)boilerSetting / 2);
-        protected virtual float WaterInput => Props.baseWaterConsumption * (1 + (int)boilerSetting / 2);
+        protected virtual float DesiredSteamOutput => -Props.baseSteamConsumption * (1 + (int)curBoilerSetting / 2);
+        protected virtual float WaterInput => Props.baseWaterConsumption * (1 + (int)curBoilerSetting / 2);
 
 
+        public void SetBoilerSettingFromPressure(PressureLevel pressure)
+        {
+            var newBoilerSetting = BoilerSetting.Safe;
+            switch (pressure)
+            {
+                case PressureLevel.Off:
+                    newBoilerSetting = BoilerSetting.Safe;
+                    break;
+                case PressureLevel.Nominal:
+                    newBoilerSetting = BoilerSetting.Acceptable;
+                    break;
+                case PressureLevel.Caution:
+                    newBoilerSetting = BoilerSetting.Caution;
+                    break;
+                case PressureLevel.Danger:
+                    newBoilerSetting = BoilerSetting.Dangerous;
+                    break;
+                case PressureLevel.Maximum:
+                    newBoilerSetting = BoilerSetting.SetToBlow;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(pressure), pressure, null);
+            }
+            CurBoilerSetting = newBoilerSetting;
+        }
+        
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
@@ -45,21 +72,13 @@ namespace ArkhamEstate
             {
                 int damageRate = 9999999;
                 if (waterTank.LeakRate < 5f)
-                {
                     damageRate = 9999999;
-                }
                 else if (waterTank.LeakRate < 10f)
-                {
                     damageRate = 500;
-                }
                 else if (waterTank.LeakRate < 20f)
-                {
                     damageRate = 200;
-                }
                 else
-                {
                     damageRate = 100;
-                }
                 if (Find.TickManager.TicksGame % damageRate == 0)
                 {
                     this.parent?.TakeDamage(new DamageInfo(DamageDefOf.Crush, Rand.Range(5, 10)));
@@ -69,6 +88,11 @@ namespace ArkhamEstate
 
         }
 
+        public override string CompInspectStringExtra()
+        {
+            return base.CompInspectStringExtra();
+        }
+
         public override IEnumerable<FloatMenuOption> CompFloatMenuOptions(Pawn selPawn)
         {
             return base.CompFloatMenuOptions(selPawn);
@@ -76,7 +100,7 @@ namespace ArkhamEstate
 
         public void UpdateDesiredSteamOutput()
         {
-            if ((waterTankComp != null && !waterTankComp.CanDrawWater(DesiredSteamOutput)) || 
+            if ((waterTankComp != null && !waterTankComp.CanDrawWater(WaterInput * LitersPerTick)) || 
                 (breakdownableComp != null && breakdownableComp.BrokenDown) || 
                 (refuelableComp != null && !refuelableComp.HasFuel) || 
                 (flickableComp != null && !flickableComp.SwitchIsOn) || 
@@ -86,32 +110,31 @@ namespace ArkhamEstate
             }
             else
             {
-                var newBoilerSetting = boilerSetting;
-                if (refuelableComp?.FuelPercentOfMax <= 0.5)
-                {
-                    newBoilerSetting = BoilerSetting.Safe;
-                }
-                else if (refuelableComp?.FuelPercentOfMax <= 0.7)
-                {
-                    newBoilerSetting = BoilerSetting.Caution;
-                }
-                else if (refuelableComp?.FuelPercentOfMax <= 0.85)
-                {
-                    newBoilerSetting = BoilerSetting.Dangerous;
-                }
-                else
-                {
-                    newBoilerSetting = BoilerSetting.SetToBlow;
-                }
+                SteamOutput = DesiredSteamOutput;
+                waterTankComp?.DrawWater(WaterInput * LitersPerTick);
+            }
+        }
 
-                if (newBoilerSetting != boilerSetting)
+        protected CompWaterTank waterTankComp;
+        
+        protected CompRefuelable refuelableComp;
+
+        protected CompBreakdownable breakdownableComp;
+
+        public BoilerSetting CurBoilerSetting
+        {
+            get => curBoilerSetting;
+            set
+            {
+                if (value != curBoilerSetting)
                 {
-                    boilerSetting = newBoilerSetting;
+                    curBoilerSetting = value;
                     if (waterTankComp != null)
                     {
-                        switch (boilerSetting)
+                        switch (curBoilerSetting)
                         {
                             case BoilerSetting.Safe:
+                            case BoilerSetting.Acceptable:
                                 waterTankComp.LeakGainFactor = 1f;
                                 break;
                             case BoilerSetting.Caution:
@@ -127,19 +150,12 @@ namespace ArkhamEstate
                         //waterTankComp.LastRepairTick = -1;
                     }
                 }
-                SteamOutput = DesiredSteamOutput;
-                waterTankComp?.DrawWater(WaterInput * LitersPerTick);
+                
             }
         }
 
-        protected CompWaterTank waterTankComp;
+        private BoilerSetting curBoilerSetting = BoilerSetting.Safe;
         
-        protected CompRefuelable refuelableComp;
-
-        protected CompBreakdownable breakdownableComp;
-
-        private BoilerSetting boilerSetting = BoilerSetting.Safe;
-        
-        public static readonly float LitersPerTick = 0.000012f;
+        public static readonly float LitersPerTick = 0.00006f;
     }
 }

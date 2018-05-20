@@ -51,6 +51,7 @@
         <e p="Steam" t="Include">
           <e p="Building_Boiler.cs" t="Include" />
           <e p="Building_SteamTank.cs" t="Include" />
+          <e p="Command_SetTargetFuelLevel.cs" t="Include" />
           <e p="CompProperties_Steam.cs" t="Include" />
           <e p="CompProperties_SteamTank.cs" t="Include" />
           <e p="CompSteam.cs" t="Include" />

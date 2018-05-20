@@ -52,8 +52,18 @@ namespace ArkhamEstate
                 null, new HarmonyMethod(AccessTools.Method(typeof(HarmonyPatches), nameof(TerrainCanSupport))));
             harmony.Patch(AccessTools.Method(typeof(GenConstruct), "CanBuildOnTerrain"),
                 null, new HarmonyMethod(AccessTools.Method(typeof(HarmonyPatches), nameof(CanBuildOnTerrain))));
+            harmony.Patch(AccessTools.Method(typeof(CompRefuelable), "get_TargetFuelLevel"),
+                null, new HarmonyMethod(AccessTools.Method(typeof(HarmonyPatches), nameof(get_TargetFuelLevel))));
         }
 
+        public static void get_TargetFuelLevel(CompRefuelable __instance, ref float __result)
+        {
+            var configuredTargetFuelLevel = Traverse.Create(__instance).Field("configuredTargetFuelLevel").GetValue<float>();
+            if ((double) configuredTargetFuelLevel >= 0.0)
+                return;
+            if (__instance.Props.initialConfigurableTargetFuelLevel != 0.0F)
+                __result = __instance.Props.initialConfigurableTargetFuelLevel;
+        }
         //GenConstruct
         public static void CanBuildOnTerrain(BuildableDef entDef, IntVec3 c, Map map, Rot4 rot,
             Thing thingToIgnore, ref bool __result)

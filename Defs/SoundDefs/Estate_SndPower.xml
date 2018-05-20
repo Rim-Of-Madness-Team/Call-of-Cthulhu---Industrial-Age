@@ -104,6 +104,71 @@
   </SoundDef>
 
   <SoundDef>
+    <defName>Estate_SteamPressureUp</defName>  
+    <eventNames />
+	<context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Power/SteamPressureUp</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>
+          <min>7</min>        
+          <max>9</max>
+        </volumeRange>      
+        <pitchRange>
+          <min>0.4311765</min>        
+          <max>1.845882</max>
+        </pitchRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>Estate_SteamPressureDown</defName>  
+    <eventNames />
+	<context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Power/SteamPressureDown</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>
+          <min>7</min>        
+          <max>9</max>
+        </volumeRange>      
+        <pitchRange>
+          <min>0.4311765</min>        
+          <max>1.845882</max>
+        </pitchRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>Estate_SteamPressureWhistle</defName>  
+    <eventNames />
+	<context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Power/SteamPressureWhistle</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>
+          <min>5</min>        
+          <max>7</max>
+        </volumeRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
     <defName>Estate_SteamHiss</defName>  
     <eventNames />
 	<context>MapOnly</context>

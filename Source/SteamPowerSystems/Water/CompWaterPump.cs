@@ -1,5 +1,4 @@
 ﻿using RimWorld;
-using CompRefuelable = ArkhamEstate.SteamPowerSystems.Steam.CompRefuelable;
 
 namespace ArkhamEstate
 {

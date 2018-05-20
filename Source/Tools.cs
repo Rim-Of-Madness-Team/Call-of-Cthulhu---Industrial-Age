@@ -51,7 +51,7 @@ namespace RimWorld
                 {
                     return false;
                 }
-                ArkhamEstate.SteamPowerSystems.Steam.CompRefuelable compRefuelable = this.parent.TryGetComp<ArkhamEstate.SteamPowerSystems.Steam.CompRefuelable>();
+                CompRefuelable compRefuelable = this.parent.TryGetComp<CompRefuelable>();
                 if (compRefuelable != null && !compRefuelable.HasFuel)
                 {
                     return false;
