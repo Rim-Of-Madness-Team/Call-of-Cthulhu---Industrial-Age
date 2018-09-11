@@ -7,11 +7,9 @@ Y
 0.0       ->       ->  MUSI0 ->  MUSI1  ->  MUSI2
 0.5       ->       ->  GAS   ->  EDISON ->
 1.0 LIGH1 ->       ->  ARC1  ->  ARC2   ->         ->  ARC3 
-1.5 WRIT1 -> WRIT2 ->        ->  WRIT3  ->
-2.0       -> WOOD  ->  STEAM ->
+2.0       -> WOOD  
 2.5       ->       ->  TELE  ->
 3.0       ->       ->        ->         -> FOOD1
-3.5       -> MINE1 ->  DRIL1 ->  DRILL3 ->
 4.0
 4.5
 5
@@ -38,40 +36,9 @@ Y
   </ResearchProjectDef> 	
   
 
-  <ResearchProjectDef>
-    <defName>Estate_TechSimpleWriting</defName>
-    <label>simple writing</label>
-    <description>Allows your colony to chisel out tablets or create leather scrolls at crafting spots that retain stories of your colony.</description>
-    <baseCost>500</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <tags>
-      <li>ClassicStart</li>
-    </tags>
-	<researchViewX>0</researchViewX>
-	<researchViewY>1.5</researchViewY>
-	<tab>Estate_ResearchTab</tab>	
-  </ResearchProjectDef> 
-  
 <!-- Medieval Tier -->  
 
 
-  <ResearchProjectDef>
-    <defName>Estate_TechHandWriting</defName>
-    <label>bookbinding</label>
-    <description>Allows your colony to perform simple techniques such as handwriting pages at a crafting spot, as well as creating simple books.</description>
-    <baseCost>700</baseCost>
-    <techLevel>Medieval</techLevel>
-    <prerequisites>
-      <li>Estate_TechSimpleWriting</li>
-    </prerequisites>	
-    <tags>
-      <li>ClassicStart</li>
-    </tags>
-	<researchViewX>1</researchViewX>
-	<researchViewY>1.5</researchViewY>
-	<tab>Estate_ResearchTab</tab>	
-  </ResearchProjectDef> 
-  
   <ResearchProjectDef>
     <defName>Estate_TechWoodStoveFurnace</defName>
     <label>wood stove furnace</label>
@@ -103,21 +70,6 @@ Y
   -->  
   
   <!-- Early Industrial -->  
-    
-
-  <ResearchProjectDef>
-	<defName>Industrial_SteamPower</defName>
-	<label>steam power</label>
-	<description>Discover rudimentary utilization of steam power. Unlocks building simple generators.</description>
-	<baseCost>500</baseCost>
-	<techLevel>Industrial</techLevel>
-	<tab>Estate_ResearchTab</tab>	
-	<tags>
-		<li>ClassicStart</li>
-	</tags>		
-	<researchViewX>2</researchViewX>
-	<researchViewY>2.0</researchViewY>
-  </ResearchProjectDef>
 	
   <ResearchProjectDef>
     <defName>Estate_TechArcLamps</defName>
@@ -160,16 +112,6 @@ Y
 	<researchViewX>2</researchViewX>
 	<researchViewY>2.5</researchViewY>
   </ResearchProjectDef>	  
-  
-  <ResearchProjectDef>
-	<defName>Estate_TechDrill</defName>
-	<label>industrial drill</label>
-	<description>Allows for the construction of drills for materials (Limited to coal and brass).</description>
-	<baseCost>500</baseCost>
-	<techLevel>Industrial</techLevel>
-	<researchViewX>2</researchViewX>
-	<researchViewY>3.5</researchViewY>
-  </ResearchProjectDef>	
 
   <!-- Late Industrial -->
 
@@ -181,7 +123,7 @@ Y
     <baseCost>1000</baseCost>
     <techLevel>Industrial</techLevel>
 	<researchViewX>3</researchViewX>
-	<researchViewY>1</researchViewY>
+	<researchViewY>1.5</researchViewY>
 	<prerequisites>
 	    <li>Electricity</li>
 	    <li>Estate_TechArcLamps</li>		
@@ -203,24 +145,7 @@ Y
 	<tab>Estate_ResearchTab</tab>	
   </ResearchProjectDef>
   
-
-  <ResearchProjectDef>
-    <defName>Estate_TechTypewriting</defName>
-    <label>typewriting</label>
-    <description>Allows you to construct a writing table to provide a joyful creative outlet for your colonists.</description>
-    <baseCost>700</baseCost>
-    <prerequisites>
-      <li>Estate_TechHandWriting</li>
-    </prerequisites>	
-    <techLevel>Industrial</techLevel>
-    <tags>
-      <li>ClassicStart</li>
-    </tags>
-	<researchViewX>3</researchViewX>
-	<researchViewY>1.5</researchViewY>
-	<tab>Estate_ResearchTab</tab>	
-  </ResearchProjectDef>    
-  
+  <!--
   <ResearchProjectDef>
     <defName>Estate_TechMusicZero</defName>
     <label>piano</label>
@@ -234,6 +159,7 @@ Y
 	<researchViewY>0</researchViewY>
 	<tab>Estate_ResearchTab</tab>	
   </ResearchProjectDef>
+  -->
     
   <ResearchProjectDef>
     <defName>Estate_TechMusicLow</defName>
@@ -246,21 +172,6 @@ Y
     </tags>
 	<researchViewX>3</researchViewX>
 	<researchViewY>0</researchViewY>
-	<tab>Estate_ResearchTab</tab>	
-  </ResearchProjectDef>
-  
-
-  <ResearchProjectDef>
-    <defName>Estate_TechDrillAdvanced</defName>
-    <label>advanced drilling</label>
-    <description>Allows advanced drills for materials, far more efficient than previous models. (Limited to coal and brass).</description>
-    <baseCost>3000</baseCost>
-    <techLevel>Industrial</techLevel>
-    <prerequisites>
-      <li>Estate_TechDrill</li>
-    </prerequisites>	
-	<researchViewX>3</researchViewX>
-	<researchViewY>3.5</researchViewY>	
 	<tab>Estate_ResearchTab</tab>	
   </ResearchProjectDef>
   
@@ -318,7 +229,7 @@ Y
 			<li>MicroelectronicsBasics</li>		
 	</prerequisites>
 	<researchViewX>5</researchViewX>
-	<researchViewY>1</researchViewY>
+	<researchViewY>1.5</researchViewY>
   </ResearchProjectDef>   
   
 	

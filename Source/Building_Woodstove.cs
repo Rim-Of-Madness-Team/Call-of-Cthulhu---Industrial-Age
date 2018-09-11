@@ -9,7 +9,6 @@ namespace ArkhamEstate
 {
     public class Building_Woodstove : Building_WorkTable
     {
-
         private CompFlickable flickableComp;
 
         private CompGlower glowerComp;
@@ -36,7 +35,7 @@ namespace ArkhamEstate
             if (this.flickableComp.SwitchIsOn && this.refuelableComp.Fuel > 0f)
             {
                 this.heatPusherComp.Props.heatPerSecond = heatPerSecond;
-                this.glowerComp.Props.glowRadius = glowRadius;       
+                this.glowerComp.Props.glowRadius = glowRadius;
             }
             else
             {
@@ -51,14 +50,16 @@ namespace ArkhamEstate
         {
             if (Find.TickManager.TicksGame % 60 == 0)
             {
-                Pawn Dave = Map.mapPawns.FreeColonistsSpawned.FirstOrDefault((Pawn p) => p.Position == this.BillInteractionCell);
+                Pawn Dave = Map.mapPawns.FreeColonistsSpawned.FirstOrDefault((Pawn p) =>
+                    p.Position == this.BillInteractionCell);
                 if (Dave != null)
                 {
                     if (Dave.CurJob.def == JobDefOf.DoBill)
                     {
-                        IntVec3 smokePos = this.Position + GenAdj.CardinalDirections[Rot4.North.AsInt] + GenAdj.CardinalDirections[Rot4.North.AsInt];
+                        IntVec3 smokePos = this.Position + GenAdj.CardinalDirections[Rot4.North.AsInt] +
+                                           GenAdj.CardinalDirections[Rot4.North.AsInt];
                         Vector3 smokePosV3 = smokePos.ToVector3();
-                        float smokePosX = (float)smokePos.x;
+                        float smokePosX = (float) smokePos.x;
                         if (this.Rotation == Rot4.North || this.Rotation == Rot4.South)
                         {
                             smokePosX += 0.5f;
@@ -73,12 +74,14 @@ namespace ArkhamEstate
                         }
                         if (GenView.ShouldSpawnMotesAt(smokePos, this.Map))
                         {
-                            MoteThrown moteThrown = (MoteThrown)ThingMaker.MakeThing(ThingDef.Named("Mote_Smoke"), null);
+                            MoteThrown moteThrown =
+                                (MoteThrown) ThingMaker.MakeThing(ThingDef.Named("Mote_Smoke"), null);
                             moteThrown.Scale = Rand.Range(1.5f, 2.5f) * smokeSize.RandomInRange;
                             moteThrown.exactRotation = Rand.Range(-0.5f, 0.5f);
-                            moteThrown.exactPosition = new Vector3(smokePosX + Rand.Range(-0.1f, 0.1f), 0, (float)smokePos.z + Rand.Range(-0.25f, 1.0f));
+                            moteThrown.exactPosition = new Vector3(smokePosX + Rand.Range(-0.1f, 0.1f), 0,
+                                (float) smokePos.z + Rand.Range(-0.25f, 1.0f));
                             moteThrown.airTimeLeft = 5000f;
-                            moteThrown.SetVelocity((float)Rand.Range(30, 40), Rand.Range(0.008f, 0.012f));
+                            moteThrown.SetVelocity((float) Rand.Range(30, 40), Rand.Range(0.008f, 0.012f));
                             GenSpawn.Spawn(moteThrown, smokePos, this.Map);
                         }
                     }
@@ -93,13 +96,15 @@ namespace ArkhamEstate
             ResolveSmoke();
         }
 
-        public override bool UsableNow
-        {
-            get
-            {
-                return ((this.flickableComp != null && this.flickableComp.SwitchIsOn)) && (this.refuelableComp == null || this.refuelableComp.HasFuel) && (this.breakdownableComp == null || !this.breakdownableComp.BrokenDown);
-            }
-        }
+//        public override bool UsableNow
+//        {
+//            get
+//            {
+//                return ((this.flickableComp != null && this.flickableComp.SwitchIsOn)) &&
+//                       (this.refuelableComp == null || this.refuelableComp.HasFuel) &&
+//                       (this.breakdownableComp == null || !this.breakdownableComp.BrokenDown);
+//            }
+//        }
 
         public Building_Woodstove()
         {
@@ -125,9 +130,9 @@ namespace ArkhamEstate
             this.breakdownableComp = base.GetComp<CompBreakdownable>();
         }
 
-        public override void DeSpawn()
+        public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
         {
-            base.DeSpawn();
+            base.DeSpawn(mode);
             this.heatPusherComp = null;
             this.flickableComp = null;
             this.glowerComp = null;

@@ -10,11 +10,11 @@
     </graphicData>	
     <description>tesla coil</description>
     <menuHidden>true</menuHidden>
-    <soundInteract>InteractRifle</soundInteract>
-    <canBeSpawningInventory>false</canBeSpawningInventory>
-    <tradeability>Never</tradeability>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <tradeability>None</tradeability>
     <destroyOnDrop>true</destroyOnDrop>
     <statBases>
+	  <Mass>35</Mass>
       <AccuracyTouch>1.00</AccuracyTouch>
       <AccuracyShort>1.00</AccuracyShort>
       <AccuracyMedium>1.00</AccuracyMedium>
@@ -32,7 +32,7 @@
         <defaultProjectile>Bullet_Tesla</defaultProjectile>
         <warmupTime>10</warmupTime>
         <range>18</range>
-        <soundCast>ShotTesla</soundCast>
+        <soundCast>PsychicPulseGlobal</soundCast>
         <muzzleFlashScale>14</muzzleFlashScale>
       </li>
     </verbs>
@@ -40,33 +40,18 @@
  </ThingDef>	
     <ThingDef ParentName="BaseBullet">
     <defName>Bullet_Tesla</defName>
-    <label>electric arc</label>
-    <thingClass>GaussWeapons.Projectile_Gauss</thingClass>		
+    <label>electric arc</label>	
     <graphicData>
       <texPath>Things/Projectile/ElectricityArc</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <projectile>
-      <damageDef>Arc</damageDef>
+      <damageDef>Flame</damageDef>
       <damageAmountBase>25</damageAmountBase>
       <speed>190</speed>
 	  <explosionRadius>1.5</explosionRadius>
 	  <explosionDelay>1</explosionDelay>	  
    </projectile>
-     <comps>
-      <li Class="GaussWeapons.CompProperties_ExtraDamage">
-        <compClass>GaussWeapons.CompExtraDamage</compClass>
-        <damageDef>Stun</damageDef>
-        <damageAmount>2</damageAmount>
-        <chanceToProc>0.8</chanceToProc>
-      </li>
-      <li Class="GaussWeapons.CompProperties_ExtraDamage">
-        <compClass>GaussWeapons.CompExtraDamage</compClass>
-        <damageDef>EMP</damageDef>
-        <damageAmount>2</damageAmount>
-        <chanceToProc>1</chanceToProc>
-      </li>	  
-    </comps>  
   </ThingDef>
 
 

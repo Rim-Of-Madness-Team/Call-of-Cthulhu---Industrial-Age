@@ -1,12 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <ModMetaData>
-	<name>Call of Cthulhu - Industrial Age</name>
+	<name>Industrial Age - Objects and Furniture</name>
 	<author>Jecrell</author>
-	<targetVersion>0.18.0</targetVersion>
+	<targetVersion>0.19.0</targetVersion>
 	<description>
-	V1.18.0.1
-	Adds new furniture and appliances to your game from the time period of the late 1800's and early 1900s themed after the industrial era of H.P. Lovecraft's writings.
+	Adds new furniture and appliances to your game inspired by the time period of the late 1800's and early 1900s themed after the industrial era.
 
 	Adds the following objects:
 		*Refrigerator
@@ -17,7 +16,7 @@
 		*Street Gas Lamp
 		*Interior Gas Lamp
 		*Wood Stove Furnace
-		*Bookcases and Books
+	Books and bookcases have been moved to a new mod: RimWriter!
 
 	Special thanks to Vendan for a refrigeration subclass.
 	Check out his mod, RimFridge!

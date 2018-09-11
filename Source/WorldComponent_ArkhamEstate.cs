@@ -32,7 +32,7 @@ namespace ArkhamEstate
 
         public void GenerateStrangeMeatRecipe()
         {
-            if (Cthulhu.Utility.IsCosmicHorrorsLoaded() && !AreRecipesReady)
+            if (LoadedModManager.RunningMods.Any(x => x.Name.Contains("Cosmic Horrors")) && !AreRecipesReady)
             {
                 //Not really, but hey, let's get started.
                 AreRecipesReady = true;

@@ -218,7 +218,7 @@ namespace ArkhamEstate
 				action = delegate
 				{
 					idealTemp = 21f;
-					SoundDefOf.TickTiny.PlayOneShotOnCamera(null);
+					SoundDefOf.Tick_Tiny.PlayOneShotOnCamera(null);
 					ThrowCurrentTemperatureText();
 				},
 				defaultLabel = "CommandResetTemp".Translate(),

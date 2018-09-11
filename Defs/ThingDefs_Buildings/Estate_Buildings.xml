@@ -1,882 +1,80 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-
-  <ThingDef Name="EstateBuildingBase" Abstract="True">
-    <category>Building</category>
-    <thingClass>Building</thingClass>
-    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
-    <selectable>true</selectable>
-    <drawerType>MapMeshAndRealTime</drawerType>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <repairEffect>Repair</repairEffect>
-    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
-    <filthLeaving>BuildingRubble</filthLeaving>
-  </ThingDef>
   
-  
-  
-  <ThingDef Name="EstateBenchBase" ParentName="EstateBuildingBase" Abstract="True">
-    <castEdgeShadows>true</castEdgeShadows>
-    <staticSunShadowHeight>0.20</staticSunShadowHeight>
-  </ThingDef>  
-
-  <ThingDef ParentName="EstateBuildingBase">
-    <defName>Jecrell_Chandelier</defName>
-    <label>chandelier</label>
-    <description>A metal or stone ceiling mount for wax candles to light an area. Can be automatically refueled with wax made from animal fats at a cooking station. Produces a very small amount of heat.</description>
-    <category>Building</category>
+  <ThingDef ParentName="ArtableFurnitureBase">
+    <defName>Estate_Telescope</defName>
+    <label>fancy telescope</label>
+    <description>A fancy telescope for doing amateur astronomy. It's a relaxing and fun hobby for a certain kind of person.</description>
     <graphicData>
-      <texPath>Building/Misc/Chandelier/Jecrell_Chandelier</texPath>
+      <texPath>Things/Building/Joy/invernusTelescope</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawRotated>false</drawRotated>
-      <shaderType>CutoutComplex</shaderType>	  
-      <damageData>
-        <rect>(0.35,0.35,0.3,0.3)</rect>
-      </damageData>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+      </shadowData>
     </graphicData>
-    <stuffCategories>
-      <li>Metallic</li>
-      <li>Stony</li>
-    </stuffCategories>
-    <researchPrerequisites>
-      <li>Estate_TechCandleLights</li>
-    </researchPrerequisites>		
-    <costStuffCount>100</costStuffCount>	
-    <rotatable>false</rotatable>
-    <altitudeLayer>MoteOverhead</altitudeLayer>
-    <passability>Standable</passability>
-	<pathCost>8</pathCost>
-    <tickerType>Normal</tickerType>
-    <drawerType>RealtimeOnly</drawerType>
     <fillPercent>0.15</fillPercent>
-    <statBases>
-      <MaxHitPoints>110</MaxHitPoints>
-      <WorkToBuild>2500</WorkToBuild>
-      <Flammability>0</Flammability>
-	  <Beauty>10</Beauty>
-      <Mass>4.0</Mass>	  
-    </statBases>
-    <selectable>true</selectable>
-    <costList>
-      <Jecrell_Wax>20</Jecrell_Wax>
-    </costList>
-    <soundImpactDefault>BulletImpactGround</soundImpactDefault>
-    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
-    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
-    <comps>
-      <li Class="CompProperties_Refuelable">
-        <fuelConsumptionRate>0.5</fuelConsumptionRate>
-        <fuelCapacity>20.0</fuelCapacity>
-        <fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>
-        <fuelFilter>
-          <thingDefs>
-            <li>Jecrell_Wax</li>
-          </thingDefs>
-        </fuelFilter>
-        <destroyOnNoFuel>false</destroyOnNoFuel>
-      </li>
-      <li Class="CompProperties_Glower">
-        <glowRadius>10</glowRadius>
-        <glowColor>(252,187,113,0)</glowColor>
-      </li>
-      <li Class="CompProperties_HeatPusher">
-        <heatPerSecond>0.5</heatPerSecond>
-        <heatPushMaxTemperature>23</heatPushMaxTemperature>
-      </li>
-      <li Class="CompProperties_Fire4Overlay">
-        <flameSize>0.3</flameSize>
-        <offset>(0.22,0.1,0.25)</offset>
-      </li>
-      <li Class="CompProperties_Fire2Overlay">
-        <flameSize>0.02</flameSize>
-        <offset>(0,0.1,0.28)</offset>
-      </li>
-      <li Class="CompProperties_Fire3Overlay">
-        <flameSize>0.2</flameSize>
-        <offset>(-0.22,0.1,0.25)</offset>
-      </li>
-    </comps>
-	<placeWorkers>
-      <li>PlaceWorker_IsUnderRoof</li>
-      <li>PlaceWorker_Heater</li>
-    </placeWorkers>
-    <designationCategory>Furniture</designationCategory>
-    <storedConceptLearnOpportunity>Jecrell_Wax</storedConceptLearnOpportunity>	
-  </ThingDef>
-
-    <ThingDef ParentName="EstateBuildingBase">
-    <defName>Jecrell_ChandelierRoyal</defName>
-    <label>royal chandelier</label>
-    <description>A lavish metal or stone ceiling mount for wax candles to light an area. Can be automatically refueled with wax made from animal fats at a cooking station. Produces a very small amount of heat.</description>
-    <category>Building</category>
-    <graphicData>
-      <texPath>Building/Misc/Chandelier/Jecrell_RoyalChandelier</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawRotated>false</drawRotated>
-      <shaderType>CutoutComplex</shaderType>	  
-      <damageData>
-        <rect>(0.35,0.35,0.3,0.3)</rect>
-      </damageData>
-	  <drawSize>2.0</drawSize>
-    </graphicData>
-    <stuffCategories>
-      <li>Metallic</li>
-      <li>Stony</li>
-    </stuffCategories>
-    <researchPrerequisites>
-      <li>Estate_TechCandleLights</li>
-    </researchPrerequisites>		
-    <costStuffCount>200</costStuffCount>	
-    <rotatable>false</rotatable>
-    <altitudeLayer>MoteOverhead</altitudeLayer>
-    <passability>Standable</passability>
-	<pathCost>8</pathCost>
-    <tickerType>Normal</tickerType>
-    <drawerType>RealtimeOnly</drawerType>
-    <fillPercent>0.15</fillPercent>
-	<size>(2,2)</size>
-	<building>
-	  <isEdifice>false</isEdifice>
-	</building>
-    <statBases>
-      <MaxHitPoints>110</MaxHitPoints>
-      <WorkToBuild>3500</WorkToBuild>
-      <Flammability>0</Flammability>
-	  <Beauty>16</Beauty>
-      <Mass>4.0</Mass>	  
-    </statBases>
-    <selectable>true</selectable>
-    <costList>
-      <Jecrell_Wax>20</Jecrell_Wax>
-    </costList>
-    <soundImpactDefault>BulletImpactGround</soundImpactDefault>
-    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
-    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
-    <comps>
-      <li Class="CompProperties_Refuelable">
-        <fuelConsumptionRate>0.5</fuelConsumptionRate>
-        <fuelCapacity>20.0</fuelCapacity>
-        <fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>
-        <fuelFilter>
-          <thingDefs>
-            <li>Jecrell_Wax</li>
-          </thingDefs>
-        </fuelFilter>
-        <destroyOnNoFuel>false</destroyOnNoFuel>
-      </li>
-      <li Class="CompProperties_Glower">
-        <glowRadius>10</glowRadius>
-        <glowColor>(252,187,113,0)</glowColor>
-      </li>
-      <li Class="CompProperties_HeatPusher">
-        <heatPerSecond>0.5</heatPerSecond>
-        <heatPushMaxTemperature>23</heatPushMaxTemperature>
-      </li>
-      <li Class="CompOverlays.CompProperties_Overlays">
-        <overlays>
-		  <li>
-			<graphicData>
-			  <texPath>Things/Special/Fire</texPath>
-			  <graphicClass>ArkhamEstate.Graphic_CustomFlicker</graphicClass>
-			  <shaderType>TransparentPostLight</shaderType>
-			  <drawSize>0.27</drawSize>
-			</graphicData>
-			<offset>(-0.51,0.1,-0.1)</offset>
-		  </li>
-		  <li>
-			<graphicData>
-			  <texPath>Things/Special/Fire</texPath>
-			  <graphicClass>ArkhamEstate.Graphic_CustomFlicker</graphicClass>
-			  <shaderType>TransparentPostLight</shaderType>
-			  <drawSize>0.27</drawSize>
-			</graphicData>
-			<offset>(-0.31,0.1,-0.05)</offset>
-		  </li>
-		  <li>
-			<graphicData>
-			  <texPath>Things/Special/Fire</texPath>
-			  <graphicClass>ArkhamEstate.Graphic_CustomFlicker</graphicClass>
-			  <shaderType>TransparentPostLight</shaderType>
-			  <drawSize>0.27</drawSize>
-			</graphicData>
-			<offset>(0.31,0.1,-0.05)</offset>
-		  </li>
-		  <li>
-			<graphicData>
-			  <texPath>Things/Special/Fire</texPath>
-			  <graphicClass>ArkhamEstate.Graphic_CustomFlicker</graphicClass>
-			  <shaderType>TransparentPostLight</shaderType>
-			  <drawSize>0.27</drawSize>
-			</graphicData>
-			<offset>(0.5,0.1,-0.1)</offset>
-		  </li>
-		</overlays>
-      </li>
-    </comps>
-	<placeWorkers>
-      <li>PlaceWorker_IsUnderRoof</li>
-      <li>PlaceWorker_Heater</li>
-    </placeWorkers>
-    <designationCategory>Furniture</designationCategory>
-    <storedConceptLearnOpportunity>Jecrell_Wax</storedConceptLearnOpportunity>	
-  </ThingDef>
-  
-
-  <ThingDef ParentName="EstateBuildingBase">
-    <defName>Jecrell_Candelabra</defName>
-    <label>candelabra</label>
-    <description>A metal mount for wax candles to light an area. Can be automatically refueled with wax. Produces a small amount of heat.</description>
-    <category>Building</category>
-    <graphicData>
-      <texPath>Building/Misc/Candelabra/Jecrell_Candelabra</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawRotated>false</drawRotated>
-	  <shaderType>CutoutComplex</shaderType>
-      <damageData>
-        <rect>(0.35,0.35,0.3,0.3)</rect>
-      </damageData>
-    </graphicData>
-    <stuffCategories>
-      <li>Metallic</li>
-      <li>Stony</li>
-    </stuffCategories>
-    <costStuffCount>60</costStuffCount>	
-    <researchPrerequisites>
-      <li>Estate_TechCandleLights</li>
-    </researchPrerequisites>		
-    <rotatable>false</rotatable>
     <altitudeLayer>Building</altitudeLayer>
-    <passability>PassThroughOnly</passability>
-	<pathCost>8</pathCost>
-    <tickerType>Normal</tickerType>
-    <drawerType>RealtimeOnly</drawerType>
-    <fillPercent>0.15</fillPercent>
-    <statBases>
-      <Mass>4.0</Mass>	
-      <MaxHitPoints>110</MaxHitPoints>
-      <WorkToBuild>1500</WorkToBuild>
-      <Flammability>0</Flammability>
-	  <Beauty>10</Beauty>
-    </statBases>
-    <selectable>true</selectable>
-    <costList>
-      <Jecrell_Wax>20</Jecrell_Wax>
-    </costList>
-    <soundImpactDefault>BulletImpactGround</soundImpactDefault>
-    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
-    <placeWorkers>
-      <li>PlaceWorker_Heater</li>
-    </placeWorkers>
-    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
-    <comps>
-      <li Class="CompProperties_Refuelable">
-        <fuelConsumptionRate>0.5</fuelConsumptionRate>
-        <fuelCapacity>20.0</fuelCapacity>
-        <fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>
-        <fuelFilter>
-          <thingDefs>
-            <li>Jecrell_Wax</li>
-          </thingDefs>
-        </fuelFilter>
-      </li>
-      <li Class="CompProperties_Glower">
-        <glowRadius>10</glowRadius>
-        <glowColor>(252,187,113,0)</glowColor>
-      </li>
-      <li Class="CompProperties_HeatPusher">
-        <heatPerSecond>0.5</heatPerSecond>
-        <heatPushMaxTemperature>23</heatPushMaxTemperature>
-      </li>
-      <li Class="CompProperties_Fire4Overlay">
-        <flameSize>2.0</flameSize>
-        <offset>(0.22,0.1,0.44)</offset>
-      </li>
-      <li Class="CompProperties_Fire2Overlay">
-        <flameSize>2.0</flameSize>
-        <offset>(0,0.1,0.48)</offset>
-      </li>
-      <li Class="CompProperties_Fire3Overlay">
-        <flameSize>2.0</flameSize>
-        <offset>(-0.22,0.1,0.44)</offset>
-      </li>
-    </comps>
-    <designationCategory>Furniture</designationCategory>
-	    <storedConceptLearnOpportunity>Jecrell_Wax</storedConceptLearnOpportunity>
-  </ThingDef>
-  
-
-  <ThingDef ParentName="EstateBuildingBase">
-    <defName>Jecrell_Bookcase</defName>
-    <label>bookcase</label>
-	<thingClass>ArkhamEstate.Building_Bookcase</thingClass>
-    <description>Used to hold and catalog books.</description>
-	<iconDrawScale>2</iconDrawScale>
-    <graphicData>
-      <texPath>Building/Production/LibraryBookcase/Jecrell_Bookcase</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
-	  <shaderType>CutoutComplex</shaderType>
-	  <drawSize>3</drawSize>
-    </graphicData>
-    <altitudeLayer>Building</altitudeLayer>
-    <rotatable>true</rotatable>
-    <socialPropernessMatters>true</socialPropernessMatters>
-    <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
-      <WorkToBuild>10000</WorkToBuild>
-      <Mass>20</Mass>
-      <Flammability>1.0</Flammability>
-      <Beauty>5</Beauty>
-      <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
-    </statBases>
-    <stuffCategories>
-      <li>Metallic</li>
-      <li>Woody</li>
-      <li>Stony</li>
-    </stuffCategories>
-    <costStuffCount>90</costStuffCount>
-    <pathCost>70</pathCost>
-    <passability>PassThroughOnly</passability>
-    <designationCategory>Joy</designationCategory>
-    <designationHotKey>Misc2</designationHotKey>
-	<comps>
-	  <li Class="CompProperties_RoomIdentifier">
-		<roomStat>Impressiveness</roomStat>
-	  </li>
-	  <li Class="ArkhamEstate.CompProperties_StorageGraphic">
-	    <graphicEmpty>
-		  <texPath>Building/Production/LibraryBookcase/Jecrell_BookcaseEmpty</texPath>
-		  <graphicClass>Graphic_Multi</graphicClass>
-		  <shaderType>CutoutComplex</shaderType>
-		  <drawSize>3</drawSize>
-	    </graphicEmpty>
-	    <graphicSparse>
-		  <texPath>Building/Production/LibraryBookcase/Jecrell_BookcaseSparse</texPath>
-		  <graphicClass>Graphic_Multi</graphicClass>
-		  <shaderType>CutoutComplex</shaderType>
-		  <drawSize>3</drawSize>
-	    </graphicSparse>
-	    <graphicFull>
-		  <texPath>Building/Production/LibraryBookcase/Jecrell_Bookcase  </texPath>
-		  <graphicClass>Graphic_Multi</graphicClass>
-		  <shaderType>CutoutComplex</shaderType>
-		  <drawSize>3</drawSize>
-	    </graphicFull>
-	    <countSparseThreshhold>1</countSparseThreshhold>
-	    <countFullCapacity>30</countFullCapacity>
-	  </li>
-	</comps>
-	<building>
-      <isJoySource>true</isJoySource>
-	  <ai_chillDestination>false</ai_chillDestination>
-      <isInert>true</isInert>
-      <preventDeteriorationInside>true</preventDeteriorationInside>
-      <fixedStorageSettings>
-        <filter>
-          <categories>
-            <li>Estate_Books</li>
-          </categories>
-        </filter>
-      </fixedStorageSettings>
-      <defaultStorageSettings>
-        <filter>
-          <categories>
-            <li>Estate_Books</li>
-          </categories>
-        </filter>
-      </defaultStorageSettings>
-    </building>
-    <inspectorTabs>
-      <li>ITab_Storage</li>
-	  <li>ArkhamEstate.ITab_Inventory</li>
-    </inspectorTabs>
-  </ThingDef>
-
-  <ThingDef ParentName="EstateBenchBase">
-    <defName>Estate_TableTypewriter</defName>
-    <label>typewriting table</label>
-	<thingClass>ArkhamEstate.Building_Typewriter</thingClass>	
-    <description>A writer's bench equipped with a typewriter.</description> 
-	<graphicData>
-      <texPath>Building/Production/TypewriterTable/Jecrell_TypewriterTable</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
-      <shaderType>CutoutComplex</shaderType>		
-      <drawSize>(3.5,1.5)</drawSize>
-      <damageData>
-        <cornerTL>Damage/Corner</cornerTL>
-        <cornerTR>Damage/Corner</cornerTR>
-        <cornerBL>Damage/Corner</cornerBL>
-        <cornerBR>Damage/Corner</cornerBR>
-      </damageData>
-    </graphicData>
-    <defaultPlacingRot>South</defaultPlacingRot>	
-    <costList>
-      <Steel>50</Steel>
-    </costList>
-    <stuffCategories>
-      <li>Metallic</li>
-      <li>Woody</li>
-      <li>Stony</li>	  
-    </stuffCategories>
-    <costStuffCount>75</costStuffCount>
-	<minifiedDef>MinifiedFurniture</minifiedDef>
-    <altitudeLayer>Building</altitudeLayer>
-    <socialPropernessMatters>true</socialPropernessMatters>	
-    <fillPercent>0.5</fillPercent>
-    <useHitPoints>True</useHitPoints>
-    <statBases>
-      <Mass>150</Mass>	
-      <WorkToBuild>10000</WorkToBuild>
-      <MaxHitPoints>180</MaxHitPoints>
-      <Flammability>1.0</Flammability>
-	  <Beauty>10</Beauty>
-      <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>	  
-    </statBases>
-    <researchPrerequisites>
-      <li>Estate_TechTypewriting</li>
-    </researchPrerequisites>	
-    <size>(3,1)</size>
-    <designationCategory>Joy</designationCategory>
-    <passability>PassThroughOnly</passability>
-    <pathCost>70</pathCost>
-    <hasInteractionCell>True</hasInteractionCell>
+    <hasInteractionCell>true</hasInteractionCell>
     <interactionCellOffset>(0,0,1)</interactionCellOffset>
-    <surfaceType>Item</surfaceType>
-    <inspectorTabs>
-      <li>ITab_Bills</li>
-    </inspectorTabs>
-    <building>
-      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>	  
-	  <isJoySource>true</isJoySource>
-    </building>
-    <comps>
-      <li Class="CompProperties_Usable">
-        <useJob>Estate_FreeWrite</useJob>
-        <useLabel>Write</useLabel>
-      </li>
-    </comps>
-    <designationHotKey>Misc11</designationHotKey>
-	    <storedConceptLearnOpportunity>Jecrell_TypewriterTable</storedConceptLearnOpportunity>	
-  </ThingDef>
-  
-
-  <ThingDef ParentName="EstateBuildingBase">
-    <defName>Estate_Piano</defName>
-	<thingClass>ArkhamEstate.Building_Gramophone</thingClass>
-    <label>piano</label>
-    <description>An acoustic, stringed musical instrument played using a keyboard. Can improve artistic skill and joy.</description>
-    <category>Building</category>
-    <graphicData>
-      <texPath>Building/Misc/Gramophone/Jecrell_Gramophone</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawRotated>false</drawRotated>
-	  <shaderType>CutoutComplex</shaderType>
-      <damageData>
-        <rect>(0.35,0.35,0.3,0.3)</rect>
-      </damageData>
-      <shadowData>
-        <volume>(0.3, 0.6, 0.3)</volume>
-      </shadowData>	  	  	  
-    </graphicData>
-    <rotatable>false</rotatable>
-    <minifiedDef>MinifiedFurniture</minifiedDef>
-    <socialPropernessMatters>true</socialPropernessMatters>	
-    <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
-    <building>
-      <isJoySource>true</isJoySource>
-    </building>
-    <placeWorkers>
-      <li>ArkhamEstate.PlaceWorker_ListenArea</li>
-    </placeWorkers>
-    <comps>
-      <li Class="CompProperties_Forbiddable" />
-    </comps>	
-	<pathCost>8</pathCost>
-    <tickerType>Normal</tickerType>
-    <drawerType>RealtimeOnly</drawerType>
-    <fillPercent>0.15</fillPercent>
-    <statBases>
-      <Mass>30</Mass>	
-      <MaxHitPoints>110</MaxHitPoints>
-      <WorkToBuild>1500</WorkToBuild>
-      <Flammability>1.0</Flammability>
-	  <Beauty>10</Beauty>
-      <MarketValue>500</MarketValue>
-      <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>	  
-    </statBases>
-    <researchPrerequisites>
-      <li>Estate_TechMusicLow</li>
-    </researchPrerequisites>		
-    <selectable>true</selectable>
-    <costList>
-      <Steel>50</Steel>
-      <Component>2</Component>	
-    </costList>
-    <stuffCategories>
-      <li>Metallic</li>
-	  <li>Woody</li>
-      <li>Stony</li>
-    </stuffCategories>
-    <costStuffCount>60</costStuffCount>	
-    <soundImpactDefault>BulletImpactGround</soundImpactDefault>
-    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
-    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
-	    <storedConceptLearnOpportunity>Jecrell_Gramophone</storedConceptLearnOpportunity>		
-    <designationCategory>Joy</designationCategory>
-  </ThingDef>
-    
-  
-  <ThingDef ParentName="EstateBuildingBase">
-    <defName>Estate_Gramophone</defName>
-	<thingClass>ArkhamEstate.Building_Gramophone</thingClass>
-    <label>gramophone</label>
-    <description>An ancient windup device utilized to play sound recordings from bygone eras.</description>
-    <category>Building</category>
-    <graphicData>
-      <texPath>Building/Misc/Gramophone/Jecrell_Gramophone</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawRotated>false</drawRotated>
-	  <shaderType>CutoutComplex</shaderType>
-      <damageData>
-        <rect>(0.35,0.35,0.3,0.3)</rect>
-      </damageData>
-      <shadowData>
-        <volume>(0.3, 0.6, 0.3)</volume>
-      </shadowData>	  	  	  
-    </graphicData>
-    <rotatable>false</rotatable>
-    <minifiedDef>MinifiedFurniture</minifiedDef>
-    <socialPropernessMatters>true</socialPropernessMatters>	
-    <altitudeLayer>Building</altitudeLayer>
-    <passability>PassThroughOnly</passability>
-    <building>
-      <isJoySource>true</isJoySource>
-    </building>
-    <placeWorkers>
-      <li>ArkhamEstate.PlaceWorker_ListenArea</li>
-    </placeWorkers>
-    <comps>
-      <li Class="CompProperties_Forbiddable" />
-    </comps>	
-	<pathCost>8</pathCost>
-    <tickerType>Normal</tickerType>
-    <drawerType>RealtimeOnly</drawerType>
-    <fillPercent>0.15</fillPercent>
-    <statBases>
-      <Mass>30</Mass>	
-      <MaxHitPoints>110</MaxHitPoints>
-      <WorkToBuild>1500</WorkToBuild>
-      <Flammability>1.0</Flammability>
-	  <Beauty>10</Beauty>
-      <MarketValue>500</MarketValue>
-      <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>	  
-    </statBases>
-    <researchPrerequisites>
-      <li>Estate_TechMusicLow</li>
-    </researchPrerequisites>		
-    <selectable>true</selectable>
-    <costList>
-      <Steel>50</Steel>
-      <Component>2</Component>	
-    </costList>
-    <stuffCategories>
-      <li>Metallic</li>
-	  <li>Woody</li>
-      <li>Stony</li>
-    </stuffCategories>
-    <costStuffCount>60</costStuffCount>	
-    <soundImpactDefault>BulletImpactGround</soundImpactDefault>
-    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
-    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
-	    <storedConceptLearnOpportunity>Jecrell_Gramophone</storedConceptLearnOpportunity>		
-    <designationCategory>Joy</designationCategory>
-  </ThingDef>
-  
-  <ThingDef ParentName="EstateBuildingBase">
-    <defName>Estate_Radio</defName>
-	<thingClass>ArkhamEstate.Building_Radio</thingClass>
-    <label>radio</label>
-    <description>An ancient windup device utilized to play sound recordings from bygone eras. Now with autoplay.</description>
-    <category>Building</category>
-    <graphicData>
-      <texPath>Building/Misc/Radio/Jecrell_Radio</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawRotated>false</drawRotated>
-	  <shaderType>CutoutComplex</shaderType>
-      <drawSize>(2.3,2.3)</drawSize>	  
-      <damageData>
-        <rect>(0.35,0.35,0.3,0.3)</rect>
-      </damageData>
-      <shadowData>
-        <volume>(0.3, 0.6, 0.3)</volume>
-      </shadowData>	  
-    </graphicData>
-    <rotatable>false</rotatable>
-    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <pathCost>50</pathCost>
+    <minifiedDef>MinifiedThing</minifiedDef>
     <socialPropernessMatters>true</socialPropernessMatters>
-	<uiIconPath>UI/Icons/Radio/Radio_ico</uiIconPath>	
-    <altitudeLayer>Building</altitudeLayer>
-    <passability>PassThroughOnly</passability>
     <building>
-      <isJoySource>true</isJoySource>
+      <joyKind>Telescope</joyKind>
     </building>
-    <placeWorkers>
-      <li>ArkhamEstate.PlaceWorker_ListenArea</li>
-    </placeWorkers>	
-	<pathCost>8</pathCost>
-    <tickerType>Normal</tickerType>
-    <drawerType>RealtimeOnly</drawerType>
-    <fillPercent>0.15</fillPercent>
-    <statBases>
-      <Mass>35</Mass>
-      <MaxHitPoints>110</MaxHitPoints>
-      <WorkToBuild>1500</WorkToBuild>
-      <Flammability>1.0</Flammability>
-	  <Beauty>10</Beauty>
-      <MarketValue>500</MarketValue>
-      <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>	  
-    </statBases>
-    <researchPrerequisites>
-      <li>Estate_TechMusicMed</li>
-    </researchPrerequisites>
-	<comps>
-      <li Class="CompProperties_Forbiddable" />	  	
-      <li Class="CompProperties_Power">
-        <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>20</basePowerConsumption>
-      </li>
-	</comps>
-    <selectable>true</selectable>
     <costList>
       <Steel>50</Steel>
-      <Component>2</Component>	
+      <ComponentIndustrial>1</ComponentIndustrial>
+	  <Gold>1</Gold>
     </costList>
-    <stuffCategories>
-      <li>Metallic</li>
-	  <li>Woody</li>
-      <li>Stony</li>
-    </stuffCategories>
-    <costStuffCount>60</costStuffCount>	
-    <soundImpactDefault>BulletImpactGround</soundImpactDefault>
-    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
-    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
-	    <storedConceptLearnOpportunity>Jecrell_Gramophone</storedConceptLearnOpportunity>		
-    <designationCategory>Joy</designationCategory>
-  </ThingDef>  
-  
-
-  <ThingDef ParentName="EstateBuildingBase">
-    <defName>Jecrell_GasStreetLampAlpha</defName>
-    <label>gas street lamp</label>
-    <description>A standing lamp that uses preinstalled gas pipes to fuel an automatic flame.</description>
-    <category>Building</category>
-	<thingClass>ArkhamEstate.Building_StreetLamp</thingClass>	
-    <graphicData>
-      <texPath>Building/Misc/GasStreetLamp/Jecrell_GasStreetLampAlpha</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawRotated>false</drawRotated>
-      <drawSize>(6.0,6.0)</drawSize>
-	  <shaderType>CutoutComplex</shaderType>
-      <damageData>
-        <rect>(0.35,0.35,0.3,0.3)</rect>
-      </damageData>
-    </graphicData>
-	<uiIconPath>UI/Icons/GasStreetLamp/GasStreetLampAlpha_ico</uiIconPath>	
-    <stuffCategories>
-      <li>Metallic</li>
-      <li>Stony</li>
-    </stuffCategories>
-    <costStuffCount>30</costStuffCount>
-    <costList>
-      <Steel>5</Steel>
-      <Component>3</Component>	  
-	</costList>		
-    <rotatable>false</rotatable>
-    <altitudeLayer>MoteOverhead</altitudeLayer>
-    <passability>Impassable</passability>
-	<pathCost>8</pathCost>
-    <tickerType>Normal</tickerType>
-    <drawerType>RealtimeOnly</drawerType>
-    <fillPercent>0.15</fillPercent>
     <statBases>
-      <Mass>150</Mass>	
-      <MaxHitPoints>40</MaxHitPoints>
-      <WorkToBuild>160</WorkToBuild>
+      <MaxHitPoints>75</MaxHitPoints>
       <Flammability>1.0</Flammability>
-	  <Beauty>3</Beauty>
+      <MarketValue>400</MarketValue>
+      <Mass>8.0</Mass>
+      <JoyGainFactor>1</JoyGainFactor>
     </statBases>
-    <researchPrerequisites>
-      <li>Estate_TechGasLights</li>
-    </researchPrerequisites>	
-	<size>(1,1)</size>
-    <selectable>true</selectable>
-    <soundImpactDefault>BulletImpactGround</soundImpactDefault>
-    <comps>
-      <li Class="CompProperties_Flickable"/>
-      <li Class="CompProperties_Breakdownable"/>	  
-    </comps>
-    <placeWorkers>
-      <li>PlaceWorker_NotUnderRoof</li>
-    </placeWorkers>	
-    <designationCategory>Furniture</designationCategory>
+	<comps>
+		<li Class="CompProperties_RoomIdentifier">
+			<roomStat>Impressiveness</roomStat>
+		</li>
+	</comps>
   </ThingDef>
- 
-
-  <ThingDef ParentName="EstateBuildingBase">
-    <defName>Jecrell_GasStreetLampBeta</defName>
-    <label>gas street lamp</label>
-    <description>A standing lamp that uses preinstalled gas pipes to fuel an automatic flame.</description>
-    <category>Building</category>
-	<thingClass>ArkhamEstate.Building_StreetLamp</thingClass>
-    <graphicData>
-      <texPath>Building/Misc/GasStreetLamp/Jecrell_GasStreetLampBeta</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawRotated>false</drawRotated>
-      <drawSize>(6.0,6.0)</drawSize>
-	  <shaderType>CutoutComplex</shaderType>
-      <damageData>
-        <rect>(0.35,0.35,0.3,0.3)</rect>
-      </damageData>
-    </graphicData>
-	<uiIconPath>UI/Icons/GasStreetLamp/GasStreetLampBeta_ico</uiIconPath>		
-    <stuffCategories>
-      <li>Metallic</li>
-      <li>Stony</li>
-    </stuffCategories>
-    <costStuffCount>30</costStuffCount>
-    <costList>
-      <Steel>5</Steel>
-      <Component>3</Component>	  
-	</costList>
-    <rotatable>false</rotatable>
-    <altitudeLayer>MoteOverhead</altitudeLayer>
-    <passability>Impassable</passability>
-	<pathCost>8</pathCost>
-    <tickerType>Normal</tickerType>
-    <drawerType>RealtimeOnly</drawerType>
-    <fillPercent>0.15</fillPercent>
-    <statBases>
-      <Mass>150</Mass>		
-      <MaxHitPoints>40</MaxHitPoints>
-      <WorkToBuild>160</WorkToBuild>
-      <Flammability>1.0</Flammability>
-	  <Beauty>3</Beauty>
-    </statBases>
-    <researchPrerequisites>
-      <li>Estate_TechGasLights</li>
-    </researchPrerequisites>
-	<size>(1,1)</size>
-    <selectable>true</selectable>
-    <soundImpactDefault>BulletImpactGround</soundImpactDefault>
-    <comps>
-      <li Class="CompProperties_Flickable"/>
-      <li Class="CompProperties_Breakdownable"/>	  
-    </comps>
-    <placeWorkers>
-      <li>PlaceWorker_NotUnderRoof</li>
-    </placeWorkers>	
-    <designationCategory>Furniture</designationCategory>
-  </ThingDef>
-
   
-  <ThingDef ParentName="EstateBuildingBase">
-    <defName>Jecrell_GasLampGlower</defName>
-    <label>gas street lamp glower</label>
-    <description>A standing lamp that uses preinstalled gas pipes to fuel an automatic flame.</description>
-    <graphicData>
-      <texPath>Building/Misc/GasStreetLamp/Jecrell_GasStreetLampAlpha</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawRotated>false</drawRotated>
-      <drawSize>(6.0,6.0)</drawSize>
-	  <shaderType>CutoutComplex</shaderType>
-      <damageData>
-        <rect>(0.35,0.35,0.3,0.3)</rect>
-      </damageData>
-    </graphicData>
-    <category>Building</category>
-    <thingClass>ArkhamEstate.ThingWithComps_Glower</thingClass>
-    <altitudeLayer>MoteOverhead</altitudeLayer>
-    <tickerType>Normal</tickerType>
-    <drawerType>RealtimeOnly</drawerType>
- 	<size>(1,1)</size>
-    <selectable>false</selectable>
-    <comps>
-      <li Class="CompProperties_Glower">
-        <glowRadius>12</glowRadius>
-        <glowColor>(255,178,64,0)</glowColor>
-      </li>
-      <li Class="CompProperties_Flickable"/>  
-    </comps>
-  </ThingDef>
-
   
-  <ThingDef ParentName="EstateBuildingBase">
-    <defName>Jecrell_GasLamp</defName>
-    <label>gas lamp</label>
-    <description>A standing lamp that uses an inner gas mantle with preinstalled gas pipes to create incandescent light.</description>
-    <category>Building</category>
+  <ThingDef ParentName="TableGatherSpotBase">
+    <defName>Estate_RoundTable</defName>
+    <label>round table (1x1)</label>
     <graphicData>
-      <texPath>Building/Misc/GasLamp/Jecrell_GasLamp</texPath>
+      <texPath>Things/Building/Furniture/mrXuiryusRoundTable</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawRotated>false</drawRotated>
-	  <shaderType>CutoutComplex</shaderType>
-      <damageData>
-        <rect>(0.35,0.35,0.3,0.3)</rect>
-      </damageData>
+      <drawSize>(2,2)</drawSize>
+      <shadowData>
+        <volume>(0.3, 0.3, 0.3)</volume>
+      </shadowData>
     </graphicData>
-    <stuffCategories>
-      <li>Metallic</li>
-      <li>Stony</li>
-    </stuffCategories>
-    <costStuffCount>15</costStuffCount>
-    <costList>
-      <Steel>3</Steel>
-      <Component>2</Component>	  
-	</costList>	
-    <rotatable>false</rotatable>
-    <altitudeLayer>Building</altitudeLayer>
-    <passability>PassThroughOnly</passability>
-	<pathCost>8</pathCost>
-    <tickerType>Normal</tickerType>
-    <drawerType>RealtimeOnly</drawerType>
-	<minifiedDef>MinifiedFurniture</minifiedDef>	
-    <fillPercent>0.15</fillPercent>
+      <castEdgeShadows>false</castEdgeShadows>
+      <staticSunShadowHeight>0.0</staticSunShadowHeight>
     <statBases>
-      <Mass>5</Mass>		
-      <MaxHitPoints>40</MaxHitPoints>
-      <WorkToBuild>160</WorkToBuild>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToBuild>550</WorkToBuild>
+      <Mass>3</Mass>
       <Flammability>1.0</Flammability>
-	  <Beauty>1</Beauty>
+      <Beauty>0.7</Beauty>
     </statBases>
-    <researchPrerequisites>
-      <li>Estate_TechGasLights</li>
-    </researchPrerequisites>		
-    <selectable>true</selectable>
-    <soundImpactDefault>BulletImpactGround</soundImpactDefault>
-    <comps>
-      <li Class="CompProperties_Glower">
-        <glowRadius>10</glowRadius>
-        <glowColor>(255,178,64,0)</glowColor>
-      </li>
-      <li Class="CompProperties_Flickable"/>	  
-    </comps>
-    <designationCategory>Furniture</designationCategory>
+    <size>(1,1)</size>
+    <costStuffCount>22</costStuffCount>
   </ThingDef>
 
-
-  <ThingDef ParentName="EstateBuildingBase">
+  <ThingDef ParentName="BuildingBase">
     <defName>WoodStoveFurnace</defName>
     <label>wood stove furnace</label>
     <thingClass>ArkhamEstate.Building_WoodStove</thingClass>
     <description>Cooks meals and produces heat. Runs out of fuel after a few days. As with all heat sources, it must be placed indoors so it has a closed space to heat. Refuelable.</description>    
-    <category>Building</category>
+    <category>Building</category><thingCategories><li>Buildings</li></thingCategories>
     <graphicData>
       <texPath>Building/Temperature/WoodStoveFurnace/Jecrell_WoodStoveFurnace</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -912,12 +110,12 @@
 	<size>(1,1)</size>
     <costList>
       <Steel>70</Steel>
-      <Component>1</Component>
+      <ComponentIndustrial>1</ComponentIndustrial>
     </costList>
-	<minifiedDef>MinifiedFurniture</minifiedDef>	
+	<minifiedDef>MinifiedThing</minifiedDef>	
     <hasInteractionCell>True</hasInteractionCell>
     <interactionCellOffset>(0,0,1)</interactionCellOffset>	
-    <soundImpactDefault>BulletImpactGround</soundImpactDefault>
+    <soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
     <placeWorkers>
       <li>PlaceWorker_Heater</li>
     </placeWorkers>
@@ -952,7 +150,8 @@
       <li>CookMealSimple</li>
       <li>CookMealFine</li>
       <li>CookMealLavish</li>
-      <li>MakePemmican</li>
+      <li>Make_Pemmican</li>
+      <li>BurnApparel</li>
       <li>BurnDrugs</li>
     </recipes>
     <inspectorTabs>
@@ -965,7 +164,7 @@
   </ThingDef>
   
 
-  <ThingDef ParentName="EstateBuildingBase">
+  <ThingDef ParentName="BuildingBase">
     <defName>Estate_Refrigerator</defName>
     <label>Refrigerator</label>
     <thingClass>ArkhamEstate.Building_Refrigerator</thingClass>
@@ -995,7 +194,7 @@
         <filter>
           <thingDefs>
             <li>Beer</li>
-			<li>HerbalMedicine</li>
+			<li>MedicineHerbal</li>
           </thingDefs>
           <categories>
             <li>FoodMeals</li>
@@ -1007,7 +206,7 @@
         <filter>
           <thingDefs>
             <li>Beer</li>
-			<li>HerbalMedicine</li>
+			<li>MedicineHerbal</li>
           </thingDefs>		
           <categories>
             <li>FoodMeals</li>
@@ -1043,7 +242,7 @@
     <description>Meals stored in this will not deteriorate, even if outside.</description>
     <costList>
       <Steel>100</Steel>
-	  <Component>3</Component>
+	  <ComponentIndustrial>3</ComponentIndustrial>
     </costList>
     <tickerType>Rare</tickerType>
     <neverMultiSelect>true</neverMultiSelect>
@@ -1052,6 +251,73 @@
     <constructEffect>ConstructMetal</constructEffect>
 	    <storedConceptLearnOpportunity>Jecrell_Refrigerator</storedConceptLearnOpportunity>			
   </ThingDef>
-
+  
+  
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>Estate_Telegraph</defName>
+    <label>telegraph</label>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <thingClass>Building_CommsConsole</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Misc/Telegraph</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>	
+      <drawSize>(2.5,1.5)</drawSize>
+      <damageData>
+        <rect>(0,0,3,1.8)</rect>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <defaultPlacingRot>South</defaultPlacingRot>		
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <blockWind>true</blockWind>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <rotatable>true</rotatable>
+    <minifiedDef>MinifiedThing</minifiedDef>	
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>2200</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Mass>30</Mass>	  
+    </statBases>
+    <description>The telegraph allows communication with remote traders as well as other factions for trade and diplomacy.</description>
+    <size>(2,1)</size>
+    <costList>
+      <Steel>20</Steel>	  
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <stuffCategories>
+      <li>Woody</li>	  
+    </stuffCategories>
+    <costStuffCount>140</costStuffCount>	
+    <interactionCellOffset>(0,0,1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>Misc</designationCategory>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>200</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <designationHotKey>Misc3</designationHotKey>
+    <researchPrerequisites>
+      <li>Industrial_Telegraph</li>
+    </researchPrerequisites>
+  </ThingDef> 
+  
   
 </Defs>

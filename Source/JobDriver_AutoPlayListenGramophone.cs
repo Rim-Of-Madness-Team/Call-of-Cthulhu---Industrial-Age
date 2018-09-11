@@ -19,7 +19,7 @@ namespace ArkhamEstate
     public class JobDriver_AutoPlayListenGramophone : JobDriver
     {
 
-        public override bool TryMakePreToilReservations()
+        public override bool TryMakePreToilReservations(bool debug)
         {
             return true;
         }
@@ -159,7 +159,7 @@ namespace ArkhamEstate
             }
             this.pawn.rotationTracker.FaceCell(base.TargetA.Cell);
             this.pawn.GainComfortFromCellIfPossible();
-            float statValue = base.TargetThingA.GetStatValue(StatDefOf.EntertainmentStrengthFactor, true);
+            float statValue = base.TargetThingA.GetStatValue(StatDefOf.JoyGainFactor, true);
             float extraJoyGainFactor = statValue;
             JoyUtility.JoyTickCheckEnd(this.pawn, JoyTickFullJoyAction.EndJob, extraJoyGainFactor);
         }

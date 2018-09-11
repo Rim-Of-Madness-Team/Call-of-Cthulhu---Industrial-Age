@@ -228,7 +228,7 @@ namespace ArkhamEstate
                 }
                 if (!powerTrader.PowerOn)
                 {
-                    Cthulhu.Utility.DebugReport("Radio: Power Off Called");
+                    //Cthulhu.Utility.DebugReport("Radio: Power Off Called");
                     StopMusic();
                 }
             }
@@ -450,9 +450,9 @@ namespace ArkhamEstate
             if (state == State.off) state = State.on;
 
             //Establish duration
-            Cthulhu.Utility.DebugReport("Cur Time:" + Time.time.ToString());
+            //Cthulhu.Utility.DebugReport("Cur Time:" + Time.time.ToString());
             duration = Time.time + currentTuneDef.durationTime;
-            Cthulhu.Utility.DebugReport(currentTuneDef.ToString() + " Fin Time:" + duration.ToString());
+            //Cthulhu.Utility.DebugReport(currentTuneDef.ToString() + " Fin Time:" + duration.ToString());
 
             //Clear old song
             this.playingSong = null;
@@ -498,7 +498,7 @@ namespace ArkhamEstate
             {
                 return listenableCells;
             }
-            RegionTraverser.BreadthFirstTraverse(region, (Region from, Region r) => r.portal == null, delegate (Region r)
+            RegionTraverser.BreadthFirstTraverse(region, (Region from, Region r) => r.door == null, delegate (Region r)
             {
                 foreach (IntVec3 current in r.Cells)
                 {
@@ -524,7 +524,7 @@ namespace ArkhamEstate
             if (isRadio && powerTrader != null)
             {
                 Command_Toggle toggleDef = new Command_Toggle();
-                toggleDef.hotKey = KeyBindingDefOf.CommandTogglePower;
+                toggleDef.hotKey = KeyBindingDefOf.Command_TogglePower;
                 toggleDef.icon = ContentFinder<Texture2D>.Get("UI/Icons/Commands/Autoplay", true);
                 toggleDef.defaultLabel = "Autoplay";
                 toggleDef.defaultDesc = "Enables automatic playing of music through the radio.";

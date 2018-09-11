@@ -18,7 +18,7 @@ namespace ArkhamEstate
         private HediffDef sanityLossHediff;
         private float sanityRestoreRate = 0.1f;
 
-        public override bool TryMakePreToilReservations()
+        public override bool TryMakePreToilReservations(bool debug)
         {
             return true;
         }
@@ -38,7 +38,7 @@ namespace ArkhamEstate
             {
                 this.pawn.rotationTracker.FaceCell(this.TargetA.Cell);
                 this.pawn.GainComfortFromCellIfPossible();
-                float statValue = this.TargetThingA.GetStatValue(StatDefOf.EntertainmentStrengthFactor, true);
+                float statValue = this.TargetThingA.GetStatValue(StatDefOf.JoyGainFactor, true);
                 float extraJoyGainFactor = statValue;
                 JoyUtility.JoyTickCheckEnd(this.pawn, JoyTickFullJoyAction.EndJob, extraJoyGainFactor);
             };

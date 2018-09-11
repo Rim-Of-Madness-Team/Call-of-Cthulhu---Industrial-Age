@@ -19,7 +19,7 @@ namespace ArkhamEstate
     public class JobDriver_TurnOffGramophone : JobDriver
     {
 
-        public override bool TryMakePreToilReservations()
+        public override bool TryMakePreToilReservations(bool debug)
         {
             return true;
         }

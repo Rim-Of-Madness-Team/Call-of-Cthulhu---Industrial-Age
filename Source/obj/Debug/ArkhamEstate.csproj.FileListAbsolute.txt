@@ -41,3 +41,8 @@ D:\SteamLibrary\steamapps\common\RimWorld\ModsWorkspace\Call-of-Cthulhu---Indust
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\ModsWorkspace\Call-of-Cthulhu---Industrial-Age\Assemblies\ArkhamEstate.dll
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\ModsWorkspace\Call-of-Cthulhu---Industrial-Age\Source\obj\Debug\ArkhamEstate.csprojResolveAssemblyReference.cache
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\ModsWorkspace\Call-of-Cthulhu---Industrial-Age\Source\obj\Debug\ArkhamEstate.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\ModsWorkspace\Industrial-Age---Objects-and-Furniture\Source\obj\Debug\ArkhamEstate.csprojAssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\ModsWorkspace\Industrial-Age---Objects-and-Furniture\Source\obj\Debug\ArkhamEstate.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\ModsWorkspace\Industrial-Age---Objects-and-Furniture\Source\obj\Debug\ArkhamEstate.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\ModsWorkspace\Industrial-Age---Objects-and-Furniture\Assemblies\ArkhamEstate.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\ModsWorkspace\Industrial-Age---Objects-and-Furniture\Source\obj\Debug\ArkhamEstate.csproj.CopyComplete
