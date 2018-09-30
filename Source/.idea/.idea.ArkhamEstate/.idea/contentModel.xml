@@ -3,8 +3,8 @@
   <component name="ContentModelStore">
     <e p="C:\Program Files (x86)\Steam\steamapps\common\RimWorld\ModsWorkspace\Industrial-Age---Objects-and-Furniture\Assemblies" t="ExcludeRecursive" />
     <e p="C:\Program Files (x86)\Steam\steamapps\common\RimWorld\ModsWorkspace\Industrial-Age---Objects-and-Furniture\Source" t="IncludeRecursive">
-      <e p="ArkhamEstate.csproj" t="IncludeRecursive" />
-      <e p="ArkhamEstate.sln" t="IncludeFlat" />
+      <e p="IndustrialAge.Objects.csproj" t="IncludeRecursive" />
+      <e p="IndustrialAge.Objects.sln" t="IncludeFlat" />
       <e p="Building_Gramophone.cs" t="Include" />
       <e p="Building_Radio.cs" t="Include" />
       <e p="Building_Refrigerator.cs" t="Include" />
@@ -31,9 +31,9 @@
       <e p="ThingWithComps_Glower.cs" t="Include" />
       <e p="Tools.cs" t="Include" />
       <e p="TuneDef.cs" t="Include" />
-      <e p="WorldComponent_ArkhamEstate.cs" t="Include" />
+      <e p="WorldComponent_IndustrialAge.Objects.cs" t="Include" />
       <e p="WorldComponent_Tunes.cs" t="Include" />
     </e>
-    <e p="C:\Users\mattw\.Rider2017.2\system\resharper-host\local\Transient\ReSharperHost\v10\SolutionCaches\_ArkhamEstate.-520091432.00" t="ExcludeRecursive" />
+    <e p="C:\Users\mattw\.Rider2017.2\system\resharper-host\local\Transient\ReSharperHost\v10\SolutionCaches\_IndustrialAge.Objects.-520091432.00" t="ExcludeRecursive" />
   </component>
 </project>

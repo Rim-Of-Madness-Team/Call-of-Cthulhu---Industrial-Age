@@ -1,20 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
 <ModMetaData>
-	<name>Industrial Age - Objects and Furniture</name>
-	<author>Jecrell</author>
-	<targetVersion>0.19.0</targetVersion>
-	<description>
+  <name>Industrial Age - Objects and Furniture</name>
+  <author>Jecrell</author>
+  <targetVersion>0.19.0</targetVersion>
+  <description>1.19.0.1 (09-30-2018)
+
 	Adds new furniture and appliances to your game inspired by the time period of the late 1800's and early 1900s themed after the industrial era.
 
 	Adds the following objects:
 		*Refrigerator
-		*Typewriter
+		*Telegraph
 		*Gramophone
+                *Radio
 		*Candelabra
 		*Chandelier
+                *Grand chandelier
 		*Street Gas Lamp
 		*Interior Gas Lamp
+                *Tesla Arc Lamp
+                *Edison Lamp
+                *Edison Tube
 		*Wood Stove Furnace
 	Books and bookcases have been moved to a new mod: RimWriter!
 
@@ -22,5 +27,18 @@
 	Check out his mod, RimFridge!
 
 	Adds the following resources:
-		*Wax (Obtained from meat at cooking tables)</description>
+		*Wax (Obtained from meat at cooking tables)
+
+Thank you to my Patrons for supporting me in my efforts. Without you, none of this would be possible.
+
+These are the most excellent rim dwellers who support me: 
+Brachiaraidos, Cory Bonifay, CrankyPeanut, E_T, Finwej, Jan Koutsky, Jonathan, K. Bolden, Kiya Nicoll, Matt Harris, Paul Fenwick, Toc Anastar, Grendalloffen, Martin K. Bonde, Harvey Mclellan, Shane M. aka ShotgunFace, Bentley Alsup, Eric Idema, MasterScootie, GoSu, Josh McCabe, spook, Clifford Campbell, J, Michael Paugh, John Kanady, Luis Figueroa, Midgeman, Nate Haug, Richard Paul, SilentWeirdo, Audrin Navarro, Calhoun Cattell, Михаил Юрченко, Nemuri Hime, Calum, Keith Thoma, Dick Jones, Patrick, Tim Stillson, Nathan Getman, Sharp Spook, Emily Shaw, Populous25, Steven James, Zalson, Mark, Marcus Sireanu, Drachken, Nicholas Bateman, Baron Xot, Justin Andres, Luis Salvatierra, Christopher, TinyFloatingTurtle, George Chong Chuang Ming, John Boehr, Oliver White, roxxploxx, Robin Hager, That Guy, Allic, Karol Rybak, Austin Harbert, Yewty, Evan Hwang, Ryan Brock, Jonathan Holzinger, MC, Alexander, Alex Mederer, Kevin Reagan, Toss Antilles, Chelsea Archambeau, Aron Glasser, Dan Winn, Fredric Sundberg, Sarah Banks, ted stevens
+===================
+Changelog
+===================
+1.19.0.1 (09-30-2018)
+===================
+This is the initial update of Industrial Age - Objects and Furniture for RimWorld B19.
+
+</description>
 </ModMetaData>

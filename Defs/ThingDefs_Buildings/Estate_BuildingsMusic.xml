@@ -4,12 +4,12 @@
 <!--
   <ThingDef ParentName="BuildingBase">
     <defName>Estate_Piano</defName>
-	<thingClass>ArkhamEstate.Building_Gramophone</thingClass>
+	<thingClass>IndustrialAge.Objects.Building_Gramophone</thingClass>
     <label>piano</label>
     <description>An acoustic, stringed musical instrument played using a keyboard. Can improve artistic skill and joy.</description>
     <category>Building</category><thingCategories><li>Buildings</li></thingCategories>
     <graphicData>
-      <texPath>Building/Misc/Gramophone/Jecrell_Gramophone</texPath>
+      <texPath>Things/Building/Misc/Gramophone/Jecrell_Gramophone</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawRotated>false</drawRotated>
 	  <shaderType>CutoutComplex</shaderType>
@@ -29,7 +29,7 @@
       <joyKind>Gaming_Cerebral</joyKind>
     </building>
     <placeWorkers>
-      <li>ArkhamEstate.PlaceWorker_ListenArea</li>
+      <li>IndustrialAge.Objects.PlaceWorker_ListenArea</li>
     </placeWorkers>
     <comps>
       <li Class="CompProperties_Forbiddable" />
@@ -73,15 +73,15 @@
   
   <ThingDef ParentName="BuildingBase">
     <defName>Estate_Gramophone</defName>
-	<thingClass>ArkhamEstate.Building_Gramophone</thingClass>
+	<thingClass>IndustrialAge.Objects.Building_Gramophone</thingClass>
     <label>gramophone</label>
     <description>An ancient windup device utilized to play sound recordings from bygone eras.</description>
     <category>Building</category><thingCategories><li>Buildings</li></thingCategories>
     <graphicData>
-      <texPath>Building/Misc/Gramophone/Jecrell_Gramophone</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawRotated>false</drawRotated>
+      <texPath>Things/Building/Misc/Gramophone/Jecrell_Gramophone</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
 	  <shaderType>CutoutComplex</shaderType>
+      <drawSize>(2.3,2.3)</drawSize>	  
       <damageData>
         <rect>(0.35,0.35,0.3,0.3)</rect>
       </damageData>
@@ -89,16 +89,19 @@
         <volume>(0.3, 0.6, 0.3)</volume>
       </shadowData>	  	  	  
     </graphicData>
-    <rotatable>false</rotatable>
+	<clearBuildingArea>false</clearBuildingArea>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+	<uiIconPath>Things/Building/Misc/Gramophone/Jecrell_Gramophone_ui</uiIconPath>
     <minifiedDef>MinifiedThing</minifiedDef>
-    <socialPropernessMatters>true</socialPropernessMatters>	
-    <altitudeLayer>Building</altitudeLayer>
+    <socialPropernessMatters>true</socialPropernessMatters>
     <passability>PassThroughOnly</passability>
     <building>
+	  <isEdifice>false</isEdifice>
+	  <canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
       <joyKind>Gaming_Cerebral</joyKind>
     </building>
     <placeWorkers>
-      <li>ArkhamEstate.PlaceWorker_ListenArea</li>
+      <li>IndustrialAge.Objects.PlaceWorker_ListenArea</li>
     </placeWorkers>
     <comps>
       <li Class="CompProperties_Forbiddable" />
@@ -108,7 +111,7 @@
     <drawerType>RealtimeOnly</drawerType>
     <fillPercent>0.15</fillPercent>
     <statBases>
-      <Mass>30</Mass>	
+      <Mass>5</Mass>	
       <MaxHitPoints>110</MaxHitPoints>
       <WorkToBuild>1500</WorkToBuild>
       <Flammability>1.0</Flammability>
@@ -136,20 +139,26 @@
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
 	    <storedConceptLearnOpportunity>Jecrell_Gramophone</storedConceptLearnOpportunity>		
     <designationCategory>Joy</designationCategory>
+	<modExtensions>
+	  <li Class="JecsTools.BuildingExtension">
+	    <wipeCategories>
+		  <li>OnFurniture</li>
+		</wipeCategories>
+	  </li>
+    </modExtensions>	
   </ThingDef>
   
   <ThingDef ParentName="BuildingBase">
     <defName>Estate_Radio</defName>
-	<thingClass>ArkhamEstate.Building_Radio</thingClass>
+	<thingClass>IndustrialAge.Objects.Building_Radio</thingClass>
     <label>radio</label>
     <description>An ancient windup device utilized to play sound recordings from bygone eras. Now with autoplay.</description>
     <category>Building</category><thingCategories><li>Buildings</li></thingCategories>
     <graphicData>
-      <texPath>Building/Misc/Radio/Jecrell_Radio</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawRotated>false</drawRotated>
+      <texPath>Things/Building/Misc/Radio/Jecrell_Radio</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
 	  <shaderType>CutoutComplex</shaderType>
-      <drawSize>(2.3,2.3)</drawSize>	  
+      <drawSize>(2,2)</drawSize>	  
       <damageData>
         <rect>(0.35,0.35,0.3,0.3)</rect>
       </damageData>
@@ -157,24 +166,22 @@
         <volume>(0.3, 0.6, 0.3)</volume>
       </shadowData>	  
     </graphicData>
-    <rotatable>false</rotatable>
-    <minifiedDef>MinifiedThing</minifiedDef>
+    <minifiedDef>MinifiedThing</minifiedDef>	
     <socialPropernessMatters>true</socialPropernessMatters>
-	<uiIconPath>UI/Icons/Radio/Radio_ico</uiIconPath>	
-    <altitudeLayer>Building</altitudeLayer>
-    <passability>PassThroughOnly</passability>
+	<uiIconPath>UI/Icons/Radio/Radio_ico</uiIconPath>
     <building>
       <joyKind>Gaming_Cerebral</joyKind>
+	  <isEdifice>false</isEdifice>
+	  <canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
     </building>
     <placeWorkers>
-      <li>ArkhamEstate.PlaceWorker_ListenArea</li>
+      <li>IndustrialAge.Objects.PlaceWorker_ListenArea</li>
     </placeWorkers>	
 	<pathCost>8</pathCost>
     <tickerType>Normal</tickerType>
     <drawerType>RealtimeOnly</drawerType>
-    <fillPercent>0.15</fillPercent>
     <statBases>
-      <Mass>35</Mass>
+      <Mass>3</Mass>
       <MaxHitPoints>110</MaxHitPoints>
       <WorkToBuild>1500</WorkToBuild>
       <Flammability>1.0</Flammability>
@@ -202,6 +209,10 @@
 	  <li>Woody</li>
       <li>Stony</li>
     </stuffCategories>
+	<clearBuildingArea>false</clearBuildingArea>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <passability>Standable</passability>
+    <fillPercent>0.15</fillPercent>
     <costStuffCount>60</costStuffCount>	
     <soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
@@ -209,6 +220,13 @@
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
 	    <storedConceptLearnOpportunity>Jecrell_Gramophone</storedConceptLearnOpportunity>		
     <designationCategory>Joy</designationCategory>
+	<modExtensions>
+	  <li Class="JecsTools.BuildingExtension">
+	    <wipeCategories>
+		  <li>OnFurniture</li>
+		</wipeCategories>
+	  </li>
+    </modExtensions>	
   </ThingDef>  
   
 </Defs>

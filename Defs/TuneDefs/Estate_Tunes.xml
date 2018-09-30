@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <SoundDef Class="ArkhamEstate.TuneDef">
+  <SoundDef Class="IndustrialAge.Objects.TuneDef">
     <defName>Estate_GS_Charleston</defName>
 	<label>Charleston</label>
 	<artist>Green Hill Instrumental</artist>
@@ -30,7 +30,7 @@
     </subSounds>
   </SoundDef>
     
-  <SoundDef Class="ArkhamEstate.TuneDef">
+  <SoundDef Class="IndustrialAge.Objects.TuneDef">
     <defName>Estate_GS_InTheMood</defName>  
 	<label>In The Mood</label>
 	<artist>Glenn Miller</artist>
@@ -60,7 +60,7 @@
     </subSounds>
   </SoundDef>
   
-  <SoundDef Class="ArkhamEstate.TuneDef">
+  <SoundDef Class="IndustrialAge.Objects.TuneDef">
     <defName>Estate_GS_KingPorterStomp</defName>  
     <label>King Porter Stomp</label>
 	<artist>Benny Goodman</artist>
@@ -91,7 +91,7 @@
   </SoundDef>
   
   
-  <SoundDef Class="ArkhamEstate.TuneDef">
+  <SoundDef Class="IndustrialAge.Objects.TuneDef">
     <defName>Estate_GS_AintMisbehavin</defName>  
     <label>Ain't Misbehavin'</label>
 	<artist>Fats Waller</artist>
@@ -121,7 +121,7 @@
     </subSounds>
   </SoundDef>
   
-    <SoundDef Class="ArkhamEstate.TuneDef">
+    <SoundDef Class="IndustrialAge.Objects.TuneDef">
     <defName>Estate_GS_ItDontMeanAThing</defName>  
     <label>It Don't Mean A Thing</label>
 	<artist>Duke Ellington</artist>

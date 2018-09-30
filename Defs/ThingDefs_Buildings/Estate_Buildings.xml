@@ -72,11 +72,11 @@
   <ThingDef ParentName="BuildingBase">
     <defName>WoodStoveFurnace</defName>
     <label>wood stove furnace</label>
-    <thingClass>ArkhamEstate.Building_WoodStove</thingClass>
+    <thingClass>IndustrialAge.Objects.Building_WoodStove</thingClass>
     <description>Cooks meals and produces heat. Runs out of fuel after a few days. As with all heat sources, it must be placed indoors so it has a closed space to heat. Refuelable.</description>    
     <category>Building</category><thingCategories><li>Buildings</li></thingCategories>
     <graphicData>
-      <texPath>Building/Temperature/WoodStoveFurnace/Jecrell_WoodStoveFurnace</texPath>
+      <texPath>Things/Building/Temperature/WoodStoveFurnace/Jecrell_WoodStoveFurnace</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <damageData>
@@ -139,7 +139,7 @@
         <glowColor>(252,187,113,0)</glowColor>
       </li>
       <li Class="CompProperties_HeatPusher">
-	    <compClass>ArkhamEstate.CompHeatPusherRefuelable</compClass>
+	    <compClass>IndustrialAge.Objects.CompHeatPusherRefuelable</compClass>
         <heatPerSecond>21</heatPerSecond>
         <heatPushMaxTemperature>28</heatPushMaxTemperature>
       </li>
@@ -167,9 +167,9 @@
   <ThingDef ParentName="BuildingBase">
     <defName>Estate_Refrigerator</defName>
     <label>Refrigerator</label>
-    <thingClass>ArkhamEstate.Building_Refrigerator</thingClass>
+    <thingClass>IndustrialAge.Objects.Building_Refrigerator</thingClass>
     <graphicData>
-      <texPath>Building/Temperature/RefrigeratorBasic/Jecrell_Refrigerator</texPath>
+      <texPath>Things/Building/Temperature/RefrigeratorBasic/Jecrell_Refrigerator</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <damageData>
         <rect>(0.05,0.1,0.9,0.9)</rect>

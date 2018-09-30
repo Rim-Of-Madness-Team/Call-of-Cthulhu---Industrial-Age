@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Program Files (x86)\Steam\steamapps\common\RimWorld\ModsWorkspace\Industrial-Age---Objects-and-Furniture\Assemblies" t="ExcludeRecursive" />
+    <e p="C:\Program Files (x86)\Steam\steamapps\common\RimWorld\ModsWorkspace\Industrial-Age---Objects-and-Furniture\Source" t="IncludeRecursive">
+      <e p="Building_Gramophone.cs" t="Include" />
+      <e p="Building_Radio.cs" t="Include" />
+      <e p="Building_Refrigerator.cs" t="Include" />
+      <e p="Building_StreetLamp.cs" t="Include" />
+      <e p="Building_Woodstove.cs" t="Include" />
+      <e p="CompBetterRottable.cs" t="Include" />
+      <e p="CompHeatPusherRefuelable.cs" t="Include" />
+      <e p="CthulhuUtility.cs" t="Include" />
+      <e p="Graphic_CustomFlicker.cs" t="Include" />
+      <e p="IndustrialAgeObjects.csproj" t="IncludeRecursive" />
+      <e p="IndustrialAgeObjects.sln" t="IncludeFlat" />
+      <e p="JobDriver_AutoPlayListenGramophone.cs" t="Include" />
+      <e p="JobDriver_ListenToGramophone.cs" t="Include" />
+      <e p="JobDriver_PlayGramophone.cs" t="Include" />
+      <e p="JobDriver_PlayInstrument.cs" t="Include" />
+      <e p="JobDriver_TurnOffGramophone.cs" t="Include" />
+      <e p="JoyGiver_ListenToBuilding.cs" t="Include" />
+      <e p="ListenBuildingUtility.cs" t="Include" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="PlaceWorker_ListenArea.cs" t="Include" />
+      <e p="Properties" t="Include">
+        <e p="AssemblyInfo.cs" t="Include" />
+      </e>
+      <e p="TexButton.cs" t="Include" />
+      <e p="ThingWithComps_Glower.cs" t="Include" />
+      <e p="Tools.cs" t="Include" />
+      <e p="TuneDef.cs" t="Include" />
+      <e p="WorldComponent_IndustrialAge.Objects.cs" t="Include" />
+      <e p="WorldComponent_Tunes.cs" t="Include" />
+    </e>
+    <e p="C:\Users\mattw\.Rider2018.2\config\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\mattw\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\mattw\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_IndustrialAgeObjects.1987473024.00" t="ExcludeRecursive" />
+  </component>
+</project>

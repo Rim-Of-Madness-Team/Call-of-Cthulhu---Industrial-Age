@@ -115,6 +115,7 @@ Y
 
   <!-- Late Industrial -->
 
+  <!--
    <ResearchProjectDef>
     <defName>Industrial_ArcWeaponry</defName>
     <label>weaponized electricity</label>
@@ -129,7 +130,7 @@ Y
 	    <li>Estate_TechArcLamps</li>		
 	</prerequisites>
   </ResearchProjectDef>   
-
+-->
   
   <ResearchProjectDef>
     <defName>Estate_TechEdisonLights</defName>
@@ -216,7 +217,7 @@ Y
   
   <!-- What the heck is this? Look out! -->
   
-  
+  <!--
    <ResearchProjectDef>
     <defName>Industrial_ArcTower</defName>
     <label>arc tower patent</label>
@@ -231,6 +232,6 @@ Y
 	<researchViewX>5</researchViewX>
 	<researchViewY>1.5</researchViewY>
   </ResearchProjectDef>   
-  
+  -->
 	
 </Defs>

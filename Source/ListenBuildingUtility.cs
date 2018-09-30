@@ -6,7 +6,7 @@ using RimWorld;
 using Verse;
 using Verse.AI;
 
-namespace ArkhamEstate
+namespace IndustrialAge.Objects
 {
     public class ListenBuildingUtility
     {

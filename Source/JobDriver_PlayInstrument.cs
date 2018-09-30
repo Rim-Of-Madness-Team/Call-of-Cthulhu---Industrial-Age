@@ -11,7 +11,7 @@ using Verse.AI;
 using Verse.Sound;
 using RimWorld;
 
-namespace ArkhamEstate
+namespace IndustrialAge.Objects
 {
     public class JobDriver_PlayInstrument : JobDriver
     {

@@ -7,7 +7,7 @@ using RimWorld;
 using UnityEngine;
 using Verse.Sound;
 
-namespace ArkhamEstate
+namespace IndustrialAge.Objects
 {
     public class Building_Radio : Building_Gramophone
     {

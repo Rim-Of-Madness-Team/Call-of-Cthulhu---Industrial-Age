@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using Verse;
 
-namespace ArkhamEstate
+namespace IndustrialAge.Objects
 {
     /*
      * 

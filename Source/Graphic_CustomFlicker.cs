@@ -3,7 +3,7 @@ using System;
 using UnityEngine;
 using Verse;
 
-namespace ArkhamEstate
+namespace IndustrialAge.Objects
 {
     public class Graphic_CustomFlicker : Graphic_Collection
     {

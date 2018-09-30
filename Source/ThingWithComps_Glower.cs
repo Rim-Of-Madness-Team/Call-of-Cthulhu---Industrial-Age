@@ -5,7 +5,7 @@ using System.Text;
 using RimWorld;
 using Verse;
 
-namespace ArkhamEstate
+namespace IndustrialAge.Objects
 {
     class ThingWithComps_Glower : ThingWithComps
     {

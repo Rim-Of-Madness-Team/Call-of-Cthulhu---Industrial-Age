@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f27830ea-c749-431e-bea8-835606322746" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Assemblies/0Harmony.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Assemblies/0Harmony.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assemblies/ArkhamEstate.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ArkhamEstate/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ArkhamEstate/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArkhamEstate.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArkhamEstate.csproj.user" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArkhamEstate.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Building_Gramophone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Building_Gramophone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Building_Radio.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Building_Radio.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Building_Refrigerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Building_Refrigerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Building_StreetLamp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Building_StreetLamp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Building_Woodstove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Building_Woodstove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CompBetterRottable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CompBetterRottable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CompHeatPusherRefuelable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CompHeatPusherRefuelable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Graphic_CustomFlicker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Graphic_CustomFlicker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobDriver_AutoPlayListenGramophone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/JobDriver_AutoPlayListenGramophone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobDriver_ListenToGramophone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/JobDriver_ListenToGramophone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobDriver_PlayGramophone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/JobDriver_PlayGramophone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobDriver_PlayInstrument.cs" beforeDir="false" afterPath="$PROJECT_DIR$/JobDriver_PlayInstrument.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobDriver_TurnOffGramophone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/JobDriver_TurnOffGramophone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JoyGiver_ListenToBuilding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/JoyGiver_ListenToBuilding.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ListenBuildingUtility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ListenBuildingUtility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlaceWorker_ListenArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PlaceWorker_ListenArea.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TexButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TexButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThingWithComps_Glower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ThingWithComps_Glower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TuneDef.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TuneDef.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorldComponent_ArkhamEstate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WorldComponent_ArkhamEstate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorldComponent_Tunes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WorldComponent_Tunes.cs" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="2044394917">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="cs" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="C#" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.file.types.edit" />
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.file.extensions.edit" />
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Building_Gramophone.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+              <folding>
+                <marker date="1537874599627" expanded="true" signature="0:199" ph="/* ---------------------------------------------------------------------- ... */" />
+                <marker date="1537874599627" expanded="false" signature="206:1072" ph="..." />
+                <marker date="1537874599627" expanded="true" signature="313:534" ph="/* ---------------------------------------------------------------------- ... */" />
+                <marker date="1537874599627" expanded="true" signature="562:660" ph="/* Always needed ... */" />
+                <marker date="1537874599627" expanded="true" signature="1074:1199" ph="/* RimWorld specific functions for world creation ... */" />
+                <marker date="1537874599627" expanded="true" signature="1232:23161" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="1239:1532" ph="/// This is the main class for the Gramophone. ... " />
+                <marker date="1537874599627" expanded="true" signature="1580:23159" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="1595:1677" ph="/* ===================== Variables ===================== ... */" />
+                <marker date="1537874599627" expanded="true" signature="2716:2772" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="3177:3315" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="3222:3279" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="3377:3512" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="3403:3502" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="3575:3693" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="3958:4178" ph="/* Component references (will be set in 'SpawnSetup()') ... */" />
+                <marker date="1537874599627" expanded="true" signature="4489:4578" ph="/// Do something after the object is spawned ... " />
+                <marker date="1537874599627" expanded="true" signature="4638:4940" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="4758:4857" ph="/* Get refferences to the components CompPowerTrader and CompGlower ... */" />
+                <marker date="1537874599627" expanded="true" signature="4950:5045" ph="/// To save and load actual values (savegame-data) ... " />
+                <marker date="1537874599627" expanded="true" signature="5087:6174" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="5916:6015" ph="/* Get refferences to the components CompPowerTrader and CompGlower ... */" />
+                <marker date="1537874599627" expanded="true" signature="6073:6164" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="6257:6337" ph="/// Clean up when this is destroyed ... " />
+                <marker date="1537874599627" expanded="true" signature="6413:6566" ph="{...}" />
+                <marker date="1537874599627" expanded="false" signature="6576:9992" ph="Ticker" />
+                <marker date="1537874599627" expanded="true" signature="6662:6834" ph="/// This is used, when the Ticker in the XML is set to 'Rare' ... " />
+                <marker date="1537874599627" expanded="true" signature="6874:7141" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="7152:7318" ph="/// This is used, when the Ticker in the XML is set to 'Normal' ... " />
+                <marker date="1537874599627" expanded="true" signature="7354:7573" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="7658:7808" ph="/// This will be called from one of the Ticker-Functions. ... " />
+                <marker date="1537874599627" expanded="true" signature="7860:9965" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="8018:8464" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="8116:8261" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="8303:8450" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="8670:9942" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="8815:9928" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="8904:9804" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="8980:9157" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="9206:9600" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="9328:9436" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="9469:9574" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="9629:9782" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="9829:9910" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="10078:10220" ph="/// This string will be shown when the object is selected (focus) ... " />
+                <marker date="1537874599627" expanded="true" signature="10270:11566" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="10524:10741" ph="/* Add your own strings (caution: string shouldn't be more than 5 lines (including base)!) ... */" />
+                <marker date="1537874599627" expanded="true" signature="11156:11417" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="11577:11674" ph="/* ===================== Pawn Actions ===================== ... */" />
+                <marker date="1537874599627" expanded="true" signature="11728:12370" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="11853:11905" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="12045:12185" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="12266:12360" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="12380:12490" ph="/* ============= COMPS =================== ... */" />
+                <marker date="1537874599627" expanded="true" signature="12534:12845" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="12632:12810" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="12947:13753" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="13210:13322" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="13763:13925" ph="/// Triggered from resolve next track, if no playlist exists, this method creates it. ... " />
+                <marker date="1537874599627" expanded="true" signature="13966:14312" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="14322:14469" ph="/// Handles the upcoming track. ... " />
+                <marker date="1537874599627" expanded="true" signature="14527:15247" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="14598:14799" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="14654:14785" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="14876:15092" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="14958:15078" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="15124:15211" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="15311:16055" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="15389:15488" ph="/* Establish duration ... */" />
+                <marker date="1537874599627" expanded="true" signature="15565:15689" ph="/* Cthulhu.Utility.DebugReport(currentTuneDef.ToString() + &quot; Fin Time:&quot; + duration.ToString()); ... */" />
+                <marker date="1537874599627" expanded="true" signature="16088:16526" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="16222:16516" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="16320:16376" ph="/* Let's stop the music. ... */" />
+                <marker date="1537874599627" expanded="true" signature="16422:16502" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="16536:16710" ph="/// Checks for cells in a 7.9 radius around for listening. ... " />
+                <marker date="1537874599627" expanded="true" signature="16790:17665" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="16920:16988" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="17068:17136" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="17323:17541" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="17425:17523" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="17721:18818" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="17851:17969" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="18018:18783" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="18828:18991" ph="/// All the menu options for the Gramophone. ... " />
+                <marker date="1537874599627" expanded="true" signature="19077:23152" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="19133:19421" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="19362:19406" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="19531:19819" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="19759:19804" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="19904:20411" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="20036:20226" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="20123:20207" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="20351:20396" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="20590:22186" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="20806:20956" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="21068:21218" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="21255:21535" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="21426:21513" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="21945:22020" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="22223:23117" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="22358:23103" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="22430:23085" ph="{...}" />
+                <marker date="1537874599627" expanded="true" signature="22797:22896" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>namespace ArkhamEstate</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>namespace IndustrialAge.Objects</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/ListenBuildingUtility.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Building_Gramophone.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Building_Gramophone.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="67" />
+    <option name="y" value="57" />
+    <option name="width" value="1144" />
+    <option name="height" value="749" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="IndustrialAgeObjects" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="IndustrialAgeObjects" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="IndustrialAgeObjects" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-all-files" value="false" />
+      </pane>
+      <pane id="FileSystemExplorer" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Attach to Unity Editor.Attach to Unity Editor" />
+      <item itemvalue="Attach to Unity Editor.Attach to Unity Editor &amp; Play" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f27830ea-c749-431e-bea8-835606322746" name="Default Changelist" comment="" />
+      <created>1537874414688</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1537874414688</updated>
+      <workItem from="1537874416675" duration="1383000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1383000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="67" y="57" width="1144" height="749" extended-state="0" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30535054" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="NuGet" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unit Tests" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Build" visible="true" weight="0.3284553" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Errors In Solution" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Unit Tests Coverage" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Building_Gramophone.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding>
+            <marker date="1537874599627" expanded="true" signature="0:199" ph="/* ---------------------------------------------------------------------- ... */" />
+            <marker date="1537874599627" expanded="false" signature="206:1072" ph="..." />
+            <marker date="1537874599627" expanded="true" signature="313:534" ph="/* ---------------------------------------------------------------------- ... */" />
+            <marker date="1537874599627" expanded="true" signature="562:660" ph="/* Always needed ... */" />
+            <marker date="1537874599627" expanded="true" signature="1074:1199" ph="/* RimWorld specific functions for world creation ... */" />
+            <marker date="1537874599627" expanded="true" signature="1232:23161" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="1239:1532" ph="/// This is the main class for the Gramophone. ... " />
+            <marker date="1537874599627" expanded="true" signature="1580:23159" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="1595:1677" ph="/* ===================== Variables ===================== ... */" />
+            <marker date="1537874599627" expanded="true" signature="2716:2772" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="3177:3315" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="3222:3279" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="3377:3512" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="3403:3502" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="3575:3693" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="3958:4178" ph="/* Component references (will be set in 'SpawnSetup()') ... */" />
+            <marker date="1537874599627" expanded="true" signature="4489:4578" ph="/// Do something after the object is spawned ... " />
+            <marker date="1537874599627" expanded="true" signature="4638:4940" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="4758:4857" ph="/* Get refferences to the components CompPowerTrader and CompGlower ... */" />
+            <marker date="1537874599627" expanded="true" signature="4950:5045" ph="/// To save and load actual values (savegame-data) ... " />
+            <marker date="1537874599627" expanded="true" signature="5087:6174" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="5916:6015" ph="/* Get refferences to the components CompPowerTrader and CompGlower ... */" />
+            <marker date="1537874599627" expanded="true" signature="6073:6164" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="6257:6337" ph="/// Clean up when this is destroyed ... " />
+            <marker date="1537874599627" expanded="true" signature="6413:6566" ph="{...}" />
+            <marker date="1537874599627" expanded="false" signature="6576:9992" ph="Ticker" />
+            <marker date="1537874599627" expanded="true" signature="6662:6834" ph="/// This is used, when the Ticker in the XML is set to 'Rare' ... " />
+            <marker date="1537874599627" expanded="true" signature="6874:7141" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="7152:7318" ph="/// This is used, when the Ticker in the XML is set to 'Normal' ... " />
+            <marker date="1537874599627" expanded="true" signature="7354:7573" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="7658:7808" ph="/// This will be called from one of the Ticker-Functions. ... " />
+            <marker date="1537874599627" expanded="true" signature="7860:9965" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="8018:8464" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="8116:8261" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="8303:8450" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="8670:9942" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="8815:9928" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="8904:9804" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="8980:9157" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="9206:9600" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="9328:9436" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="9469:9574" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="9629:9782" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="9829:9910" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="10078:10220" ph="/// This string will be shown when the object is selected (focus) ... " />
+            <marker date="1537874599627" expanded="true" signature="10270:11566" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="10524:10741" ph="/* Add your own strings (caution: string shouldn't be more than 5 lines (including base)!) ... */" />
+            <marker date="1537874599627" expanded="true" signature="11156:11417" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="11577:11674" ph="/* ===================== Pawn Actions ===================== ... */" />
+            <marker date="1537874599627" expanded="true" signature="11728:12370" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="11853:11905" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="12045:12185" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="12266:12360" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="12380:12490" ph="/* ============= COMPS =================== ... */" />
+            <marker date="1537874599627" expanded="true" signature="12534:12845" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="12632:12810" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="12947:13753" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="13210:13322" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="13763:13925" ph="/// Triggered from resolve next track, if no playlist exists, this method creates it. ... " />
+            <marker date="1537874599627" expanded="true" signature="13966:14312" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="14322:14469" ph="/// Handles the upcoming track. ... " />
+            <marker date="1537874599627" expanded="true" signature="14527:15247" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="14598:14799" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="14654:14785" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="14876:15092" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="14958:15078" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="15124:15211" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="15311:16055" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="15389:15488" ph="/* Establish duration ... */" />
+            <marker date="1537874599627" expanded="true" signature="15565:15689" ph="/* Cthulhu.Utility.DebugReport(currentTuneDef.ToString() + &quot; Fin Time:&quot; + duration.ToString()); ... */" />
+            <marker date="1537874599627" expanded="true" signature="16088:16526" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="16222:16516" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="16320:16376" ph="/* Let's stop the music. ... */" />
+            <marker date="1537874599627" expanded="true" signature="16422:16502" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="16536:16710" ph="/// Checks for cells in a 7.9 radius around for listening. ... " />
+            <marker date="1537874599627" expanded="true" signature="16790:17665" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="16920:16988" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="17068:17136" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="17323:17541" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="17425:17523" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="17721:18818" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="17851:17969" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="18018:18783" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="18828:18991" ph="/// All the menu options for the Gramophone. ... " />
+            <marker date="1537874599627" expanded="true" signature="19077:23152" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="19133:19421" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="19362:19406" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="19531:19819" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="19759:19804" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="19904:20411" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="20036:20226" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="20123:20207" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="20351:20396" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="20590:22186" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="20806:20956" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="21068:21218" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="21255:21535" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="21426:21513" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="21945:22020" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="22223:23117" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="22358:23103" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="22430:23085" ph="{...}" />
+            <marker date="1537874599627" expanded="true" signature="22797:22896" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

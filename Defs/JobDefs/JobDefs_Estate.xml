@@ -3,13 +3,13 @@
 
   <JobDef>
 	<defName>PlayGramophone</defName>
-	<driverClass>ArkhamEstate.JobDriver_PlayGramophone</driverClass>
+	<driverClass>IndustrialAge.Objects.JobDriver_PlayGramophone</driverClass>
 	<reportString>Winding up gramophone.</reportString>
   </JobDef>
 	
   <JobDef>
     <defName>ListenToGramophone</defName>
-    <driverClass>ArkhamEstate.JobDriver_ListenToGramophone</driverClass>
+    <driverClass>IndustrialAge.Objects.JobDriver_ListenToGramophone</driverClass>
     <reportString>listening to gramophone.</reportString>
     <joyDuration>8000</joyDuration>
     <joyMaxParticipants>8</joyMaxParticipants>
@@ -19,7 +19,7 @@
 
    <JobDef>
 	<defName>PlayAndListenToGramophone</defName>
-    <driverClass>ArkhamEstate.JobDriver_AutoPlayListenGramophone</driverClass>
+    <driverClass>IndustrialAge.Objects.JobDriver_AutoPlayListenGramophone</driverClass>
     <reportString>listening to gramophone.</reportString>
     <joyDuration>8000</joyDuration>
     <joyMaxParticipants>8</joyMaxParticipants>
@@ -29,7 +29,7 @@
 	
   <JobDef>
     <defName>TurnOffGramophone</defName>
-    <driverClass>ArkhamEstate.JobDriver_TurnOffGramophone</driverClass>
+    <driverClass>IndustrialAge.Objects.JobDriver_TurnOffGramophone</driverClass>
     <reportString>turning off gramophone.</reportString>
   </JobDef>
 

@@ -7,7 +7,7 @@ using UnityEngine;
 using Verse;
 using Verse.Sound;
 
-namespace ArkhamEstate
+namespace IndustrialAge.Objects
 {
     public class Building_Refrigerator : Building_Storage, IStoreSettingsParent
     {

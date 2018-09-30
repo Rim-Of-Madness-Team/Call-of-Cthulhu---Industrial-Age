@@ -1,0 +1,23 @@
+	Adds new furniture and appliances to your game inspired by the time period of the late 1800's and early 1900s themed after the industrial era.
+
+	Adds the following objects:
+		*Refrigerator
+		*Telegraph
+		*Gramophone
+                *Radio
+		*Candelabra
+		*Chandelier
+                *Grand chandelier
+		*Street Gas Lamp
+		*Interior Gas Lamp
+                *Tesla Arc Lamp
+                *Edison Lamp
+                *Edison Tube
+		*Wood Stove Furnace
+	Books and bookcases have been moved to a new mod: RimWriter!
+
+	Special thanks to Vendan for a refrigeration subclass.
+	Check out his mod, RimFridge!
+
+	Adds the following resources:
+		*Wax (Obtained from meat at cooking tables)

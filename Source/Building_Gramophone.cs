@@ -22,7 +22,7 @@ using RimWorld.Planet;
 // RimWorld specific functions for world creation
 //using RimWorld.SquadAI;  // RimWorld specific functions for squad brains 
 
-namespace ArkhamEstate
+namespace IndustrialAge.Objects
 {
     /// <summary>
     /// This is the main class for the Gramophone.

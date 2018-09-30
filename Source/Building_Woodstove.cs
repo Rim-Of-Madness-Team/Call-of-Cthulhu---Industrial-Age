@@ -5,7 +5,7 @@ using Verse;
 using System.Linq;
 using UnityEngine;
 
-namespace ArkhamEstate
+namespace IndustrialAge.Objects
 {
     public class Building_Woodstove : Building_WorkTable
     {

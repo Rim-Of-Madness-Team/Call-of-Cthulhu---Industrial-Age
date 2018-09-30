@@ -1,0 +1,4 @@
+1.19.0.1 (09-30-2018)
+===================
+This is the initial update of Industrial Age - Objects and Furniture for RimWorld B19.
+

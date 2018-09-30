@@ -6,7 +6,7 @@
     <label>tallow wax</label>
     <description>Wax created from animal fat.</description>
     <graphicData>
-      <texPath>Item/Resource/Wax/Jecrell_Wax</texPath>
+      <texPath>Things/Item/Resource/Wax/Jecrell_Wax</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Standard_Drop</soundInteract>

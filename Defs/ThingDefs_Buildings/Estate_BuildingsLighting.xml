@@ -6,13 +6,13 @@
     <label>chandelier</label>
 	<thingClass>Building</thingClass>
 	<minifiedDef>MinifiedThing</minifiedDef>
+	<clearBuildingArea>false</clearBuildingArea>
     <thingCategories>
       <li>BuildingsFurniture</li>
     </thingCategories>
     <description>A metal or stone ceiling mount for wax candles to light an area. Can be automatically refueled with wax made from animal fats at a cooking station. Produces a very small amount of heat.</description>
-    <category>Building</category>
     <graphicData>
-      <texPath>Building/Misc/Chandelier/Jecrell_Chandelier</texPath>
+      <texPath>Things/Building/Misc/Chandelier/Jecrell_Chandelier</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawRotated>false</drawRotated>
       <shaderType>CutoutComplex</shaderType>	  
@@ -89,6 +89,13 @@
     </placeWorkers>
     <designationCategory>Furniture</designationCategory>
     <storedConceptLearnOpportunity>Jecrell_Wax</storedConceptLearnOpportunity>	
+	<modExtensions>
+	  <li Class="JecsTools.BuildingExtension">
+	    <wipeCategories>
+		  <li>OnCeiling</li>
+		</wipeCategories>
+	  </li>
+    </modExtensions>
   </ThingDef>
 
     <ThingDef ParentName="BuildingBase">
@@ -97,12 +104,12 @@
     <description>A lavish metal or stone ceiling mount for wax candles to light an area. Can be automatically refueled with wax made from animal fats at a cooking station. Produces a very small amount of heat.</description>
 	<thingClass>Building</thingClass>
 	<minifiedDef>MinifiedThing</minifiedDef>
+	<clearBuildingArea>false</clearBuildingArea>
     <thingCategories>
       <li>BuildingsFurniture</li>
     </thingCategories>
-    <category>Building</category>
     <graphicData>
-      <texPath>Building/Misc/Chandelier/Jecrell_RoyalChandelier</texPath>
+      <texPath>Things/Building/Misc/Chandelier/Jecrell_RoyalChandelier</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawRotated>false</drawRotated>
       <shaderType>CutoutComplex</shaderType>	  
@@ -170,7 +177,7 @@
 		  <li>
 			<graphicData>
 			  <texPath>Things/Special/Fire</texPath>
-			  <graphicClass>ArkhamEstate.Graphic_CustomFlicker</graphicClass>
+			  <graphicClass>IndustrialAge.Objects.Graphic_CustomFlicker</graphicClass>
 			  <shaderType>TransparentPostLight</shaderType>
 			  <drawSize>0.27</drawSize>
 			</graphicData>
@@ -179,7 +186,7 @@
 		  <li>
 			<graphicData>
 			  <texPath>Things/Special/Fire</texPath>
-			  <graphicClass>ArkhamEstate.Graphic_CustomFlicker</graphicClass>
+			  <graphicClass>IndustrialAge.Objects.Graphic_CustomFlicker</graphicClass>
 			  <shaderType>TransparentPostLight</shaderType>
 			  <drawSize>0.27</drawSize>
 			</graphicData>
@@ -188,7 +195,7 @@
 		  <li>
 			<graphicData>
 			  <texPath>Things/Special/Fire</texPath>
-			  <graphicClass>ArkhamEstate.Graphic_CustomFlicker</graphicClass>
+			  <graphicClass>IndustrialAge.Objects.Graphic_CustomFlicker</graphicClass>
 			  <shaderType>TransparentPostLight</shaderType>
 			  <drawSize>0.27</drawSize>
 			</graphicData>
@@ -197,7 +204,7 @@
 		  <li>
 			<graphicData>
 			  <texPath>Things/Special/Fire</texPath>
-			  <graphicClass>ArkhamEstate.Graphic_CustomFlicker</graphicClass>
+			  <graphicClass>IndustrialAge.Objects.Graphic_CustomFlicker</graphicClass>
 			  <shaderType>TransparentPostLight</shaderType>
 			  <drawSize>0.27</drawSize>
 			</graphicData>
@@ -212,6 +219,13 @@
     </placeWorkers>
     <designationCategory>Furniture</designationCategory>
     <storedConceptLearnOpportunity>Jecrell_Wax</storedConceptLearnOpportunity>	
+	<modExtensions>
+	  <li Class="JecsTools.BuildingExtension">
+	    <wipeCategories>
+		  <li>OnCeiling</li>
+		</wipeCategories>
+	  </li>
+    </modExtensions>
   </ThingDef>
   
   <ThingDef ParentName="BuildingBase">
@@ -225,7 +239,7 @@
       <li>BuildingsFurniture</li>
     </thingCategories>
     <graphicData>
-      <texPath>Building/Misc/Candelabra/Jecrell_Candelabra</texPath>
+      <texPath>Things/Building/Misc/Candelabra/Jecrell_Candelabra</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawRotated>false</drawRotated>
 	  <shaderType>CutoutComplex</shaderType>
@@ -307,13 +321,13 @@
     <label>gas street lamp</label>
     <description>A standing lamp that uses preinstalled gas pipes to fuel an automatic flame.</description>
     <category>Building</category>
-	<thingClass>ArkhamEstate.Building_StreetLamp</thingClass>
+	<thingClass>IndustrialAge.Objects.Building_StreetLamp</thingClass>
 	<minifiedDef>MinifiedThing</minifiedDef>
     <thingCategories>
       <li>BuildingsFurniture</li>
     </thingCategories>
     <graphicData>
-      <texPath>Building/Misc/GasStreetLamp/Jecrell_GasStreetLampAlpha</texPath>
+      <texPath>Things/Building/Misc/GasStreetLamp/Jecrell_GasStreetLampAlpha</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawRotated>false</drawRotated>
       <drawSize>(6.0,6.0)</drawSize>
@@ -368,13 +382,13 @@
     <label>gas street lamp</label>
     <description>A standing lamp that uses preinstalled gas pipes to fuel an automatic flame.</description>
     <category>Building</category>
-	<thingClass>ArkhamEstate.Building_StreetLamp</thingClass>
+	<thingClass>IndustrialAge.Objects.Building_StreetLamp</thingClass>
 	<minifiedDef>MinifiedThing</minifiedDef>
     <thingCategories>
       <li>BuildingsFurniture</li>
     </thingCategories>
     <graphicData>
-      <texPath>Building/Misc/GasStreetLamp/Jecrell_GasStreetLampBeta</texPath>
+      <texPath>Things/Building/Misc/GasStreetLamp/Jecrell_GasStreetLampBeta</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawRotated>false</drawRotated>
       <drawSize>(6.0,6.0)</drawSize>
@@ -428,7 +442,7 @@
     <label>gas street lamp glower</label>
     <description>A standing lamp that uses preinstalled gas pipes to fuel an automatic flame.</description>
     <graphicData>
-      <texPath>Building/Misc/GasStreetLamp/Jecrell_GasStreetLampAlpha</texPath>
+      <texPath>Things/Building/Misc/GasStreetLamp/Jecrell_GasStreetLampAlpha</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawRotated>false</drawRotated>
       <drawSize>(6.0,6.0)</drawSize>
@@ -439,7 +453,7 @@
     </graphicData>
     <category>Building</category>
 	<thingCategories/>
-    <thingClass>ArkhamEstate.ThingWithComps_Glower</thingClass>
+    <thingClass>IndustrialAge.Objects.ThingWithComps_Glower</thingClass>
     <altitudeLayer>MoteOverhead</altitudeLayer>
     <tickerType>Normal</tickerType>
     <drawerType>RealtimeOnly</drawerType>
@@ -461,13 +475,20 @@
     <category>Building</category>
 	<thingClass>Building</thingClass>
 	<minifiedDef>MinifiedThing</minifiedDef>
+	<clearBuildingArea>false</clearBuildingArea>
+	<uiIconPath>Things/Building/Misc/GasLamp/Jecrell_GasLamp_ui</uiIconPath>
+	<building>
+	  <isEdifice>false</isEdifice>
+	  <canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+	</building>
+	
     <thingCategories>
       <li>BuildingsFurniture</li>
     </thingCategories>
     <graphicData>
-      <texPath>Building/Misc/GasLamp/Jecrell_GasLamp</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawRotated>false</drawRotated>
+      <texPath>Things/Building/Misc/GasLamp/Jecrell_GasLamp</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>	
 	  <shaderType>CutoutComplex</shaderType>
       <damageData>
         <rect>(0.35,0.35,0.3,0.3)</rect>
@@ -482,8 +503,7 @@
       <Steel>3</Steel>
       <ComponentIndustrial>2</ComponentIndustrial>	  
 	</costList>	
-    <rotatable>false</rotatable>
-    <altitudeLayer>Building</altitudeLayer>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
     <passability>PassThroughOnly</passability>
 	<pathCost>8</pathCost>
     <tickerType>Normal</tickerType>
@@ -509,6 +529,13 @@
       <li Class="CompProperties_Flickable"/>	  
     </comps>
     <designationCategory>Furniture</designationCategory>
+	<modExtensions>
+	  <li Class="JecsTools.BuildingExtension">
+	    <wipeCategories>
+		  <li>OnFurniture</li>
+		</wipeCategories>
+	  </li>
+    </modExtensions>
   </ThingDef>
   
   <ThingDef Abstract="True" Name="Estate_ArcLampBase" ParentName="LampBase">
@@ -516,6 +543,7 @@
     <stuffCategories>
       <li>Metallic</li>
     </stuffCategories>
+	<clearBuildingArea>false</clearBuildingArea>
     <altitudeLayer>MoteOverhead</altitudeLayer>
     <passability>Standable</passability>
     <fillPercent>0.15</fillPercent>
@@ -524,15 +552,19 @@
     </statBases>
 	<building>
 	  <isEdifice>false</isEdifice>
+	  <canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
 	</building>
   </ThingDef>
   
   <ThingDef ParentName="Estate_ArcLampBase" >
     <defName>Estate_ArcLamp</defName>
-    <label>Arc lamp</label>
+    <label>Tesla arc lamp</label>
+	<uiIconPath>Things/Building/Furniture/jecArcLamp_ui</uiIconPath>
     <description>The earliest form of electric lighting, a lamp that produces light through an arc between carbon rods.</description>
     <designationHotKey>Misc11</designationHotKey>
     <costStuffCount>25</costStuffCount>
+	<clearBuildingArea>false</clearBuildingArea>
+	<passability>Standable</passability>
     <stuffCategories>
       <li>Metallic</li>
     </stuffCategories>
@@ -554,15 +586,25 @@
         <shortCircuitInRain>false</shortCircuitInRain>
       </li>
     </comps>
-    <researchPrerequisites><li>Estate_TechArcLamps</li></researchPrerequisites>		
+    <researchPrerequisites><li>Estate_TechArcLamps</li></researchPrerequisites>	
+	<modExtensions>
+	  <li Class="JecsTools.BuildingExtension">
+	    <wipeCategories>
+		  <li>OnFurniture</li>
+		</wipeCategories>
+	  </li>
+    </modExtensions>	
   </ThingDef>  
   
   <ThingDef ParentName="Estate_ArcLampBase" >
     <defName>Estate_EdisonLamp</defName>
     <label>Edison lamp</label>
+	<uiIconPath>Things/Building/Furniture/jecEdisonLamp_ui</uiIconPath>
     <description>Tungsten-filament lamp that lights a small area. While not as bright as an arc lamp, it provides a warm glow.</description>
     <designationHotKey>Misc11</designationHotKey>
     <costStuffCount>10</costStuffCount>
+	<clearBuildingArea>false</clearBuildingArea>
+	<passability>Standable</passability>
     <stuffCategories>
       <li>Metallic</li>
     </stuffCategories>
@@ -590,14 +632,24 @@
     <researchPrerequisites>
 	  <li>Estate_TechEdisonLights</li>
 	</researchPrerequisites>		
+	<modExtensions>
+	  <li Class="JecsTools.BuildingExtension">
+	    <wipeCategories>
+		  <li>OnFurniture</li>
+		</wipeCategories>
+	  </li>
+    </modExtensions>
   </ThingDef>
   
   <ThingDef ParentName="Estate_ArcLampBase" >
     <defName>Estate_EdisonTube</defName>
     <label>Edison tube</label>
+	<uiIconPath>Things/Building/Furniture/jecEdisonTube_ui</uiIconPath>
     <description>Tungsten-filament tube that lights a small area encased with a small metal cage. While not as bright as an arc lamp, it provides a warm glow.</description>
     <designationHotKey>Misc11</designationHotKey>
     <costStuffCount>10</costStuffCount>
+	<clearBuildingArea>false</clearBuildingArea>
+	<passability>Standable</passability>
     <stuffCategories>
       <li>Metallic</li>
     </stuffCategories>
@@ -625,7 +677,14 @@
     <researchPrerequisites>
 	  <li>Estate_TechEdisonLights</li>
 	</researchPrerequisites>		
-  </ThingDef>
+	<modExtensions>
+	  <li Class="JecsTools.BuildingExtension">
+	    <wipeCategories>
+		  <li>OnFurniture</li>
+		</wipeCategories>
+	  </li>
+    </modExtensions>
+  </ThingDef> 
 
   <ThingDef ParentName="TableGatherSpotBase">
     <defName>Estate_RoundTable</defName>

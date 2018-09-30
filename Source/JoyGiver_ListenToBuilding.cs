@@ -6,7 +6,7 @@ using Verse;
 using Verse.AI;
 using RimWorld;
 
-namespace ArkhamEstate
+namespace IndustrialAge.Objects
 {
     public class JoyGiver_ListenToBuilding : JoyGiver_InteractBuilding
     {

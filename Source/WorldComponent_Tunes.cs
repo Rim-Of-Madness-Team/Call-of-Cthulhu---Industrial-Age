@@ -6,7 +6,7 @@ using RimWorld;
 using Verse;
 using RimWorld.Planet;
 
-namespace ArkhamEstate
+namespace IndustrialAge.Objects
 {
     class WorldComponent_Tunes : WorldComponent
     {

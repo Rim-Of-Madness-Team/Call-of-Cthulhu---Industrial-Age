@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEngine;
 using Verse;
 
-namespace ArkhamEstate
+namespace IndustrialAge.Objects
 {
     public class PlaceWorker_ListenArea : PlaceWorker
     {

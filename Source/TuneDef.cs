@@ -6,7 +6,7 @@ using Verse;
 using UnityEngine;
 using RimWorld;
 
-namespace ArkhamEstate
+namespace IndustrialAge.Objects
 {
     public class TuneDef : SoundDef
     {

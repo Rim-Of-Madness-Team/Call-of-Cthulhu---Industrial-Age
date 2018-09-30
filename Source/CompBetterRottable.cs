@@ -4,7 +4,7 @@ using System.Text;
 using UnityEngine;
 using Verse;
 
-namespace ArkhamEstate
+namespace IndustrialAge.Objects
 {
     public class CompBetterRottable : CompRottable
     {
