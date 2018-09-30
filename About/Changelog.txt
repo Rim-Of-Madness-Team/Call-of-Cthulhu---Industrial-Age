@@ -1,4 +1,8 @@
 1.19.0.1 (09-30-2018)
 ===================
+Added many new lightsources. Now uses latest JecsTools code so that most added furniture can be safely placed on top of tables or other surfaces.
+
+1.19.0.1 (09-30-2018)
+===================
 This is the initial update of Industrial Age - Objects and Furniture for RimWorld B19.
 
