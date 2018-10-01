@@ -31,7 +31,7 @@
       <e p="ThingWithComps_Glower.cs" t="Include" />
       <e p="Tools.cs" t="Include" />
       <e p="TuneDef.cs" t="Include" />
-      <e p="WorldComponent_IndustrialAge.Objects.cs" t="Include" />
+      <e p="WorldComponent_ArkhamEstate.cs" t="Include" />
       <e p="WorldComponent_Tunes.cs" t="Include" />
     </e>
     <e p="C:\Users\mattw\.Rider2018.2\config\extensions" t="IncludeRecursive" />
