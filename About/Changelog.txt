@@ -1,3 +1,7 @@
+1.20.0.0 (10-19-2018)
+========================
+Initial release for RimWorld 1.0.
+
 1.19.0.2 (10-01-2018)
 ========================
 The initial release did not have the proper wax recipe available. Wax can now be properly created at the Electric Stove, Fueled Stove, or Wood Stove by using meat.
